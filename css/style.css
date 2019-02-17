@@ -5572,6 +5572,9 @@ html {
 .content h4:not(:first-child),
 .content h5:not(:first-child),
 .content h6:not(:first-child),
+article {
+    margin-top: 40px;
+}
 article.article {
     margin-bottom: 40px;
     padding-bottom: 40px;
@@ -5753,4 +5756,20 @@ div.subtitle.tags{
 }
 .mini-nav .nav {
     min-height: 0;
+}
+.content .end .divider {
+    height: 1px;
+    width: 100%;
+    margin: 24px 0;
+    background: #e8e8e8;
+}
+.content .end .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #999;
+}
+.content .qrcode {
+    text-align: center;
 }
