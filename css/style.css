@@ -1164,9 +1164,13 @@ a.box:active {
 .content h4,
 .content h5,
 .content h6 {
-    color: #b52323;
-    font-weight: 300;
+    color: #222324;
+    font-weight: 500;
     margin-bottom: 20px;
+}
+.content h1 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eaeaea;
 }
 .content blockquote {
     background-color: #f5f7fa;
@@ -5649,22 +5653,22 @@ code {
     margin-top: 20px;
 }
 .content h1 {
-    font-size: 24px;
+    font-size: 28px;
 }
 .content h2 {
-    font-size: 22px;
+    font-size: 24px;
 }
 .content h3 {
     font-size: 20px;
 }
 .content h4 {
-    font-size: 18px;
+    font-size: 16px;
 }
 .content h5 {
-    font-size: 17px;
+    font-size: 14px;
 }
 .content h6 {
-    font-size: 16px;
+    font-size: 12px;
 }
 .content ol:not(:last-child),
 .content p:not(:last-child),
@@ -5764,11 +5768,12 @@ div.subtitle.tags{
     background: #e8e8e8;
 }
 .content .end .text {
+    flex-shrink: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     color: #999;
+    padding: 0 20px;
 }
 .content .qrcode {
     text-align: center;

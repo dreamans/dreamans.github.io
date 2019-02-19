@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Dreamans</copyright>
-    <lastBuildDate>Sat, 16 Feb 2019 20:41:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 19 Feb 2019 10:32:04 +0800</lastBuildDate>
     
 	<atom:link href="https://rsy.me/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL InnoDB 存储引擎探秘</title>
+      <link>https://rsy.me/posts/mysql-innodb-preliminary/</link>
+      <pubDate>Tue, 19 Feb 2019 10:32:04 +0800</pubDate>
+      
+      <guid>https://rsy.me/posts/mysql-innodb-preliminary/</guid>
+      <description>&lt;p&gt;在MySQL中InnoDB属于存储引擎层，并以插件的形式集成在数据库中。从MySQL5.5.8开始，InnoDB成为其默认的存储引擎。InnoDB存储引擎支持事务、其设计目标主要是面向OLTP的应用，主要特点有：支持事务、行锁设计支持高并发、外键支持、自动崩溃恢复、聚簇索引的方式组织表结构等。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Redis在Web项目中的应用与实践</title>

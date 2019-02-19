@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>MySQL InnoDB 存储引擎探秘</title>
+      <link>https://rsy.me/posts/mysql-innodb-preliminary/</link>
+      <pubDate>Tue, 19 Feb 2019 10:32:04 +0800</pubDate>
+      <author>Emir Ribic</author>
+      <guid>https://rsy.me/posts/mysql-innodb-preliminary/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Redis在Web项目中的应用与实践</title>
       <link>https://rsy.me/posts/redis-application-in-web-development/</link>
       <pubDate>Sat, 16 Feb 2019 20:41:52 +0800</pubDate>
