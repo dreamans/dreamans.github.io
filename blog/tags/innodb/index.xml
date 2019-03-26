@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Innodb on Dreamans&#39;s Blog</title>
-    <link>https://rsy.me/tags/innodb/</link>
+    <link>https://rsy.me/blog/tags/innodb/</link>
     <description>Recent content in Innodb on Dreamans&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Dreamans</copyright>
     <lastBuildDate>Tue, 19 Feb 2019 10:32:04 +0800</lastBuildDate>
     
-	<atom:link href="https://rsy.me/tags/innodb/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rsy.me/blog/tags/innodb/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MySQL InnoDB 存储引擎探秘</title>
-      <link>https://rsy.me/posts/mysql-innodb-preliminary/</link>
+      <link>https://rsy.me/blog/posts/mysql-innodb-preliminary/</link>
       <pubDate>Tue, 19 Feb 2019 10:32:04 +0800</pubDate>
       
-      <guid>https://rsy.me/posts/mysql-innodb-preliminary/</guid>
+      <guid>https://rsy.me/blog/posts/mysql-innodb-preliminary/</guid>
       <description>&lt;p&gt;在MySQL中InnoDB属于存储引擎层，并以插件的形式集成在数据库中。从MySQL5.5.8开始，InnoDB成为其默认的存储引擎。InnoDB存储引擎支持事务、其设计目标主要是面向OLTP的应用，主要特点有：支持事务、行锁设计支持高并发、外键支持、自动崩溃恢复、聚簇索引的方式组织表结构等。&lt;/p&gt;</description>
     </item>
     

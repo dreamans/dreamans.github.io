@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redis on Dreamans&#39;s Blog</title>
-    <link>https://rsy.me/tags/redis/</link>
+    <link>https://rsy.me/blog/tags/redis/</link>
     <description>Recent content in Redis on Dreamans&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>Dreamans</copyright>
     <lastBuildDate>Sat, 16 Feb 2019 20:41:52 +0800</lastBuildDate>
     
-	<atom:link href="https://rsy.me/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://rsy.me/blog/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Redis在Web项目中的应用与实践</title>
-      <link>https://rsy.me/posts/redis-application-in-web-development/</link>
+      <link>https://rsy.me/blog/posts/redis-application-in-web-development/</link>
       <pubDate>Sat, 16 Feb 2019 20:41:52 +0800</pubDate>
       
-      <guid>https://rsy.me/posts/redis-application-in-web-development/</guid>
+      <guid>https://rsy.me/blog/posts/redis-application-in-web-development/</guid>
       <description>&lt;p&gt;Redis作为一个开源的(BSD)基于内存的高性能存储系统，已经被各大互联网公司广泛使用，并且有着诸多的应用场景。本篇文章将基于PHP来详细讲解Redis在Web项目中的主要应用与实践。&lt;/p&gt;</description>
     </item>
     
