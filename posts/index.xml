@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dreamans&#39;s Blog</title>
+    <link>https://rsy.me/posts/</link>
+    <description>Recent content in Posts on Dreamans&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Dreamans</copyright>
+    <lastBuildDate>Tue, 19 Feb 2019 10:32:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://rsy.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MySQL InnoDB 存储引擎探秘</title>
+      <link>https://rsy.me/posts/mysql-innodb-preliminary/</link>
+      <pubDate>Tue, 19 Feb 2019 10:32:04 +0800</pubDate>
+      
+      <guid>https://rsy.me/posts/mysql-innodb-preliminary/</guid>
+      <description>&lt;p&gt;在MySQL中InnoDB属于存储引擎层，并以插件的形式集成在数据库中。从MySQL5.5.8开始，InnoDB成为其默认的存储引擎。InnoDB存储引擎支持事务、其设计目标主要是面向OLTP的应用，主要特点有：支持事务、行锁设计支持高并发、外键支持、自动崩溃恢复、聚簇索引的方式组织表结构等。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Redis在Web项目中的应用与实践</title>
+      <link>https://rsy.me/posts/redis-application-in-web-development/</link>
+      <pubDate>Sat, 16 Feb 2019 20:41:52 +0800</pubDate>
+      
+      <guid>https://rsy.me/posts/redis-application-in-web-development/</guid>
+      <description>&lt;p&gt;Redis作为一个开源的(BSD)基于内存的高性能存储系统，已经被各大互联网公司广泛使用，并且有着诸多的应用场景。本篇文章将基于PHP来详细讲解Redis在Web项目中的主要应用与实践。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
