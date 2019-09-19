@@ -1,0 +1,2453 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        
+        <title>Gin v1.4 中文文档 | Dreamans&#39;s Blog</title>
+        
+        
+        <link href="https://rsy.me/index.xml" rel="alternate" type="application/rss+xml" title="Dreamans&#39;s Blog" />
+        
+        <link rel="stylesheet" href="/css/style.css?1568888339"/>
+        <link rel="stylesheet" href="//at.alicdn.com/t/font_1046541_1uwzccqligk.css"/>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai.min.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+
+<section class="bg-dark mini-nav">
+    <nav class="nav">
+        <div class="nav-left">
+            <a class="nav-item" href="https://rsy.me">
+                <h1 class="title is-5">Dreamans&#39;s Blog</h1>
+            </a>
+        </div>
+        <div class="nav-right">
+            <nav class="nav-item level is-mobile">
+                
+                <a class="level-item" href="https://twitter.com/MrDreamans" target='_blank'>
+                    <i class="iconfont icon-twitter"></i>
+                </a>
+                
+                
+                <a class="level-item" href="https://github.com/dreamans" target='_blank'>
+                    <i class="iconfont icon-github"></i>
+                </a>
+                
+                <a class="level-item" href="" target='_blank'>
+                    <i class="iconfont icon-wechat"></i>
+                </a>
+            </nav>
+        </div>
+    </nav>
+</section>
+
+<section class="section single">
+    <div class="flex-space-between">
+        <a class="button" href="https://rsy.me">
+            « Back Home
+        </a>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <h1 class="title is-2">Gin v1.4 中文文档</h1>
+        <div class="flex-space-between">
+            <div class="subtitle tags is-6">
+                
+                
+<i class="iconfont icon-tags"></i>
+<a class="subtitle is-6" href="/tags/gin">Gin</a>
+
+
+
+  
+    , <a class="subtitle is-6" href="/tags/go"> go</a>
+  
+    , <a class="subtitle is-6" href="/tags/golang"> golang</a>
+  
+    , <a class="subtitle is-6" href="/tags/framework"> framework</a>
+  
+
+
+                
+            </div>
+            <div class="subtitle is-6">2019-09-18 20:49</div>
+        </div>
+        <div class="content single">
+            <h1 id="gin-web-框架">Gin Web 框架</h1>
+
+<p>Gin是一款用Go（Golang）编写的Web框架. 它拥有 Martini-like API 的特性, 具有更好的性能, 速度较<a href="https://github.com/julienschmidt/httprouter">httprouter</a>提高了40倍. 如果你需要表现和良好的生产力，你会爱上Gin.</p>
+
+<h2 id="最近更新">最近更新</h2>
+
+<p>最近更新时间 2019.09.19 基于 Gin v1.4</p>
+
+<h2 id="目录">目录</h2>
+
+<ul>
+<li><a href="#gin-web-%e6%a1%86%e6%9e%b6">Gin Web 框架</a>
+
+<ul>
+<li><a href="#%e6%9c%80%e8%bf%91%e6%9b%b4%e6%96%b0">最近更新</a></li>
+<li><a href="#%e7%9b%ae%e5%bd%95">目录</a></li>
+<li><a href="#%e5%ae%89%e8%a3%85">安装</a>
+
+<ul>
+<li><a href="#%e4%bd%bf%e7%94%a8%e7%b1%bb%e4%bc%bc-govendor-%e7%9a%84-vendor-%e5%b7%a5%e5%85%b7">使用类似 Govendor 的 vendor 工具</a></li>
+</ul></li>
+<li><a href="#%e5%bf%ab%e9%80%9f%e5%bc%80%e5%a7%8b">快速开始</a></li>
+<li><a href="#%e5%9f%ba%e5%87%86%e6%b5%8b%e8%af%95">基准测试</a></li>
+<li><a href="#gin-v1-%e7%a8%b3%e5%ae%9a%e7%89%88%e6%9c%ac">Gin v1. 稳定版本</a></li>
+<li><a href="#%e9%80%9a%e8%bf%87-jsoniter-%e6%9e%84%e5%bb%ba">通过 jsoniter 构建</a></li>
+<li><a href="#api-%e7%a4%ba%e4%be%8b">API 示例</a>
+
+<ul>
+<li><a href="#%e4%bd%bf%e7%94%a8-get-post-put-patch-delete-and-options">使用 GET, POST, PUT, PATCH, DELETE and OPTIONS</a></li>
+<li><a href="#path%e4%b8%ad%e7%9a%84%e5%8f%82%e6%95%b0">path中的参数</a></li>
+<li><a href="#%e6%9f%a5%e8%af%a2%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8f%82%e6%95%b0">查询字符串参数</a></li>
+<li><a href="#multiparturlencoded-%e8%a1%a8%e5%8d%95">Multipart/Urlencoded 表单</a></li>
+<li><a href="#%e5%8f%a6%e4%b8%80%e4%b8%aa%e7%a4%ba%e4%be%8b-query--post-form">另一个示例: query + post form</a></li>
+<li><a href="#%e6%98%a0%e5%b0%84%e4%b8%ba%e6%9f%a5%e8%af%a2%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%88%96postform%e5%8f%82%e6%95%b0">映射为查询字符串或postform参数</a></li>
+<li><a href="#%e4%b8%8a%e4%bc%a0%e6%96%87%e4%bb%b6">上传文件</a>
+
+<ul>
+<li><a href="#%e5%8d%95%e4%b8%aa%e6%96%87%e4%bb%b6">单个文件</a></li>
+<li><a href="#%e5%a4%9a%e6%96%87%e4%bb%b6">多文件</a></li>
+</ul></li>
+<li><a href="#%e8%b7%af%e7%94%b1%e5%88%86%e7%bb%84">路由分组</a></li>
+<li><a href="#%e9%bb%98%e8%ae%a4%e6%97%a0%e4%b8%ad%e9%97%b4%e4%bb%b6%e7%9a%84gin">默认无中间件的Gin</a></li>
+<li><a href="#%e4%bd%bf%e7%94%a8%e4%b8%ad%e9%97%b4%e4%bb%b6">使用中间件</a></li>
+<li><a href="#%e5%a6%82%e4%bd%95%e5%86%99%e6%97%a5%e5%bf%97%e6%96%87%e4%bb%b6">如何写日志文件</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%97%a5%e5%bf%97%e6%a0%bc%e5%bc%8f">自定义日志格式</a></li>
+<li><a href="#%e6%8e%a7%e5%88%b6%e6%97%a5%e5%bf%97%e8%be%93%e5%87%ba%e9%a2%9c%e8%89%b2">控制日志输出颜色</a></li>
+<li><a href="#%e6%a8%a1%e5%9e%8b%e7%bb%91%e5%ae%9a%e5%92%8c%e9%aa%8c%e8%af%81">模型绑定和验证</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e9%aa%8c%e8%af%81%e5%99%a8">自定义验证器</a></li>
+<li><a href="#%e5%8f%aa%e7%bb%91%e5%ae%9a%e6%9f%a5%e8%af%a2%e5%ad%97%e7%ac%a6%e4%b8%b2">只绑定查询字符串</a></li>
+<li><a href="#%e7%bb%91%e5%ae%9a%e6%9f%a5%e8%af%a2%e5%ad%97%e7%ac%a6%e4%b8%b2%e6%88%96-post-%e6%95%b0%e6%8d%ae">绑定查询字符串或 Post 数据</a></li>
+<li><a href="#%e7%bb%91%e5%ae%9auri">绑定Uri</a></li>
+<li><a href="#%e7%bb%91%e5%ae%9aheader">绑定Header</a></li>
+<li><a href="#%e7%bb%91%e5%ae%9a-html-%e5%a4%8d%e9%80%89%e6%a1%86">绑定 HTML 复选框</a></li>
+<li><a href="#multiparturlencoded-%e7%bb%91%e5%ae%9a">Multipart/Urlencoded 绑定</a></li>
+<li><a href="#xml-json-yaml-and-protobuf-rendering">XML, JSON, YAML and ProtoBuf rendering</a>
+
+<ul>
+<li><a href="#securejson">SecureJSON</a></li>
+<li><a href="#jsonp">JSONP</a></li>
+<li><a href="#asciijson">AsciiJSON</a></li>
+<li><a href="#purejson">PureJSON</a></li>
+</ul></li>
+<li><a href="#%e9%9d%99%e6%80%81%e6%96%87%e4%bb%b6%e6%9c%8d%e5%8a%a1">静态文件服务</a></li>
+<li><a href="#%e4%bb%8ereader%e4%b8%ad%e6%8f%90%e4%be%9b%e6%95%b0%e6%8d%ae">从reader中提供数据</a></li>
+<li><a href="#html-%e6%b8%b2%e6%9f%93">HTML 渲染</a>
+
+<ul>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e6%9d%bf%e6%b8%b2%e6%9f%93">自定义模板渲染</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e5%88%86%e9%9a%94%e7%ac%a6">自定义分隔符</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%a8%a1%e6%9d%bf-funcs">自定义模板 Funcs</a></li>
+</ul></li>
+<li><a href="#multitemplate">Multitemplate</a></li>
+<li><a href="#%e9%87%8d%e5%ae%9a%e5%90%91">重定向</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e4%b8%ad%e9%97%b4%e4%bb%b6">自定义中间件</a></li>
+<li><a href="#%e4%bd%bf%e7%94%a8-basicauth-%e4%b8%ad%e9%97%b4%e4%bb%b6">使用 BasicAuth() 中间件</a></li>
+<li><a href="#%e5%9c%a8%e4%b8%ad%e9%97%b4%e4%bb%b6%e4%b8%ad%e4%bd%bf%e7%94%a8%e5%8d%8f%e7%a8%8b">在中间件中使用协程</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89-http-%e9%85%8d%e7%bd%ae">自定义 HTTP 配置</a></li>
+<li><a href="#%e6%94%af%e6%8c%81-lets-encrypt">支持 Let&rsquo;s Encrypt</a></li>
+<li><a href="#gin-%e8%bf%90%e8%a1%8c%e5%a4%9a%e6%9c%8d%e5%8a%a1">Gin 运行多服务</a></li>
+<li><a href="#%e4%bc%98%e9%9b%85%e9%87%8d%e5%90%af%e6%88%96%e5%81%9c%e6%ad%a2">优雅重启或停止</a></li>
+<li><a href="#%e6%9e%84%e5%bb%ba%e5%b8%a6%e6%a8%a1%e6%9d%bf%e7%9a%84%e4%ba%8c%e8%bf%9b%e5%88%b6%e6%96%87%e4%bb%b6">构建带模板的二进制文件</a></li>
+<li><a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e7%bb%93%e6%9e%84%e7%bb%91%e5%ae%9a%e8%a1%a8%e5%8d%95%e6%95%b0%e6%8d%ae%e8%af%b7%e6%b1%82">自定义结构绑定表单数据请求</a></li>
+<li><a href="#%e5%b0%9d%e8%af%95%e7%bb%91%e5%ae%9abody%e5%88%b0%e4%b8%8d%e5%90%8c%e7%9a%84%e7%bb%93%e6%9e%84">尝试绑定body到不同的结构</a></li>
+<li><a href="#http2-%e6%9c%8d%e5%8a%a1%e5%99%a8%e6%8e%a8%e9%80%81">http2 服务器推送</a></li>
+<li><a href="#%e5%ae%9a%e4%b9%89%e8%b7%af%e7%94%b1%e6%97%a5%e5%bf%97%e7%9a%84%e6%a0%bc%e5%bc%8f">定义路由日志的格式</a></li>
+<li><a href="#cookie-%e6%93%8d%e4%bd%9c">Cookie 操作</a></li>
+</ul></li>
+<li><a href="#%e6%b5%8b%e8%af%95">测试</a></li>
+<li><a href="#users">Users</a></li>
+</ul></li>
+</ul>
+
+<h2 id="安装">安装</h2>
+
+<p>要安装Gin package, 需要先安装Go并设置Go工作区.</p>
+
+<ol>
+<li><p>首先需要安装 <a href="https://golang.org/">Go</a> (<strong>version 1.10+ is required</strong>), 然后你可以使用下面的Go命令来安装Gin.</p>
+
+<pre><code class="language-sh">$ go get -u github.com/gin-gonic/gin
+</code></pre></li>
+
+<li><p>导入你的项目代码中:</p>
+
+<pre><code class="language-go">import &quot;github.com/gin-gonic/gin&quot;
+</code></pre></li>
+
+<li><p>(可选的) 导入 <code>net/http</code>. 如果需要使用如 <code>http.StatusOK</code> 的常量则需要这么做.</p>
+
+<pre><code class="language-go">import &quot;net/http&quot;
+</code></pre></li>
+</ol>
+
+<h3 id="使用类似-govendor-https-github-com-kardianos-govendor-的-vendor-工具">使用类似 <a href="https://github.com/kardianos/govendor">Govendor</a> 的 vendor 工具</h3>
+
+<ol>
+<li><p><code>go get</code> govendor</p>
+
+<pre><code class="language-sh">$ go get github.com/kardianos/govendor
+</code></pre></li>
+
+<li><p>创建你的项目目录并且 <code>cd</code> 到该目录中</p>
+
+<pre><code class="language-sh">$ mkdir -p $GOPATH/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;
+</code></pre>
+
+<p>如果你使用的是Mac并且已经安装Go 1.8或更高版本, GOPATH将由Go工具链自动确定。它默认为 <code>$HOME/go</code> on macOS, 因此您可以像这样创建项目:</p>
+
+<pre><code class="language-sh">$ mkdir -p $HOME/go/src/github.com/myusername/project &amp;&amp; cd &quot;$_&quot;
+</code></pre></li>
+
+<li><p>初始化Vendor并引入gin包</p>
+
+<pre><code class="language-sh">$ govendor init
+$ govendor fetch github.com/gin-gonic/gin@v1.3
+</code></pre></li>
+
+<li><p>复制启动代码模板到你的项目中</p>
+
+<pre><code class="language-sh">$ curl https://raw.githubusercontent.com/gin-gonic/examples/master/basic/main.go &gt; main.go
+</code></pre></li>
+
+<li><p>运行你的项目</p>
+
+<pre><code class="language-sh">$ go run main.go
+</code></pre></li>
+</ol>
+
+<h2 id="快速开始">快速开始</h2>
+
+<pre><code class="language-sh"># 假设example.go文件中包含以下代码
+$ cat example.go
+</code></pre>
+
+<pre><code class="language-go">package main
+
+import &quot;github.com/gin-gonic/gin&quot;
+
+func main() {
+	r := gin.Default()
+	r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			&quot;message&quot;: &quot;pong&quot;,
+		})
+	})
+	r.Run() // listen and serve on 0.0.0.0:8080
+}
+</code></pre>
+
+<pre><code># 运行 example.go 并且在浏览器中访问 http://0.0.0.0:8080/ping
+$ go run example.go
+</code></pre>
+
+<h2 id="基准测试">基准测试</h2>
+
+<p>Gin维护一个自定义版本的 <a href="https://github.com/julienschmidt/httprouter">HttpRouter</a></p>
+
+<p><a href="https://github.com/gin-gonic/gin/blob/master/BENCHMARKS.md">查看全部基准测试</a></p>
+
+<table>
+<thead>
+<tr>
+<th>Benchmark name</th>
+<th align="right">(1)</th>
+<th align="right">(2)</th>
+<th align="right">(3)</th>
+<th align="right">(4)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><strong>BenchmarkGin_GithubAll</strong></td>
+<td align="right"><strong>30000</strong></td>
+<td align="right"><strong>48375</strong></td>
+<td align="right"><strong>0</strong></td>
+<td align="right"><strong>0</strong></td>
+</tr>
+
+<tr>
+<td>BenchmarkAce_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">134059</td>
+<td align="right">13792</td>
+<td align="right">167</td>
+</tr>
+
+<tr>
+<td>BenchmarkBear_GithubAll</td>
+<td align="right">5000</td>
+<td align="right">534445</td>
+<td align="right">86448</td>
+<td align="right">943</td>
+</tr>
+
+<tr>
+<td>BenchmarkBeego_GithubAll</td>
+<td align="right">3000</td>
+<td align="right">592444</td>
+<td align="right">74705</td>
+<td align="right">812</td>
+</tr>
+
+<tr>
+<td>BenchmarkBone_GithubAll</td>
+<td align="right">200</td>
+<td align="right">6957308</td>
+<td align="right">698784</td>
+<td align="right">8453</td>
+</tr>
+
+<tr>
+<td>BenchmarkDenco_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">158819</td>
+<td align="right">20224</td>
+<td align="right">167</td>
+</tr>
+
+<tr>
+<td>BenchmarkEcho_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">154700</td>
+<td align="right">6496</td>
+<td align="right">203</td>
+</tr>
+
+<tr>
+<td>BenchmarkGocraftWeb_GithubAll</td>
+<td align="right">3000</td>
+<td align="right">570806</td>
+<td align="right">131656</td>
+<td align="right">1686</td>
+</tr>
+
+<tr>
+<td>BenchmarkGoji_GithubAll</td>
+<td align="right">2000</td>
+<td align="right">818034</td>
+<td align="right">56112</td>
+<td align="right">334</td>
+</tr>
+
+<tr>
+<td>BenchmarkGojiv2_GithubAll</td>
+<td align="right">2000</td>
+<td align="right">1213973</td>
+<td align="right">274768</td>
+<td align="right">3712</td>
+</tr>
+
+<tr>
+<td>BenchmarkGoJsonRest_GithubAll</td>
+<td align="right">2000</td>
+<td align="right">785796</td>
+<td align="right">134371</td>
+<td align="right">2737</td>
+</tr>
+
+<tr>
+<td>BenchmarkGoRestful_GithubAll</td>
+<td align="right">300</td>
+<td align="right">5238188</td>
+<td align="right">689672</td>
+<td align="right">4519</td>
+</tr>
+
+<tr>
+<td>BenchmarkGorillaMux_GithubAll</td>
+<td align="right">100</td>
+<td align="right">10257726</td>
+<td align="right">211840</td>
+<td align="right">2272</td>
+</tr>
+
+<tr>
+<td>BenchmarkHttpRouter_GithubAll</td>
+<td align="right">20000</td>
+<td align="right">105414</td>
+<td align="right">13792</td>
+<td align="right">167</td>
+</tr>
+
+<tr>
+<td>BenchmarkHttpTreeMux_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">319934</td>
+<td align="right">65856</td>
+<td align="right">671</td>
+</tr>
+
+<tr>
+<td>BenchmarkKocha_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">209442</td>
+<td align="right">23304</td>
+<td align="right">843</td>
+</tr>
+
+<tr>
+<td>BenchmarkLARS_GithubAll</td>
+<td align="right">20000</td>
+<td align="right">62565</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+
+<tr>
+<td>BenchmarkMacaron_GithubAll</td>
+<td align="right">2000</td>
+<td align="right">1161270</td>
+<td align="right">204194</td>
+<td align="right">2000</td>
+</tr>
+
+<tr>
+<td>BenchmarkMartini_GithubAll</td>
+<td align="right">200</td>
+<td align="right">9991713</td>
+<td align="right">226549</td>
+<td align="right">2325</td>
+</tr>
+
+<tr>
+<td>BenchmarkPat_GithubAll</td>
+<td align="right">200</td>
+<td align="right">5590793</td>
+<td align="right">1499568</td>
+<td align="right">27435</td>
+</tr>
+
+<tr>
+<td>BenchmarkPossum_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">319768</td>
+<td align="right">84448</td>
+<td align="right">609</td>
+</tr>
+
+<tr>
+<td>BenchmarkR2router_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">305134</td>
+<td align="right">77328</td>
+<td align="right">979</td>
+</tr>
+
+<tr>
+<td>BenchmarkRivet_GithubAll</td>
+<td align="right">10000</td>
+<td align="right">132134</td>
+<td align="right">16272</td>
+<td align="right">167</td>
+</tr>
+
+<tr>
+<td>BenchmarkTango_GithubAll</td>
+<td align="right">3000</td>
+<td align="right">552754</td>
+<td align="right">63826</td>
+<td align="right">1618</td>
+</tr>
+
+<tr>
+<td>BenchmarkTigerTonic_GithubAll</td>
+<td align="right">1000</td>
+<td align="right">1439483</td>
+<td align="right">239104</td>
+<td align="right">5374</td>
+</tr>
+
+<tr>
+<td>BenchmarkTraffic_GithubAll</td>
+<td align="right">100</td>
+<td align="right">11383067</td>
+<td align="right">2659329</td>
+<td align="right">21848</td>
+</tr>
+
+<tr>
+<td>BenchmarkVulcan_GithubAll</td>
+<td align="right">5000</td>
+<td align="right">394253</td>
+<td align="right">19894</td>
+<td align="right">609</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>(1): 在一定时间内不断重复执行, 值越高性能越好</li>
+<li>(2): 单次执行时间 (ns/op), 值越低越好</li>
+<li>(3): 堆内存占用 (B/op), 值越低越好</li>
+<li>(4): 每次执行平均分配内存 (allocs/op), 值越低越好</li>
+</ul>
+
+<h2 id="gin-v1-稳定版本">Gin v1. 稳定版本</h2>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 零内存分配路由器.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 最快的http router和web框架. 从路由到写入.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 完整的单元测试代码</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> 久经考验</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> API 稳固, 新特性不会破坏你的代码</label></li>
+</ul>
+
+<h2 id="通过-jsoniter-https-github-com-json-iterator-go-构建">通过 <a href="https://github.com/json-iterator/go">jsoniter</a> 构建</h2>
+
+<p>Gin 使用 <code>encoding/json</code> 作为默认的json package, 不过你可以通过其他构建tag来替换当前 <a href="https://github.com/json-iterator/go">jsoniter</a>.</p>
+
+<pre><code class="language-sh">$ go build -tags=jsoniter .
+</code></pre>
+
+<h2 id="api-示例">API 示例</h2>
+
+<p>你可以在以下位置找到许多可立即运行的示例 <a href="https://github.com/gin-gonic/examples">Gin 示例仓库</a>.</p>
+
+<h3 id="使用-get-post-put-patch-delete-and-options">使用 GET, POST, PUT, PATCH, DELETE and OPTIONS</h3>
+
+<pre><code class="language-go">func main() {
+	// 使用默认中间件创建一个gin路由器:
+	// logger and recovery (crash-free) middleware
+	router := gin.Default()
+
+	router.GET(&quot;/someGet&quot;, getting)
+	router.POST(&quot;/somePost&quot;, posting)
+	router.PUT(&quot;/somePut&quot;, putting)
+	router.DELETE(&quot;/someDelete&quot;, deleting)
+	router.PATCH(&quot;/somePatch&quot;, patching)
+	router.HEAD(&quot;/someHead&quot;, head)
+	router.OPTIONS(&quot;/someOptions&quot;, options)
+
+	// By default it serves on :8080 unless a
+	// PORT environment variable was defined.
+	router.Run()
+	// router.Run(&quot;:3000&quot;) for a hard coded port
+}
+</code></pre>
+
+<h3 id="path中的参数">path中的参数</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	// 此 handler 将会匹配 /user/john, 但不会匹配 /user/ 或 /user
+	router.GET(&quot;/user/:name&quot;, func(c *gin.Context) {
+		name := c.Param(&quot;name&quot;)
+		c.String(http.StatusOK, &quot;Hello %s&quot;, name)
+	})
+
+	// 然而, 这个路由将会匹配 /user/john/ 和 /user/john/send
+	// If no other routers match /user/john, it will redirect to /user/john/
+	router.GET(&quot;/user/:name/*action&quot;, func(c *gin.Context) {
+		name := c.Param(&quot;name&quot;)
+		action := c.Param(&quot;action&quot;)
+		message := name + &quot; is &quot; + action
+		c.String(http.StatusOK, message)
+	})
+
+    // 对于每个匹配的请求，Context将保存路由定义
+	router.POST(&quot;/user/:name/*action&quot;, func(c *gin.Context) {
+		c.FullPath() == &quot;/user/:name/*action&quot; // true
+	})
+
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="查询字符串参数">查询字符串参数</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	// 使用现有的底层请求对象解析查询字符串参数
+	// The request responds to a url matching:  /welcome?firstname=Jane&amp;lastname=Doe
+	router.GET(&quot;/welcome&quot;, func(c *gin.Context) {
+		firstname := c.DefaultQuery(&quot;firstname&quot;, &quot;Guest&quot;)
+		lastname := c.Query(&quot;lastname&quot;) // shortcut for c.Request.URL.Query().Get(&quot;lastname&quot;)
+
+		c.String(http.StatusOK, &quot;Hello %s %s&quot;, firstname, lastname)
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="multipart-urlencoded-表单">Multipart/Urlencoded 表单</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	router.POST(&quot;/form_post&quot;, func(c *gin.Context) {
+		message := c.PostForm(&quot;message&quot;)
+		nick := c.DefaultPostForm(&quot;nick&quot;, &quot;anonymous&quot;)
+
+		c.JSON(200, gin.H{
+			&quot;status&quot;:  &quot;posted&quot;,
+			&quot;message&quot;: message,
+			&quot;nick&quot;:    nick,
+		})
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="另一个示例-query-post-form">另一个示例: query + post form</h3>
+
+<pre><code>POST /post?id=1234&amp;page=1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+name=manu&amp;message=this_is_great
+</code></pre>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	router.POST(&quot;/post&quot;, func(c *gin.Context) {
+
+		id := c.Query(&quot;id&quot;)
+		page := c.DefaultQuery(&quot;page&quot;, &quot;0&quot;)
+		name := c.PostForm(&quot;name&quot;)
+		message := c.PostForm(&quot;message&quot;)
+
+		fmt.Printf(&quot;id: %s; page: %s; name: %s; message: %s&quot;, id, page, name, message)
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<pre><code>id: 1234; page: 1; name: manu; message: this_is_great
+</code></pre>
+
+<h3 id="映射为查询字符串或postform参数">映射为查询字符串或postform参数</h3>
+
+<pre><code>POST /post?ids[a]=1234&amp;ids[b]=hello HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+names[first]=thinkerou&amp;names[second]=tianou
+</code></pre>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	router.POST(&quot;/post&quot;, func(c *gin.Context) {
+
+		ids := c.QueryMap(&quot;ids&quot;)
+		names := c.PostFormMap(&quot;names&quot;)
+
+		fmt.Printf(&quot;ids: %v; names: %v&quot;, ids, names)
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<pre><code>ids: map[b:hello a:1234], names: map[second:tianou first:thinkerou]
+</code></pre>
+
+<h3 id="上传文件">上传文件</h3>
+
+<h4 id="单个文件">单个文件</h4>
+
+<p>参考 issue <a href="https://github.com/gin-gonic/gin/issues/774">#774</a>, 和详细 <a href="https://github.com/gin-gonic/examples/tree/master/upload-file/single">示例代码</a>.</p>
+
+<p><code>file.Filename</code> <strong>不应该</strong>被信任. 查看 <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Disposition#Directives"><code>Content-Disposition</code> on MDN</a> 和 <a href="https://github.com/gin-gonic/gin/issues/1693">#1693</a></p>
+
+<blockquote>
+<p>文件名始终是不可信任的, 不应由应用程序盲目使用: 应删除路径信息, 并转换为服务器文件系统规则.</p>
+</blockquote>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	// 为表单设置一个较低的内存上限 (默认为 32 MiB)
+	// router.MaxMultipartMemory = 8 &lt;&lt; 20  // 8 MiB
+	router.POST(&quot;/upload&quot;, func(c *gin.Context) {
+		// 单文件上传
+		file, _ := c.FormFile(&quot;file&quot;)
+		log.Println(file.Filename)
+
+		// 将文件上传到指定位置dst
+		// c.SaveUploadedFile(file, dst)
+
+		c.String(http.StatusOK, fmt.Sprintf(&quot;'%s' uploaded!&quot;, file.Filename))
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>如何 <code>curl</code>:</p>
+
+<pre><code class="language-bash">curl -X POST http://localhost:8080/upload \
+  -F &quot;file=@/Users/appleboy/test.zip&quot; \
+  -H &quot;Content-Type: multipart/form-data&quot;
+</code></pre>
+
+<h4 id="多文件">多文件</h4>
+
+<p>详细请见 <a href="https://github.com/gin-gonic/examples/tree/master/upload-file/multiple">示例代码</a>.</p>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	// Set a lower memory limit for multipart forms (default is 32 MiB)
+	// router.MaxMultipartMemory = 8 &lt;&lt; 20  // 8 MiB
+	router.POST(&quot;/upload&quot;, func(c *gin.Context) {
+		// Multipart form
+		form, _ := c.MultipartForm()
+		files := form.File[&quot;upload[]&quot;]
+
+		for _, file := range files {
+			log.Println(file.Filename)
+
+			// Upload the file to specific dst.
+			// c.SaveUploadedFile(file, dst)
+		}
+		c.String(http.StatusOK, fmt.Sprintf(&quot;%d files uploaded!&quot;, len(files)))
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>如何 <code>curl</code>:</p>
+
+<pre><code class="language-bash">curl -X POST http://localhost:8080/upload \
+  -F &quot;upload[]=@/Users/appleboy/test1.zip&quot; \
+  -F &quot;upload[]=@/Users/appleboy/test2.zip&quot; \
+  -H &quot;Content-Type: multipart/form-data&quot;
+</code></pre>
+
+<h3 id="路由分组">路由分组</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	// Simple group: v1
+	v1 := router.Group(&quot;/v1&quot;)
+	{
+		v1.POST(&quot;/login&quot;, loginEndpoint)
+		v1.POST(&quot;/submit&quot;, submitEndpoint)
+		v1.POST(&quot;/read&quot;, readEndpoint)
+	}
+
+	// Simple group: v2
+	v2 := router.Group(&quot;/v2&quot;)
+	{
+		v2.POST(&quot;/login&quot;, loginEndpoint)
+		v2.POST(&quot;/submit&quot;, submitEndpoint)
+		v2.POST(&quot;/read&quot;, readEndpoint)
+	}
+
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="默认无中间件的gin">默认无中间件的Gin</h3>
+
+<p>使用</p>
+
+<pre><code class="language-go">r := gin.New()
+</code></pre>
+
+<p>代替</p>
+
+<pre><code class="language-go">// 默认已添加Logger和Recovery中间件
+r := gin.Default()
+</code></pre>
+
+<h3 id="使用中间件">使用中间件</h3>
+
+<pre><code class="language-go">func main() {
+	// 创建一个无中间件的默认路由
+	r := gin.New()
+
+	// 注册全局中间件
+	// 即使使用GIN_MODE = release进行设置, Logger中间件也会将日志写入 gin.DefaultWriter
+	// 默认 gin.DefaultWriter = os.Stdout
+	r.Use(gin.Logger())
+
+	// Recovery中间件会恢复panics并写入500错误
+	r.Use(gin.Recovery())
+
+	// Per route middleware, you can add as many as you desire.
+	r.GET(&quot;/benchmark&quot;, MyBenchLogger(), benchEndpoint)
+
+	// Authorization group
+	// authorized := r.Group(&quot;/&quot;, AuthRequired())
+	// exactly the same as:
+	authorized := r.Group(&quot;/&quot;)
+	// per group middleware! in this case we use the custom created
+	// AuthRequired() middleware just in the &quot;authorized&quot; group.
+	authorized.Use(AuthRequired())
+	{
+		authorized.POST(&quot;/login&quot;, loginEndpoint)
+		authorized.POST(&quot;/submit&quot;, submitEndpoint)
+		authorized.POST(&quot;/read&quot;, readEndpoint)
+
+		// nested group
+		testing := authorized.Group(&quot;testing&quot;)
+		testing.GET(&quot;/analytics&quot;, analyticsEndpoint)
+	}
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="如何写日志文件">如何写日志文件</h3>
+
+<pre><code class="language-go">func main() {
+	// 禁用控制台颜色, 将日志写入文件时不需要控制台颜色
+	gin.DisableConsoleColor()
+
+	// 日志写入文件
+	f, _ := os.Create(&quot;gin.log&quot;)
+	gin.DefaultWriter = io.MultiWriter(f)
+
+	// 如果需要同时将日志写入文件和控制台, 请使用以下代码
+	// gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+
+	router := gin.Default()
+	router.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.String(200, &quot;pong&quot;)
+	})
+
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="自定义日志格式">自定义日志格式</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.New()
+
+	// LoggerWithFormatter 中间件会将日志写入 gin.DefaultWriter
+	// By default gin.DefaultWriter = os.Stdout
+	router.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
+
+		// your custom format
+		return fmt.Sprintf(&quot;%s - [%s] \&quot;%s %s %s %d %s \&quot;%s\&quot; %s\&quot;\n&quot;,
+				param.ClientIP,
+				param.TimeStamp.Format(time.RFC1123),
+				param.Method,
+				param.Path,
+				param.Request.Proto,
+				param.StatusCode,
+				param.Latency,
+				param.Request.UserAgent(),
+				param.ErrorMessage,
+		)
+	}))
+	router.Use(gin.Recovery())
+
+	router.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.String(200, &quot;pong&quot;)
+	})
+
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p><strong>日志输出示例</strong></p>
+
+<pre><code>::1 - [Fri, 07 Dec 2018 17:04:38 JST] &quot;GET /ping HTTP/1.1 200 122.767µs &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36&quot; &quot;
+</code></pre>
+
+<h3 id="控制日志输出颜色">控制日志输出颜色</h3>
+
+<p>默认情况下, 控制台上的日志输出应根据检测到的TTY进行着色.</p>
+
+<p>关闭日志彩色显示:</p>
+
+<pre><code class="language-go">func main() {
+    // 关闭日志控制台着色
+    gin.DisableConsoleColor()
+    
+    // Creates a gin router with default middleware:
+    // logger and recovery (crash-free) middleware
+    router := gin.Default()
+    
+    router.GET(&quot;/ping&quot;, func(c *gin.Context) {
+        c.String(200, &quot;pong&quot;)
+    })
+    
+    router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>保持开启日志彩色显示:</p>
+
+<pre><code class="language-go">func main() {
+    // Force log's color
+    gin.ForceConsoleColor()
+    
+    // Creates a gin router with default middleware:
+    // logger and recovery (crash-free) middleware
+    router := gin.Default()
+    
+    router.GET(&quot;/ping&quot;, func(c *gin.Context) {
+        c.String(200, &quot;pong&quot;)
+    })
+    
+    router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="模型绑定和验证">模型绑定和验证</h3>
+
+<p>要将请求body绑定到类型中, 请使用模型绑定. Gin 目前支持JSON, XML, YAML和标准表单值的绑定（foo = bar＆boo = baz）.</p>
+
+<p>Gin 使用 <a href="https://github.com/go-playground/validator"><strong>go-playground/validator.v8</strong></a> 进行验证. 查看完整文档 <a href="http://godoc.org/gopkg.in/go-playground/validator.v8#hdr-Baked_In_Validators_and_Tags">点击此处</a>.</p>
+
+<p>请注意, 需要在要绑定的所有字段上设置相应的绑定标记. 例如, 从JSON绑定时需要设置 <code>json:&quot;fieldname&quot;</code>.</p>
+
+<p>此外, Gin 提供了两组绑定方法:</p>
+
+<ul>
+<li><strong>Type</strong> - 必须绑定
+
+<ul>
+<li><strong>Methods</strong> - <code>Bind</code>, <code>BindJSON</code>, <code>BindXML</code>, <code>BindQuery</code>, <code>BindYAML</code>, <code>BindHeader</code></li>
+<li><strong>Behavior</strong> - 这些方法基于 <code>MustBindWith</code> 实现. 如果出现绑定错误, 则会通过 <code>c.AbortWithError(400, err).SetType(ErrorTypeBind)</code> 来终止请求. 并且将返回的状态码设置为400并且设置响应头 <code>Content-Type</code> 的值为 <code>text/plain; charset=utf-8</code>. 请注意, 如果你在此之后尝试重新设置相应状态码, 则会发出警告 <code>[GIN-debug] [WARNING] Headers were already written. Wanted to override status code 400 with 422</code>. 如果你希望更灵活的控制, 请使用等效的 <code>ShouldBind</code> 绑定方法.</li>
+</ul></li>
+<li><strong>Type</strong> - 应当绑定
+
+<ul>
+<li><strong>Methods</strong> - <code>ShouldBind</code>, <code>ShouldBindJSON</code>, <code>ShouldBindXML</code>, <code>ShouldBindQuery</code>, <code>ShouldBindYAML</code>, <code>ShouldBindHeader</code></li>
+<li><strong>Behavior</strong> - 这些方法基于 <code>ShouldBindWith</code> 实现. 如果出现绑定错误, 则错误将会返回, 开发者可以自由处理这些错误.</li>
+</ul></li>
+</ul>
+
+<p>使用Bind-method时, Gin 会尝试根据请求头 <code>Content-Type</code> 的值来推断该使用何种绑定器. 如果你已确定要绑定的内容, 请使用 <code>MustBindWith</code> 或者 <code>ShouldBindWith</code>.</p>
+
+<p>你还可以指定特定的字段为必须字段(值非空), 如果某个字段使用 <code>binding:&quot;required&quot;</code> 修饰并且在绑定时值为空, 则将返回错误.</p>
+
+<pre><code class="language-go">// 从JSON绑定
+type Login struct {
+	User     string `form:&quot;user&quot; json:&quot;user&quot; xml:&quot;user&quot;  binding:&quot;required&quot;`
+	Password string `form:&quot;password&quot; json:&quot;password&quot; xml:&quot;password&quot; binding:&quot;required&quot;`
+}
+
+func main() {
+	router := gin.Default()
+
+	// Example for binding JSON ({&quot;user&quot;: &quot;manu&quot;, &quot;password&quot;: &quot;123&quot;})
+	router.POST(&quot;/loginJSON&quot;, func(c *gin.Context) {
+		var json Login
+		if err := c.ShouldBindJSON(&amp;json); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{&quot;error&quot;: err.Error()})
+			return
+		}
+		
+		if json.User != &quot;manu&quot; || json.Password != &quot;123&quot; {
+			c.JSON(http.StatusUnauthorized, gin.H{&quot;status&quot;: &quot;unauthorized&quot;})
+			return
+		} 
+		
+		c.JSON(http.StatusOK, gin.H{&quot;status&quot;: &quot;you are logged in&quot;})
+	})
+
+	// Example for binding XML (
+	//	&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+	//	&lt;root&gt;
+	//		&lt;user&gt;user&lt;/user&gt;
+	//		&lt;password&gt;123&lt;/password&gt;
+	//	&lt;/root&gt;)
+	router.POST(&quot;/loginXML&quot;, func(c *gin.Context) {
+		var xml Login
+		if err := c.ShouldBindXML(&amp;xml); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{&quot;error&quot;: err.Error()})
+			return
+		}
+		
+		if xml.User != &quot;manu&quot; || xml.Password != &quot;123&quot; {
+			c.JSON(http.StatusUnauthorized, gin.H{&quot;status&quot;: &quot;unauthorized&quot;})
+			return
+		} 
+		
+		c.JSON(http.StatusOK, gin.H{&quot;status&quot;: &quot;you are logged in&quot;})
+	})
+
+	// Example for binding a HTML form (user=manu&amp;password=123)
+	router.POST(&quot;/loginForm&quot;, func(c *gin.Context) {
+		var form Login
+		// This will infer what binder to use depending on the content-type header.
+		if err := c.ShouldBind(&amp;form); err != nil {
+			c.JSON(http.StatusBadRequest, gin.H{&quot;error&quot;: err.Error()})
+			return
+		}
+		
+		if form.User != &quot;manu&quot; || form.Password != &quot;123&quot; {
+			c.JSON(http.StatusUnauthorized, gin.H{&quot;status&quot;: &quot;unauthorized&quot;})
+			return
+		} 
+		
+		c.JSON(http.StatusOK, gin.H{&quot;status&quot;: &quot;you are logged in&quot;})
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p><strong>请求示例</strong></p>
+
+<pre><code class="language-shell">$ curl -v -X POST \
+  http://localhost:8080/loginJSON \
+  -H 'content-type: application/json' \
+  -d '{ &quot;user&quot;: &quot;manu&quot; }'
+&gt; POST /loginJSON HTTP/1.1
+&gt; Host: localhost:8080
+&gt; User-Agent: curl/7.51.0
+&gt; Accept: */*
+&gt; content-type: application/json
+&gt; Content-Length: 18
+&gt;
+* upload completely sent off: 18 out of 18 bytes
+&lt; HTTP/1.1 400 Bad Request
+&lt; Content-Type: application/json; charset=utf-8
+&lt; Date: Fri, 04 Aug 2017 03:51:31 GMT
+&lt; Content-Length: 100
+&lt;
+{&quot;error&quot;:&quot;Key: 'Login.Password' Error:Field validation for 'Password' failed on the 'required' tag&quot;}
+</code></pre>
+
+<p><strong>跳过验证</strong></p>
+
+<p>使用 <code>curl</code> 命令运行上面的示例时将会返回错误. 因为该示例在 <code>Password</code> 字段中使用 <code>binding:&quot;required&quot;</code> 标记了该字段为必须字段. 如果使用 <code>binding:&quot;-&quot;</code> 来标记 <code>Password</code> 字段则不会报错.</p>
+
+<h3 id="自定义验证器">自定义验证器</h3>
+
+<p>Gin 允许自定义验证器, 请参见 <a href="https://github.com/gin-gonic/examples/tree/master/custom-validation/server.go">示例代码</a>.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;net/http&quot;
+	&quot;reflect&quot;
+	&quot;time&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+	&quot;github.com/gin-gonic/gin/binding&quot;
+	&quot;gopkg.in/go-playground/validator.v8&quot;
+)
+
+// Booking contains binded and validated data.
+type Booking struct {
+	CheckIn  time.Time `form:&quot;check_in&quot; binding:&quot;required,bookabledate&quot; time_format:&quot;2006-01-02&quot;`
+	CheckOut time.Time `form:&quot;check_out&quot; binding:&quot;required,gtfield=CheckIn&quot; time_format:&quot;2006-01-02&quot;`
+}
+
+func bookableDate(
+	v *validator.Validate, topStruct reflect.Value, currentStructOrField reflect.Value,
+	field reflect.Value, fieldType reflect.Type, fieldKind reflect.Kind, param string,
+) bool {
+	if date, ok := field.Interface().(time.Time); ok {
+		today := time.Now()
+		if today.After(date) {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	route := gin.Default()
+
+	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
+		v.RegisterValidation(&quot;bookabledate&quot;, bookableDate)
+	}
+
+	route.GET(&quot;/bookable&quot;, getBookable)
+	route.Run(&quot;:8085&quot;)
+}
+
+func getBookable(c *gin.Context) {
+	var b Booking
+	if err := c.ShouldBindWith(&amp;b, binding.Query); err == nil {
+		c.JSON(http.StatusOK, gin.H{&quot;message&quot;: &quot;Booking dates are valid!&quot;})
+	} else {
+		c.JSON(http.StatusBadRequest, gin.H{&quot;error&quot;: err.Error()})
+	}
+}
+</code></pre>
+
+<pre><code class="language-console">$ curl &quot;localhost:8085/bookable?check_in=2018-04-16&amp;check_out=2018-04-17&quot;
+{&quot;message&quot;:&quot;Booking dates are valid!&quot;}
+
+$ curl &quot;localhost:8085/bookable?check_in=2018-03-08&amp;check_out=2018-03-09&quot;
+{&quot;error&quot;:&quot;Key: 'Booking.CheckIn' Error:Field validation for 'CheckIn' failed on the 'bookabledate' tag&quot;}
+</code></pre>
+
+<p><a href="https://github.com/go-playground/validator/releases/tag/v8.7">Struct level validations</a> 能够以这种方式被注册.
+参见 <a href="https://github.com/gin-gonic/examples/tree/master/struct-lvl-validations">struct-lvl-validation 示例</a> 来了解更多.</p>
+
+<h3 id="只绑定查询字符串">只绑定查询字符串</h3>
+
+<p><code>ShouldBindQuery</code> 函数仅绑定查询参数而不是Post数据, 参见 <a href="https://github.com/gin-gonic/gin/issues/742#issuecomment-315953017">详细信息</a>.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+type Person struct {
+	Name    string `form:&quot;name&quot;`
+	Address string `form:&quot;address&quot;`
+}
+
+func main() {
+	route := gin.Default()
+	route.Any(&quot;/testing&quot;, startPage)
+	route.Run(&quot;:8085&quot;)
+}
+
+func startPage(c *gin.Context) {
+	var person Person
+	if c.ShouldBindQuery(&amp;person) == nil {
+		log.Println(&quot;====== Only Bind By Query String ======&quot;)
+		log.Println(person.Name)
+		log.Println(person.Address)
+	}
+	c.String(200, &quot;Success&quot;)
+}
+
+</code></pre>
+
+<h3 id="绑定查询字符串或-post-数据">绑定查询字符串或 Post 数据</h3>
+
+<p>参见 <a href="https://github.com/gin-gonic/gin/issues/742#issuecomment-264681292">详细信息</a>.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;time&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+type Person struct {
+        Name       string    `form:&quot;name&quot;`
+        Address    string    `form:&quot;address&quot;`
+        Birthday   time.Time `form:&quot;birthday&quot; time_format:&quot;2006-01-02&quot; time_utc:&quot;1&quot;`
+        CreateTime time.Time `form:&quot;createTime&quot; time_format:&quot;unixNano&quot;`
+        UnixTime   time.Time `form:&quot;unixTime&quot; time_format:&quot;unix&quot;`
+}
+
+func main() {
+	route := gin.Default()
+	route.GET(&quot;/testing&quot;, startPage)
+	route.Run(&quot;:8085&quot;)
+}
+
+func startPage(c *gin.Context) {
+	var person Person
+	// If `GET`, only `Form` binding engine (`query`) used.
+	// If `POST`, first checks the `content-type` for `JSON` or `XML`, then uses `Form` (`form-data`).
+	// See more at https://github.com/gin-gonic/gin/blob/master/binding/binding.go#L48
+        if c.ShouldBind(&amp;person) == nil {
+                log.Println(person.Name)
+                log.Println(person.Address)
+                log.Println(person.Birthday)
+                log.Println(person.CreateTime)
+                log.Println(person.UnixTime)
+        }
+
+	c.String(200, &quot;Success&quot;)
+}
+</code></pre>
+
+<p>用以下命令测试:</p>
+
+<pre><code class="language-sh">$ curl -X GET &quot;localhost:8085/testing?name=appleboy&amp;address=xyz&amp;birthday=1992-03-15&amp;createTime=1562400033000000123&amp;unixTime=1562400033&quot;
+</code></pre>
+
+<h3 id="绑定uri">绑定Uri</h3>
+
+<p>参见 <a href="https://github.com/gin-gonic/gin/issues/846">详细信息</a>.</p>
+
+<pre><code class="language-go">package main
+
+import &quot;github.com/gin-gonic/gin&quot;
+
+type Person struct {
+	ID string `uri:&quot;id&quot; binding:&quot;required,uuid&quot;`
+	Name string `uri:&quot;name&quot; binding:&quot;required&quot;`
+}
+
+func main() {
+	route := gin.Default()
+	route.GET(&quot;/:name/:id&quot;, func(c *gin.Context) {
+		var person Person
+		if err := c.ShouldBindUri(&amp;person); err != nil {
+			c.JSON(400, gin.H{&quot;msg&quot;: err})
+			return
+		}
+		c.JSON(200, gin.H{&quot;name&quot;: person.Name, &quot;uuid&quot;: person.ID})
+	})
+	route.Run(&quot;:8088&quot;)
+}
+</code></pre>
+
+<p>用以下命令测试:</p>
+
+<pre><code class="language-sh">$ curl -v localhost:8088/thinkerou/987fbc97-4bed-5078-9f07-9141ba07c9f3
+$ curl -v localhost:8088/thinkerou/not-uuid
+</code></pre>
+
+<h3 id="绑定header">绑定Header</h3>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;fmt&quot;
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+type testHeader struct {
+	Rate   int    `header:&quot;Rate&quot;`
+	Domain string `header:&quot;Domain&quot;`
+}
+
+func main() {
+	r := gin.Default()
+	r.GET(&quot;/&quot;, func(c *gin.Context) {
+		h := testHeader{}
+
+		if err := c.ShouldBindHeader(&amp;h); err != nil {
+			c.JSON(200, err)
+		}
+
+		fmt.Printf(&quot;%#v\n&quot;, h)
+		c.JSON(200, gin.H{&quot;Rate&quot;: h.Rate, &quot;Domain&quot;: h.Domain})
+	})
+
+	r.Run()
+
+// client
+// curl -H &quot;rate:300&quot; -H &quot;domain:music&quot; 127.0.0.1:8080/
+// output
+// {&quot;Domain&quot;:&quot;music&quot;,&quot;Rate&quot;:300}
+}
+</code></pre>
+
+<h3 id="绑定-html-复选框">绑定 HTML 复选框</h3>
+
+<p>参见 <a href="https://github.com/gin-gonic/gin/issues/129#issuecomment-124260092">详细信息</a></p>
+
+<p>main.go</p>
+
+<pre><code class="language-go">...
+
+type myForm struct {
+    Colors []string `form:&quot;colors[]&quot;`
+}
+
+...
+
+func formHandler(c *gin.Context) {
+    var fakeForm myForm
+    c.ShouldBind(&amp;fakeForm)
+    c.JSON(200, gin.H{&quot;color&quot;: fakeForm.Colors})
+}
+
+...
+
+</code></pre>
+
+<p>form.html</p>
+
+<pre><code class="language-html">&lt;form action=&quot;/&quot; method=&quot;POST&quot;&gt;
+    &lt;p&gt;Check some colors&lt;/p&gt;
+    &lt;label for=&quot;red&quot;&gt;Red&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;colors[]&quot; value=&quot;red&quot; id=&quot;red&quot;&gt;
+    &lt;label for=&quot;green&quot;&gt;Green&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;colors[]&quot; value=&quot;green&quot; id=&quot;green&quot;&gt;
+    &lt;label for=&quot;blue&quot;&gt;Blue&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;colors[]&quot; value=&quot;blue&quot; id=&quot;blue&quot;&gt;
+    &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>结果:</p>
+
+<pre><code>{&quot;color&quot;:[&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;]}
+</code></pre>
+
+<h3 id="multipart-urlencoded-绑定">Multipart/Urlencoded 绑定</h3>
+
+<pre><code class="language-go">type ProfileForm struct {
+	Name   string                `form:&quot;name&quot; binding:&quot;required&quot;`
+	Avatar *multipart.FileHeader `form:&quot;avatar&quot; binding:&quot;required&quot;`
+
+	// or for multiple files
+	// Avatars []*multipart.FileHeader `form:&quot;avatar&quot; binding:&quot;required&quot;`
+}
+
+func main() {
+	router := gin.Default()
+	router.POST(&quot;/profile&quot;, func(c *gin.Context) {
+		// you can bind multipart form with explicit binding declaration:
+		// c.ShouldBindWith(&amp;form, binding.Form)
+		// or you can simply use autobinding with ShouldBind method:
+		var form ProfileForm
+		// in this case proper binding will be automatically selected
+		if err := c.ShouldBind(&amp;form); err != nil {
+			c.String(http.StatusBadRequest, &quot;bad request&quot;)
+			return
+		}
+
+		err := c.SaveUploadedFile(form.Avatar, form.Avatar.Filename)
+		if err != nil {
+			c.String(http.StatusInternalServerError, &quot;unknown error&quot;)
+			return
+		}
+
+		// db.Save(&amp;form)
+
+		c.String(http.StatusOK, &quot;ok&quot;)
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>用以下命令测试:</p>
+
+<pre><code class="language-sh">$ curl -X POST -v --form name=user --form &quot;avatar=@./avatar.png&quot; http://localhost:8080/profile
+</code></pre>
+
+<h3 id="xml-json-yaml-and-protobuf-rendering">XML, JSON, YAML and ProtoBuf rendering</h3>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+
+	// gin.H is a shortcut for map[string]interface{}
+	r.GET(&quot;/someJSON&quot;, func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{&quot;message&quot;: &quot;hey&quot;, &quot;status&quot;: http.StatusOK})
+	})
+
+	r.GET(&quot;/moreJSON&quot;, func(c *gin.Context) {
+		// You also can use a struct
+		var msg struct {
+			Name    string `json:&quot;user&quot;`
+			Message string
+			Number  int
+		}
+		msg.Name = &quot;Lena&quot;
+		msg.Message = &quot;hey&quot;
+		msg.Number = 123
+		// Note that msg.Name becomes &quot;user&quot; in the JSON
+		// Will output  :   {&quot;user&quot;: &quot;Lena&quot;, &quot;Message&quot;: &quot;hey&quot;, &quot;Number&quot;: 123}
+		c.JSON(http.StatusOK, msg)
+	})
+
+	r.GET(&quot;/someXML&quot;, func(c *gin.Context) {
+		c.XML(http.StatusOK, gin.H{&quot;message&quot;: &quot;hey&quot;, &quot;status&quot;: http.StatusOK})
+	})
+
+	r.GET(&quot;/someYAML&quot;, func(c *gin.Context) {
+		c.YAML(http.StatusOK, gin.H{&quot;message&quot;: &quot;hey&quot;, &quot;status&quot;: http.StatusOK})
+	})
+
+	r.GET(&quot;/someProtoBuf&quot;, func(c *gin.Context) {
+		reps := []int64{int64(1), int64(2)}
+		label := &quot;test&quot;
+		// The specific definition of protobuf is written in the testdata/protoexample file.
+		data := &amp;protoexample.Test{
+			Label: &amp;label,
+			Reps:  reps,
+		}
+		// Note that data becomes binary data in the response
+		// Will output protoexample.Test protobuf serialized data
+		c.ProtoBuf(http.StatusOK, data)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h4 id="securejson">SecureJSON</h4>
+
+<p>使用 SecureJSON 来防止json劫持. 如果给定的结构的值是数组, 则默认会将 <code>&quot;while(1),&quot;</code> 添加到响应body中.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+
+	// You can also use your own secure json prefix
+	// r.SecureJsonPrefix(&quot;)]}',\n&quot;)
+
+	r.GET(&quot;/someJSON&quot;, func(c *gin.Context) {
+		names := []string{&quot;lena&quot;, &quot;austin&quot;, &quot;foo&quot;}
+
+		// Will output  :   while(1);[&quot;lena&quot;,&quot;austin&quot;,&quot;foo&quot;]
+		c.SecureJSON(http.StatusOK, names)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h4 id="jsonp">JSONP</h4>
+
+<p>使用JSONP从不同域名中的服务器请求数据. 如果callback存在则向响应body中添加callback.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+
+	r.GET(&quot;/JSONP&quot;, func(c *gin.Context) {
+		data := gin.H{
+			&quot;foo&quot;: &quot;bar&quot;,
+		}
+		
+		//callback is x
+		// Will output  :   x({\&quot;foo\&quot;:\&quot;bar\&quot;})
+		c.JSONP(http.StatusOK, data)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+
+        // client
+        // curl http://127.0.0.1:8080/JSONP?callback=x
+}
+</code></pre>
+
+<h4 id="asciijson">AsciiJSON</h4>
+
+<p>使用 AsciiJSON 将 non-ASCII 字符转义为 ASCII-only JSON 输出.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+
+	r.GET(&quot;/someJSON&quot;, func(c *gin.Context) {
+		data := gin.H{
+			&quot;lang&quot;: &quot;GO语言&quot;,
+			&quot;tag&quot;:  &quot;&lt;br&gt;&quot;,
+		}
+
+		// will output : {&quot;lang&quot;:&quot;GO\u8bed\u8a00&quot;,&quot;tag&quot;:&quot;\u003cbr\u003e&quot;}
+		c.AsciiJSON(http.StatusOK, data)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h4 id="purejson">PureJSON</h4>
+
+<p>通常, JSON 使用unicode实体来替换特殊的HTML字符, 例如 <code>&lt;</code> 会替换成 <code>\u003c</code>. 如果要按字面量对这些字符进行编码, 则可以使用 PureJSON.</p>
+
+<p>注意: 这一特性在 Go 1.6 及其以下版本中不可用.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+	
+	// Serves unicode entities
+	r.GET(&quot;/json&quot;, func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			&quot;html&quot;: &quot;&lt;b&gt;Hello, world!&lt;/b&gt;&quot;,
+		})
+	})
+	
+	// Serves literal characters
+	r.GET(&quot;/purejson&quot;, func(c *gin.Context) {
+		c.PureJSON(200, gin.H{
+			&quot;html&quot;: &quot;&lt;b&gt;Hello, world!&lt;/b&gt;&quot;,
+		})
+	})
+	
+	// listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="静态文件服务">静态文件服务</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	router.Static(&quot;/assets&quot;, &quot;./assets&quot;)
+	router.StaticFS(&quot;/more_static&quot;, http.Dir(&quot;my_file_system&quot;))
+	router.StaticFile(&quot;/favicon.ico&quot;, &quot;./resources/favicon.ico&quot;)
+
+	// Listen and serve on 0.0.0.0:8080
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="从reader中提供数据">从reader中提供数据</h3>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	router.GET(&quot;/someDataFromReader&quot;, func(c *gin.Context) {
+		response, err := http.Get(&quot;https://raw.githubusercontent.com/gin-gonic/logo/master/color.png&quot;)
+		if err != nil || response.StatusCode != http.StatusOK {
+			c.Status(http.StatusServiceUnavailable)
+			return
+		}
+
+		reader := response.Body
+		contentLength := response.ContentLength
+		contentType := response.Header.Get(&quot;Content-Type&quot;)
+
+		extraHeaders := map[string]string{
+			&quot;Content-Disposition&quot;: `attachment; filename=&quot;gopher.png&quot;`,
+		}
+
+		c.DataFromReader(http.StatusOK, contentLength, contentType, reader, extraHeaders)
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="html-渲染">HTML 渲染</h3>
+
+<p>Using LoadHTMLGlob() or LoadHTMLFiles()</p>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	router.LoadHTMLGlob(&quot;templates/*&quot;)
+	//router.LoadHTMLFiles(&quot;templates/template1.html&quot;, &quot;templates/template2.html&quot;)
+	router.GET(&quot;/index&quot;, func(c *gin.Context) {
+		c.HTML(http.StatusOK, &quot;index.tmpl&quot;, gin.H{
+			&quot;title&quot;: &quot;Main website&quot;,
+		})
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>templates/index.tmpl</p>
+
+<pre><code class="language-html">&lt;html&gt;
+	&lt;h1&gt;
+		{{ .title }}
+	&lt;/h1&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>在不同目录中使用具有相同名称的模板</p>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	router.LoadHTMLGlob(&quot;templates/**/*&quot;)
+	router.GET(&quot;/posts/index&quot;, func(c *gin.Context) {
+		c.HTML(http.StatusOK, &quot;posts/index.tmpl&quot;, gin.H{
+			&quot;title&quot;: &quot;Posts&quot;,
+		})
+	})
+	router.GET(&quot;/users/index&quot;, func(c *gin.Context) {
+		c.HTML(http.StatusOK, &quot;users/index.tmpl&quot;, gin.H{
+			&quot;title&quot;: &quot;Users&quot;,
+		})
+	})
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>templates/posts/index.tmpl</p>
+
+<pre><code class="language-html">{{ define &quot;posts/index.tmpl&quot; }}
+&lt;html&gt;&lt;h1&gt;
+	{{ .title }}
+&lt;/h1&gt;
+&lt;p&gt;Using posts/index.tmpl&lt;/p&gt;
+&lt;/html&gt;
+{{ end }}
+</code></pre>
+
+<p>templates/users/index.tmpl</p>
+
+<pre><code class="language-html">{{ define &quot;users/index.tmpl&quot; }}
+&lt;html&gt;&lt;h1&gt;
+	{{ .title }}
+&lt;/h1&gt;
+&lt;p&gt;Using users/index.tmpl&lt;/p&gt;
+&lt;/html&gt;
+{{ end }}
+</code></pre>
+
+<h4 id="自定义模板渲染">自定义模板渲染</h4>
+
+<p>您还可以使用自己的html模板渲染</p>
+
+<pre><code class="language-go">import &quot;html/template&quot;
+
+func main() {
+	router := gin.Default()
+	html := template.Must(template.ParseFiles(&quot;file1&quot;, &quot;file2&quot;))
+	router.SetHTMLTemplate(html)
+	router.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h4 id="自定义分隔符">自定义分隔符</h4>
+
+<p>您可以使用自定义分隔符</p>
+
+<pre><code class="language-go">	r := gin.Default()
+	r.Delims(&quot;{[{&quot;, &quot;}]}&quot;)
+	r.LoadHTMLGlob(&quot;/path/to/templates&quot;)
+</code></pre>
+
+<h4 id="自定义模板-funcs">自定义模板 Funcs</h4>
+
+<p>参见 <a href="https://github.com/gin-gonic/examples/tree/master/template">示例代码</a>.</p>
+
+<p>main.go</p>
+
+<pre><code class="language-go">import (
+    &quot;fmt&quot;
+    &quot;html/template&quot;
+    &quot;net/http&quot;
+    &quot;time&quot;
+
+    &quot;github.com/gin-gonic/gin&quot;
+)
+
+func formatAsDate(t time.Time) string {
+    year, month, day := t.Date()
+    return fmt.Sprintf(&quot;%d%02d/%02d&quot;, year, month, day)
+}
+
+func main() {
+    router := gin.Default()
+    router.Delims(&quot;{[{&quot;, &quot;}]}&quot;)
+    router.SetFuncMap(template.FuncMap{
+        &quot;formatAsDate&quot;: formatAsDate,
+    })
+    router.LoadHTMLFiles(&quot;./testdata/template/raw.tmpl&quot;)
+
+    router.GET(&quot;/raw&quot;, func(c *gin.Context) {
+        c.HTML(http.StatusOK, &quot;raw.tmpl&quot;, gin.H{
+            &quot;now&quot;: time.Date(2017, 07, 01, 0, 0, 0, 0, time.UTC),
+        })
+    })
+
+    router.Run(&quot;:8080&quot;)
+}
+
+</code></pre>
+
+<p>raw.tmpl</p>
+
+<pre><code class="language-html">Date: {[{.now | formatAsDate}]}
+</code></pre>
+
+<p>Result:</p>
+
+<pre><code>Date: 2017/07/01
+</code></pre>
+
+<h3 id="multitemplate">Multitemplate</h3>
+
+<p>Gin 允许默认只使用一个 html.Template. 多模板渲染可参见 <a href="https://github.com/gin-contrib/multitemplate">a multitemplate render</a></p>
+
+<h3 id="重定向">重定向</h3>
+
+<p>Gin 发出一个 HTTP 重定向非常容易. 内部重定向和外部重定向都已支持.</p>
+
+<pre><code class="language-go">r.GET(&quot;/test&quot;, func(c *gin.Context) {
+	c.Redirect(http.StatusMovedPermanently, &quot;http://www.google.com/&quot;)
+})
+</code></pre>
+
+<p>使用 <code>HandleContext</code> 发送一个 Router 重定向, 如下</p>
+
+<pre><code class="language-go">r.GET(&quot;/test&quot;, func(c *gin.Context) {
+    c.Request.URL.Path = &quot;/test2&quot;
+    r.HandleContext(c)
+})
+r.GET(&quot;/test2&quot;, func(c *gin.Context) {
+    c.JSON(200, gin.H{&quot;hello&quot;: &quot;world&quot;})
+})
+</code></pre>
+
+<h3 id="自定义中间件">自定义中间件</h3>
+
+<pre><code class="language-go">func Logger() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		t := time.Now()
+
+		// Set example variable
+		c.Set(&quot;example&quot;, &quot;12345&quot;)
+
+		// before request
+
+		c.Next()
+
+		// after request
+		latency := time.Since(t)
+		log.Print(latency)
+
+		// access the status we are sending
+		status := c.Writer.Status()
+		log.Println(status)
+	}
+}
+
+func main() {
+	r := gin.New()
+	r.Use(Logger())
+
+	r.GET(&quot;/test&quot;, func(c *gin.Context) {
+		example := c.MustGet(&quot;example&quot;).(string)
+
+		// it would print: &quot;12345&quot;
+		log.Println(example)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="使用-basicauth-中间件">使用 BasicAuth() 中间件</h3>
+
+<pre><code class="language-go">// simulate some private data
+var secrets = gin.H{
+	&quot;foo&quot;:    gin.H{&quot;email&quot;: &quot;foo@bar.com&quot;, &quot;phone&quot;: &quot;123433&quot;},
+	&quot;austin&quot;: gin.H{&quot;email&quot;: &quot;austin@example.com&quot;, &quot;phone&quot;: &quot;666&quot;},
+	&quot;lena&quot;:   gin.H{&quot;email&quot;: &quot;lena@guapa.com&quot;, &quot;phone&quot;: &quot;523443&quot;},
+}
+
+func main() {
+	r := gin.Default()
+
+	// Group using gin.BasicAuth() middleware
+	// gin.Accounts is a shortcut for map[string]string
+	authorized := r.Group(&quot;/admin&quot;, gin.BasicAuth(gin.Accounts{
+		&quot;foo&quot;:    &quot;bar&quot;,
+		&quot;austin&quot;: &quot;1234&quot;,
+		&quot;lena&quot;:   &quot;hello2&quot;,
+		&quot;manu&quot;:   &quot;4321&quot;,
+	}))
+
+	// /admin/secrets endpoint
+	// hit &quot;localhost:8080/admin/secrets
+	authorized.GET(&quot;/secrets&quot;, func(c *gin.Context) {
+		// get user, it was set by the BasicAuth middleware
+		user := c.MustGet(gin.AuthUserKey).(string)
+		if secret, ok := secrets[user]; ok {
+			c.JSON(http.StatusOK, gin.H{&quot;user&quot;: user, &quot;secret&quot;: secret})
+		} else {
+			c.JSON(http.StatusOK, gin.H{&quot;user&quot;: user, &quot;secret&quot;: &quot;NO SECRET :(&quot;})
+		}
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="在中间件中使用协程">在中间件中使用协程</h3>
+
+<p>在中间件或handler中启动一个新协程时, 在新协程中必须使用原始上下文的只读副本来代替原始上下文.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.Default()
+
+	r.GET(&quot;/long_async&quot;, func(c *gin.Context) {
+		// 创建协程中需要使用的副本
+		cCp := c.Copy()
+		go func() {
+			// simulate a long task with time.Sleep(). 5 seconds
+			time.Sleep(5 * time.Second)
+
+			// note that you are using the copied context &quot;cCp&quot;, IMPORTANT
+			log.Println(&quot;Done! in path &quot; + cCp.Request.URL.Path)
+		}()
+	})
+
+	r.GET(&quot;/long_sync&quot;, func(c *gin.Context) {
+		// simulate a long task with time.Sleep(). 5 seconds
+		time.Sleep(5 * time.Second)
+
+		// since we are NOT using a goroutine, we do not have to copy the context
+		log.Println(&quot;Done! in path &quot; + c.Request.URL.Path)
+	})
+
+	// Listen and serve on 0.0.0.0:8080
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<h3 id="自定义-http-配置">自定义 HTTP 配置</h3>
+
+<p>直接使用 <code>http.ListenAndServe()</code>, 如下:</p>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+	http.ListenAndServe(&quot;:8080&quot;, router)
+}
+</code></pre>
+
+<p>或者</p>
+
+<pre><code class="language-go">func main() {
+	router := gin.Default()
+
+	s := &amp;http.Server{
+		Addr:           &quot;:8080&quot;,
+		Handler:        router,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 &lt;&lt; 20,
+	}
+	s.ListenAndServe()
+}
+</code></pre>
+
+<h3 id="支持-let-s-encrypt">支持 Let&rsquo;s Encrypt</h3>
+
+<p>1-line LetsEncrypt HTTPS servers 示例.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+
+	&quot;github.com/gin-gonic/autotls&quot;
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+func main() {
+	r := gin.Default()
+
+	// Ping handler
+	r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.String(200, &quot;pong&quot;)
+	})
+
+	log.Fatal(autotls.Run(r, &quot;example1.com&quot;, &quot;example2.com&quot;))
+}
+</code></pre>
+
+<p>自定义autocert管理器示例.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+
+	&quot;github.com/gin-gonic/autotls&quot;
+	&quot;github.com/gin-gonic/gin&quot;
+	&quot;golang.org/x/crypto/acme/autocert&quot;
+)
+
+func main() {
+	r := gin.Default()
+
+	// Ping handler
+	r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.String(200, &quot;pong&quot;)
+	})
+
+	m := autocert.Manager{
+		Prompt:     autocert.AcceptTOS,
+		HostPolicy: autocert.HostWhitelist(&quot;example1.com&quot;, &quot;example2.com&quot;),
+		Cache:      autocert.DirCache(&quot;/var/www/.cache&quot;),
+	}
+
+	log.Fatal(autotls.RunWithManager(r, &amp;m))
+}
+</code></pre>
+
+<h3 id="gin-运行多服务">Gin 运行多服务</h3>
+
+<p>参见 <a href="https://github.com/gin-gonic/gin/issues/346">Question</a> 并尝试以下示例:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;time&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+	&quot;golang.org/x/sync/errgroup&quot;
+)
+
+var (
+	g errgroup.Group
+)
+
+func router01() http.Handler {
+	e := gin.New()
+	e.Use(gin.Recovery())
+	e.GET(&quot;/&quot;, func(c *gin.Context) {
+		c.JSON(
+			http.StatusOK,
+			gin.H{
+				&quot;code&quot;:  http.StatusOK,
+				&quot;error&quot;: &quot;Welcome server 01&quot;,
+			},
+		)
+	})
+
+	return e
+}
+
+func router02() http.Handler {
+	e := gin.New()
+	e.Use(gin.Recovery())
+	e.GET(&quot;/&quot;, func(c *gin.Context) {
+		c.JSON(
+			http.StatusOK,
+			gin.H{
+				&quot;code&quot;:  http.StatusOK,
+				&quot;error&quot;: &quot;Welcome server 02&quot;,
+			},
+		)
+	})
+
+	return e
+}
+
+func main() {
+	server01 := &amp;http.Server{
+		Addr:         &quot;:8080&quot;,
+		Handler:      router01(),
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+
+	server02 := &amp;http.Server{
+		Addr:         &quot;:8081&quot;,
+		Handler:      router02(),
+		ReadTimeout:  5 * time.Second,
+		WriteTimeout: 10 * time.Second,
+	}
+
+	g.Go(func() error {
+		return server01.ListenAndServe()
+	})
+
+	g.Go(func() error {
+		return server02.ListenAndServe()
+	})
+
+	if err := g.Wait(); err != nil {
+		log.Fatal(err)
+	}
+}
+</code></pre>
+
+<h3 id="优雅重启或停止">优雅重启或停止</h3>
+
+<p>想要优雅地重启或停止Web服务器吗？以下方法可以做到这一点.</p>
+
+<p>可以使用 <a href="https://github.com/fvbock/endless">fvbock/endless</a> 替换默认的 <code>ListenAndServe</code>. 参考 issue <a href="https://github.com/gin-gonic/gin/issues/296">#296</a> 获取更多细节.</p>
+
+<pre><code class="language-go">router := gin.Default()
+router.GET(&quot;/&quot;, handler)
+// [...]
+endless.ListenAndServe(&quot;:4242&quot;, router)
+</code></pre>
+
+<p>endless 的替代库:</p>
+
+<ul>
+<li><a href="https://github.com/braintree/manners">manners</a>: A polite Go HTTP server that shuts down gracefully.</li>
+<li><a href="https://github.com/tylerb/graceful">graceful</a>: Graceful is a Go package enabling graceful shutdown of an http.Handler server.</li>
+<li><a href="https://github.com/facebookgo/grace">grace</a>: Graceful restart &amp; zero downtime deploy for Go servers.</li>
+</ul>
+
+<p>如果你使用的是 Go 1.8 及其以上, 则可能不需要使用这些库. 使用http.Serve的内建 <a href="https://golang.org/pkg/net/http/#Server.Shutdown">Shutdown()</a> 方法可以进行优雅关闭. 查看 <a href="https://github.com/gin-gonic/examples/tree/master/graceful-shutdown">Gin优雅关闭</a> 的全部示例.</p>
+
+<pre><code class="language-go">// +build go1.8
+
+package main
+
+import (
+	&quot;context&quot;
+	&quot;log&quot;
+	&quot;net/http&quot;
+	&quot;os&quot;
+	&quot;os/signal&quot;
+	&quot;syscall&quot;
+	&quot;time&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+func main() {
+	router := gin.Default()
+	router.GET(&quot;/&quot;, func(c *gin.Context) {
+		time.Sleep(5 * time.Second)
+		c.String(http.StatusOK, &quot;Welcome Gin Server&quot;)
+	})
+
+	srv := &amp;http.Server{
+		Addr:    &quot;:8080&quot;,
+		Handler: router,
+	}
+
+	go func() {
+		// service connections
+		if err := srv.ListenAndServe(); err != nil &amp;&amp; err != http.ErrServerClosed {
+			log.Fatalf(&quot;listen: %s\n&quot;, err)
+		}
+	}()
+
+	// Wait for interrupt signal to gracefully shutdown the server with
+	// a timeout of 5 seconds.
+	quit := make(chan os.Signal)
+	// kill (no param) default send syscall.SIGTERM
+	// kill -2 is syscall.SIGINT
+	// kill -9 is syscall.SIGKILL but can't be catch, so don't need add it
+	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
+	&lt;-quit
+	log.Println(&quot;Shutdown Server ...&quot;)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := srv.Shutdown(ctx); err != nil {
+		log.Fatal(&quot;Server Shutdown:&quot;, err)
+	}
+	// catching ctx.Done(). timeout of 5 seconds.
+	select {
+	case &lt;-ctx.Done():
+		log.Println(&quot;timeout of 5 seconds.&quot;)
+	}
+	log.Println(&quot;Server exiting&quot;)
+}
+</code></pre>
+
+<h3 id="构建带模板的二进制文件">构建带模板的二进制文件</h3>
+
+<p>你可以使用 <a href="https://github.com/jessevdk/go-assets">go-assets</a> 构建包含模板的单个二进制文件.</p>
+
+<pre><code class="language-go">func main() {
+	r := gin.New()
+
+	t, err := loadTemplate()
+	if err != nil {
+		panic(err)
+	}
+	r.SetHTMLTemplate(t)
+
+	r.GET(&quot;/&quot;, func(c *gin.Context) {
+		c.HTML(http.StatusOK, &quot;/html/index.tmpl&quot;,nil)
+	})
+	r.Run(&quot;:8080&quot;)
+}
+
+// loadTemplate loads templates embedded by go-assets-builder
+func loadTemplate() (*template.Template, error) {
+	t := template.New(&quot;&quot;)
+	for name, file := range Assets.Files {
+		if file.IsDir() || !strings.HasSuffix(name, &quot;.tmpl&quot;) {
+			continue
+		}
+		h, err := ioutil.ReadAll(file)
+		if err != nil {
+			return nil, err
+		}
+		t, err = t.New(name).Parse(string(h))
+		if err != nil {
+			return nil, err
+		}
+	}
+	return t, nil
+}
+</code></pre>
+
+<p>查看 <a href="https://github.com/gin-gonic/examples/tree/master/assets-in-binary">完整示例</a></p>
+
+<h3 id="自定义结构绑定表单数据请求">自定义结构绑定表单数据请求</h3>
+
+<p>以下示例使用自定义结构:</p>
+
+<pre><code class="language-go">type StructA struct {
+    FieldA string `form:&quot;field_a&quot;`
+}
+
+type StructB struct {
+    NestedStruct StructA
+    FieldB string `form:&quot;field_b&quot;`
+}
+
+type StructC struct {
+    NestedStructPointer *StructA
+    FieldC string `form:&quot;field_c&quot;`
+}
+
+type StructD struct {
+    NestedAnonyStruct struct {
+        FieldX string `form:&quot;field_x&quot;`
+    }
+    FieldD string `form:&quot;field_d&quot;`
+}
+
+func GetDataB(c *gin.Context) {
+    var b StructB
+    c.Bind(&amp;b)
+    c.JSON(200, gin.H{
+        &quot;a&quot;: b.NestedStruct,
+        &quot;b&quot;: b.FieldB,
+    })
+}
+
+func GetDataC(c *gin.Context) {
+    var b StructC
+    c.Bind(&amp;b)
+    c.JSON(200, gin.H{
+        &quot;a&quot;: b.NestedStructPointer,
+        &quot;c&quot;: b.FieldC,
+    })
+}
+
+func GetDataD(c *gin.Context) {
+    var b StructD
+    c.Bind(&amp;b)
+    c.JSON(200, gin.H{
+        &quot;x&quot;: b.NestedAnonyStruct,
+        &quot;d&quot;: b.FieldD,
+    })
+}
+
+func main() {
+    r := gin.Default()
+    r.GET(&quot;/getb&quot;, GetDataB)
+    r.GET(&quot;/getc&quot;, GetDataC)
+    r.GET(&quot;/getd&quot;, GetDataD)
+
+    r.Run()
+}
+</code></pre>
+
+<p>使用 <code>curl</code> 命令查看结果:</p>
+
+<pre><code>$ curl &quot;http://localhost:8080/getb?field_a=hello&amp;field_b=world&quot;
+{&quot;a&quot;:{&quot;FieldA&quot;:&quot;hello&quot;},&quot;b&quot;:&quot;world&quot;}
+$ curl &quot;http://localhost:8080/getc?field_a=hello&amp;field_c=world&quot;
+{&quot;a&quot;:{&quot;FieldA&quot;:&quot;hello&quot;},&quot;c&quot;:&quot;world&quot;}
+$ curl &quot;http://localhost:8080/getd?field_x=hello&amp;field_d=world&quot;
+{&quot;d&quot;:&quot;world&quot;,&quot;x&quot;:{&quot;FieldX&quot;:&quot;hello&quot;}}
+</code></pre>
+
+<h3 id="尝试绑定body到不同的结构">尝试绑定body到不同的结构</h3>
+
+<p>绑定请求body的常规方法使用 <code>c.Request.Body</code>, 并且不支持多次调用.</p>
+
+<pre><code class="language-go">type formA struct {
+  Foo string `json:&quot;foo&quot; xml:&quot;foo&quot; binding:&quot;required&quot;`
+}
+
+type formB struct {
+  Bar string `json:&quot;bar&quot; xml:&quot;bar&quot; binding:&quot;required&quot;`
+}
+
+func SomeHandler(c *gin.Context) {
+  objA := formA{}
+  objB := formB{}
+  // This c.ShouldBind consumes c.Request.Body and it cannot be reused.
+  if errA := c.ShouldBind(&amp;objA); errA == nil {
+    c.String(http.StatusOK, `the body should be formA`)
+  // Always an error is occurred by this because c.Request.Body is EOF now.
+  } else if errB := c.ShouldBind(&amp;objB); errB == nil {
+    c.String(http.StatusOK, `the body should be formB`)
+  } else {
+    ...
+  }
+}
+</code></pre>
+
+<p>为此, 可以使用 <code>c.ShouldBindBodyWith</code>.</p>
+
+<pre><code class="language-go">func SomeHandler(c *gin.Context) {
+  objA := formA{}
+  objB := formB{}
+  // This reads c.Request.Body and stores the result into the context.
+  if errA := c.ShouldBindBodyWith(&amp;objA, binding.JSON); errA == nil {
+    c.String(http.StatusOK, `the body should be formA`)
+  // At this time, it reuses body stored in the context.
+  } else if errB := c.ShouldBindBodyWith(&amp;objB, binding.JSON); errB == nil {
+    c.String(http.StatusOK, `the body should be formB JSON`)
+  // And it can accepts other formats
+  } else if errB2 := c.ShouldBindBodyWith(&amp;objB, binding.XML); errB2 == nil {
+    c.String(http.StatusOK, `the body should be formB XML`)
+  } else {
+    ...
+  }
+}
+</code></pre>
+
+<ul>
+<li><code>c.ShouldBindBodyWith</code> 在绑定之前将body存储到context中. 这样做会轻微影响性能, 如果只需要执行一次绑定则不应使用此方法.</li>
+<li>只有某些格式需要此特性 &ndash; <code>JSON</code>, <code>XML</code>, <code>MsgPack</code>,
+<code>ProtoBuf</code>. 对于其他格式, <code>Query</code>, <code>Form</code>, <code>FormPost</code>, <code>FormMultipart</code>,
+可以由 <code>c.ShouldBind()</code> 多次调用而不影响性能 (详见 <a href="https://github.com/gin-gonic/gin/pull/1341">#1341</a>).</li>
+</ul>
+
+<h3 id="http2-服务器推送">http2 服务器推送</h3>
+
+<p>http.Pusher 仅支持 <strong>go1.8+</strong>. 详见 <a href="https://blog.golang.org/h2push">golang blog</a> 详细介绍.</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;html/template&quot;
+	&quot;log&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+var html = template.Must(template.New(&quot;https&quot;).Parse(`
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Https Test&lt;/title&gt;
+  &lt;script src=&quot;/assets/app.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1 style=&quot;color:red;&quot;&gt;Welcome, Ginner!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`))
+
+func main() {
+	r := gin.Default()
+	r.Static(&quot;/assets&quot;, &quot;./assets&quot;)
+	r.SetHTMLTemplate(html)
+
+	r.GET(&quot;/&quot;, func(c *gin.Context) {
+		if pusher := c.Writer.Pusher(); pusher != nil {
+			// use pusher.Push() to do server push
+			if err := pusher.Push(&quot;/assets/app.js&quot;, nil); err != nil {
+				log.Printf(&quot;Failed to push: %v&quot;, err)
+			}
+		}
+		c.HTML(200, &quot;https&quot;, gin.H{
+			&quot;status&quot;: &quot;success&quot;,
+		})
+	})
+
+	// Listen and Server in https://127.0.0.1:8080
+	r.RunTLS(&quot;:8080&quot;, &quot;./testdata/server.pem&quot;, &quot;./testdata/server.key&quot;)
+}
+</code></pre>
+
+<h3 id="定义路由日志的格式">定义路由日志的格式</h3>
+
+<p>默认路由格式:</p>
+
+<pre><code>[GIN-debug] POST   /foo                      --&gt; main.main.func1 (3 handlers)
+[GIN-debug] GET    /bar                      --&gt; main.main.func2 (3 handlers)
+[GIN-debug] GET    /status                   --&gt; main.main.func3 (3 handlers)
+</code></pre>
+
+<p>如果要以给定格式 (例如JSON, key-value或其他内容) 记录信息, 则可以使用 <code>gin.DebugPrintRouteFunc</code> 定义此格式.</p>
+
+<p>在下面的示例中, 我们使用标准日志包记录所有路由,但你可以使用其他适合需求的日志工具.</p>
+
+<pre><code class="language-go">import (
+	&quot;log&quot;
+	&quot;net/http&quot;
+
+	&quot;github.com/gin-gonic/gin&quot;
+)
+
+func main() {
+	r := gin.Default()
+	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
+		log.Printf(&quot;endpoint %v %v %v %v\n&quot;, httpMethod, absolutePath, handlerName, nuHandlers)
+	}
+
+	r.POST(&quot;/foo&quot;, func(c *gin.Context) {
+		c.JSON(http.StatusOK, &quot;foo&quot;)
+	})
+
+	r.GET(&quot;/bar&quot;, func(c *gin.Context) {
+		c.JSON(http.StatusOK, &quot;bar&quot;)
+	})
+
+	r.GET(&quot;/status&quot;, func(c *gin.Context) {
+		c.JSON(http.StatusOK, &quot;ok&quot;)
+	})
+
+	// Listen and Server in http://0.0.0.0:8080
+	r.Run()
+}
+</code></pre>
+
+<h3 id="cookie-操作">Cookie 操作</h3>
+
+<pre><code class="language-go">import (
+    &quot;fmt&quot;
+
+    &quot;github.com/gin-gonic/gin&quot;
+)
+
+func main() {
+
+    router := gin.Default()
+
+    router.GET(&quot;/cookie&quot;, func(c *gin.Context) {
+
+        cookie, err := c.Cookie(&quot;gin_cookie&quot;)
+
+        if err != nil {
+            cookie = &quot;NotSet&quot;
+            c.SetCookie(&quot;gin_cookie&quot;, &quot;test&quot;, 3600, &quot;/&quot;, &quot;localhost&quot;, false, true)
+        }
+
+        fmt.Printf(&quot;Cookie value: %s \n&quot;, cookie)
+    })
+
+    router.Run()
+}
+</code></pre>
+
+<h2 id="测试">测试</h2>
+
+<p><code>net/http/httptest</code> 包是HTTP测试的首选方式.</p>
+
+<pre><code class="language-go">package main
+
+func setupRouter() *gin.Engine {
+	r := gin.Default()
+	r.GET(&quot;/ping&quot;, func(c *gin.Context) {
+		c.String(200, &quot;pong&quot;)
+	})
+	return r
+}
+
+func main() {
+	r := setupRouter()
+	r.Run(&quot;:8080&quot;)
+}
+</code></pre>
+
+<p>测试上面的代码示例:</p>
+
+<pre><code class="language-go">package main
+
+import (
+	&quot;net/http&quot;
+	&quot;net/http/httptest&quot;
+	&quot;testing&quot;
+
+	&quot;github.com/stretchr/testify/assert&quot;
+)
+
+func TestPingRoute(t *testing.T) {
+	router := setupRouter()
+
+	w := httptest.NewRecorder()
+	req, _ := http.NewRequest(&quot;GET&quot;, &quot;/ping&quot;, nil)
+	router.ServeHTTP(w, req)
+
+	assert.Equal(t, 200, w.Code)
+	assert.Equal(t, &quot;pong&quot;, w.Body.String())
+}
+</code></pre>
+
+<h2 id="users">Users</h2>
+
+<p>Awesome project lists using <a href="https://github.com/gin-gonic/gin">Gin</a> web framework.</p>
+
+<ul>
+<li><a href="https://github.com/appleboy/gorush">gorush</a>: A push notification server written in Go.</li>
+<li><a href="https://github.com/fnproject/fn">fnproject</a>: The container native, cloud agnostic serverless platform.</li>
+<li><a href="https://github.com/photoprism/photoprism">photoprism</a>: Personal photo management powered by Go and Google TensorFlow.</li>
+<li><a href="https://github.com/devopsfaith/krakend">krakend</a>: Ultra performant API Gateway with middlewares.</li>
+<li><a href="https://github.com/thoas/picfit">picfit</a>: An image resizing server written in Go.</li>
+<li><a href="https://github.com/brigadecore/brigade">brigade</a>: Event-based Scripting for Kubernetes.</li>
+</ul>
+            
+            <div class="related">
+
+</div>
+            
+            <div class="flex-space-between end">
+                <div class="divider"></div>
+                <div class="text">本文结束 </div>
+                <div class="divider"></div>
+            </div>
+            <blockquote>
+                <p>
+                    原文链接：<a href="/gin-chn-document/">Gin v1.4 中文文档</a><br/>
+                    关注作者：<a href="https://github.com/dreamans">Dreamans</a>
+                </p>
+            </blockquote>
+            <div class="qrcode">
+                <img src="/image/learn2code.jpg" />
+                <div>扫码关注微信公众号: Learn2Code</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <aside><div id="gitalk-container"></div></aside>
+        <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+        <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+        <script type="text/javascript">
+            let gitalk = new Gitalk({
+                clientID: '1b28f00e8906743e8212',
+                clientSecret: 'c9aa867f9727e0acac4310c722646cabee71bd42',
+                repo: 'blog-comments',
+                owner: 'dreamans',
+                admin: ['dreamans'],
+                id: location.pathname,
+                distractionFreeMode: false
+            })
+            gitalk.render('gitalk-container')
+        </script>
+    </div>
+</section>
+
+<section class="section footer-cpy">
+    <div class="container">
+        
+        <p><a href="https://rsy.me">Dreamans</a> &copy; 2019 </p>
+        
+        
+        <p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/ribice/kiss">Kiss</a> &amp; <a href="https://github.com/dreamans/dreamans.github.io">Github</a>.</p>
+        
+    </div>
+</section>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40173659-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-40173659-1');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9542943732178460",
+    enable_page_level_ads: true
+  });
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?efd3d86f457a857458dc0e389eb7fd4b";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body>
+</html>
+

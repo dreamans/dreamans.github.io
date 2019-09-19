@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on Dreamans&#39;s Blog</title>
+    <link>https://rsy.me/tags/golang/</link>
+    <description>Recent content in golang on Dreamans&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Dreamans</copyright>
+    <lastBuildDate>Wed, 18 Sep 2019 20:49:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://rsy.me/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gin v1.4 中文文档</title>
+      <link>https://rsy.me/gin-chn-document/</link>
+      <pubDate>Wed, 18 Sep 2019 20:49:39 +0800</pubDate>
+      
+      <guid>https://rsy.me/gin-chn-document/</guid>
+      <description>&lt;h1 id=&#34;gin-web-框架&#34;&gt;Gin Web 框架&lt;/h1&gt;
+
+&lt;p&gt;Gin是一款用Go（Golang）编写的Web框架. 它拥有 Martini-like API 的特性, 具有更好的性能, 速度较&lt;a href=&#34;https://github.com/julienschmidt/httprouter&#34;&gt;httprouter&lt;/a&gt;提高了40倍. 如果你需要表现和良好的生产力，你会爱上Gin.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
