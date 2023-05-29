@@ -1,0 +1,291 @@
+<!DOCTYPE html><html lang="en" q:render="static-ssr" q:container="paused" q:version="1.1.4" q:base="/build/" q:locale><!--qv q:id=0 q:key=w5MY:OG_0--><!--qv q:id=1 q:key=TxCF:eW_4--><!--qv q:s q:sref=1 q:key=--><head q:head><meta charSet="utf-8" q:head><!--qv q:id=2 q:key=pTmg:eW_0--><!--qv q:key=Py_7--><title q:head>Qwik - Framework reimagined for the edge</title><meta name="description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><link rel="canonical" href="https://qwik.builder.io/demo/tasks/use-visible-task/" q:id="3" q:head><meta name="viewport" content="width=device-width, initial-scale=1" q:head><meta name="apple-mobile-web-app-title" content="Qwik" q:head><meta name="application-name" content="Qwik" q:head><meta name="apple-mobile-web-app-title" content="Qwik" q:head><meta name="theme-color" content="#006ce9" q:head><meta name="color-scheme" content="dark light" q:head><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" q:head><link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" q:head><!--qv q:key=Py_2--><!--qv q:key=Jw_0--><meta property="og:url" content="https://qwik.builder.io/demo/tasks/use-visible-task/" q:head><meta property="og:title" content="Qwik - Framework reimagined for the edge" q:head><meta property="og:description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><meta property="og:image" content="https://qwik.builder.io/logos/social-card.png?v=3" q:head><meta property="og:image:alt" content="Image of Qwik Framework Logo, Framework reimagined for the edge. Code snippet npm create qwik@latest" q:head><meta property="og:image:width" content="800" q:head><meta property="og:image:height" content="418" q:head><meta property="og:type" content="website" q:head><meta property="og:site_name" content="Qwik" q:head><meta property="og:locale" content="en_US" q:head><meta name="twitter:card" content="summary_large_image" q:head><meta name="twitter:site" content="@QwikDev" q:head><meta name="twitter:title" content="Qwik - Framework reimagined for the edge" q:head><meta name="twitter:description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><meta name="twitter:image" content="https://qwik.builder.io/logos/social-card.png?v=3" q:head><meta name="twitter:image:alt" content="Image of Qwik Framework Logo, Framework reimagined for the edge. Code snippet npm create qwik@latest" q:head><meta property="fb:app_id" content="676395883130092" q:head><!--/qv--><!--qv q:key=Vt_0--><script q:head>!(function(w,p,f,c){c=w[p]=w[p]||{};c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.8.0 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,l,p){function u(){p||(p=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.0":"sandbox-sw.html?"+Date.now()),e.querySelector(o.sandboxParent||"body").appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><script type="text/partytown" q:head>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NR2STLN');</script><script type="text/partytown" src="https://cdn.jsdelivr.net/npm/@builder.io/persist-attribution@0.0.1-beta-2/dist/persist-attribution.min.js" id="persist-attribution-init" data-send-page-view-events="true" q:head></script><link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" q:head><link rel="dns-prefetch" href="https://cdn.builder.io/" q:head><!--/qv--><!--/qv--><!--qv q:key=Py_6--><script q:key="XY_0" q:head>
+        document.firstElementChild
+            .setAttribute('data-theme',
+                localStorage.getItem('theme-preference') ??
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            )</script><!--/qv--><!--/qv--><!--/qv--><link rel="stylesheet" href="/build/q-114aca15.css"><style q:style="lcydw1-0" hidden>:root{view-transition-name:none}</style></head><body q:id="4"><!--qv q:id=5 q:key=e0ss:eW_1--><!--qv q:key=zl_1--><!--qv q:id=6 q:key=RZvE:zl_0--><!--qv q:s q:sref=6 q:key=--><!--qv q:id=7 q:key=zMS3:zl_0--><style q:style="2cfjaa-0" hidden>demo {
+  display: block;
+  padding: 0.75em;
+}
+
+demo h1 {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+demo button {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: #f7f7f7;
+  color: #333;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+demo input,
+demo textarea {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1px 2px;
+  margin: 0 4px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+demo label {
+  display: block;
+  font-weight: bold;
+}
+
+demo a {
+  color: #0070c9;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+demo a:hover {
+  color: #003a6d;
+  background-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+demo a:active {
+  color: #e60000;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+demo ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+  list-style-type: square;
+}
+
+demo li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding-left: 0;
+  list-style-type: none;
+  margin-left: 1em;
+}
+
+#console.console {
+  background-color: #333;
+  border-radius: 8px 8px 0 8px;
+  padding: 1em;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: x-small;
+  overflow: scroll;
+  max-height: 85vh;
+  max-width: 75vw;
+}
+
+#console > ul {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+#console > h1 {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+#console > li {
+}
+
+#console span {
+  white-space: break-spaces;
+  padding-right: 1em;
+}
+
+#console li.debug {
+  color: #87ceeb; /* or any other light blue color */
+}
+
+#console li.error {
+  color: #ff0000; /* or any other bold red color */
+}
+
+#console li.info {
+  color: #00ff7f; /* or any other cool green color */
+}
+
+#console li.log {
+  color: #a9a9a9; /* or any other neutral grey color */
+}
+
+#console li.warn {
+  color: #ffff00; /* or any other bright yellow color */
+}
+</style><demo q:key="An_1"><!--qv q:s q:sref=7 q:key=--><!--qv q:id=8 q:key=XgW2:zl_0--><!--qv q:key=X3_1--><div style="position: sticky; top:0">Scroll to see clock. (Currently clock is<!--t=9--> not running<!---->.)</div><div style="height: 200vh"></div><!--qv q:id=a q:key=zX5T:X3_0--><div on:qvisible="q-4d9e75c0.js#_hW[0]" q:key="X3_2" q:id="b"><!--t=c-->paused<!----></div><!--/qv--><!--/qv--><!--/qv--><!--/qv--><ul id="console"></ul><script>(function logQSymbols() {
+  if (location.search.indexOf("console") == -1)
+    return;
+  const consoleUl = document.getElementById("console");
+  consoleUl.className = "console";
+  consoleUl.innerHTML = "<h1>Console</h1>";
+  function interceptLogFn(name2) {
+    const delegate = console[name2];
+    console[name2] = function(...args) {
+      const li = document.createElement("li");
+      li.className = name2;
+      consoleUl.appendChild(li);
+      for (let i = 0; i < args.length; i++) {
+        let arg = args[i];
+        let style2 = "";
+        if (typeof arg === "string" && arg.indexOf("%c") == 0) {
+          arg = arg.substring(2);
+          style2 = args[++i];
+        }
+        const span = document.createElement("span");
+        span.textContent = arg;
+        span.className = name2;
+        span.setAttribute("style", style2);
+        li.appendChild(span);
+        consoleUl.scroll(0, Number.MAX_SAFE_INTEGER);
+      }
+      return delegate.apply(console, args);
+    };
+  }
+  [
+    "debug",
+    "error",
+    "info",
+    "log",
+    "warn"
+  ].forEach(interceptLogFn);
+})()</script></demo><!--/qv--><!--/qv--><!--/qv--><script>(function(){
+  const l=location,c=l.pathname+l.search,t="_qCityPopstateFallback",o="_qCityHistory";window[t]||(window[t]=()=>{window[o]||c===(l.pathname+l.search)||l.reload()},setTimeout(()=>{addEventListener("popstate",window[t])},0))
+})();
+</script><!--/qv--><!--/qv--><!--qv q:key=eW_2--><script q:key="1Z_0">((s,a,i,r)=>{i=(e,t)=>{t=document.querySelector("[q\\:base]"),t&&a.active&&a.active.postMessage({type:"qprefetch",base:t.getAttribute("q:base"),...e})},document.addEventListener("qprefetch",e=>{const t=e.detail;a?i(t):t.bundles&&s.push(...t.bundles)}),navigator.serviceWorker.register("/service-worker.js").then(e=>{r=()=>{a=e,i({bundles:s})},e.installing?e.installing.addEventListener("statechange",t=>{t.target.state=="activated"&&r()}):e.active&&r()}).catch(e=>console.error(e))})([])</script><!--/qv--><!--qv q:key=eW_3--><script q:key="xh_0">
+  ((d, sentStats) => {
+    const id = () => Math.round(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
+    const pageId = id();
+    const sessionId = (sessionStorage["q:sId"] = sessionStorage["q:sId"] || id());
+    const now = Date.now();
+    const sessionStart = parseInt((sessionStorage["q:sTs"] = sessionStorage["q:sTs"] || now), 10);
+    const sessionOffset = now - sessionStart;
+    const visitorId = (localStorage["q:vId"] = localStorage["q:vId"] || id());
+    const qEvents = [];
+    const loggedQrls = new Set();
+
+    const send = () => {
+      if (qEvents.length > 0) {
+        fetch("https://cdn.builder.io/api/v1/track", {
+          method: "POST",
+          body: JSON.stringify({ events: qEvents }),
+          keepalive: true,
+        });
+        qEvents.length = 0;
+      }
+
+    };
+
+    const queue = (type, metadata) => {
+      qEvents.push({
+        type: type,
+        data: {
+          metadata: {
+            url: location.href,
+            pageId: pageId,
+            sessionOffset: sessionOffset,
+            ...metadata
+          },
+          ownerId: "YJIGb4i01jvw0SRdL5Bt",
+          sessionId: sessionId,
+          visitorId: visitorId
+        },
+      });
+    };
+
+    d.addEventListener("qsymbol", (ev) => {
+      try {
+        const detail = ev.detail;
+        const qsymbol = detail?.symbol;
+        console.debug('Symbol', qsymbol);
+        if (qsymbol && !loggedQrls.has(qsymbol)) {
+          loggedQrls.add(qsymbol);
+
+          queue("qrl", {
+            reqTime: Math.round(detail?.reqTime ?? -1),
+            execTime: Math.round(performance.now()),
+            qsymbol: qsymbol,
+          });
+
+          if (qEvents.length > 9) {
+            send();
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    d.addEventListener("visibilitychange", () => {
+      if (d.visibilityState === "hidden") {
+        try {
+          if (!sentStats) {
+            sentStats = true;
+
+            const metadata = {
+              perf: [],
+              ua: navigator.userAgent,
+            };
+            const entryTypes = ["navigation", "paint", "longtask"];
+
+            if (performance.getEntriesByType) {
+              for (const entryTypeName of entryTypes) {
+                for (const entry of performance.getEntriesByType(entryTypeName)) {
+                  metadata.perf.push(entry.toJSON());
+                }
+              }
+            }
+
+            if (navigator.connection) {
+              metadata.conn = {};
+              for (const n in navigator.connection) {
+                if (navigator.connection[n] && typeof navigator.connection[n] !== "function") {
+                  metadata.conn[n] = navigator.connection[n];
+                }
+              }
+            }
+            queue('qstats', metadata);
+          }
+          send();
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  })(document);
+</script><!--/qv--></body><!--/qv--><!--/qv--><!--/qv--><script type="qwik/json">{"refs":{"b":"8"},"ctx":{},"objs":["\u00122","\u0012*c",false,"\u00110 @0","#9",{"isRunning":"0"},"#c","\u0002q-4d9e75c0.js#s_BZqT08M6Wsk[5! 1]","\u00031 1 7 #a"],"subs":[["3 #9 3 #9"],["3 #c 1 #c"]]}</script><script q:func="qwik/json">document.currentScript.qFuncs=[(p0,)=>(p0.value?" running":" not running")]</script><script type="module">document.dispatchEvent(new CustomEvent("qprefetch",{detail:{"bundles":["q-4d9e75c0.js","q-4a129f99.js","q-71956c83.js"]}}))</script><script id="qwikloader">((e,t)=>{const n="__q_context__",o=window,s=new Set,i=t=>e.querySelectorAll(t),a=(e,t,n=t.type)=>{i("[on"+e+"\\:"+n+"]").forEach((o=>f(o,e,t,n)))},r=(e,t)=>e.getAttribute(t),l=t=>{if(void 0===t._qwikjson_){let n=(t===e.documentElement?e.body:t).lastElementChild;for(;n;){if("SCRIPT"===n.tagName&&"qwik/json"===r(n,"type")){t._qwikjson_=JSON.parse(n.textContent.replace(/\\x3C(\/?script)/g,"<$1"));break}n=n.previousElementSibling}}},c=(e,t)=>new CustomEvent(e,{detail:t}),f=async(t,o,s,i=s.type)=>{const a="on"+o+":"+i;t.hasAttribute("preventdefault:"+i)&&s.preventDefault();const c=t._qc_,f=null==c?void 0:c.li.filter((e=>e[0]===a));if(f&&f.length>0){for(const e of f)await e[1].getFn([t,s],(()=>t.isConnected))(s,t);return}const b=r(t,a);if(b){const o=t.closest("[q\\:container]"),i=new URL(r(o,"q:base"),e.baseURI);for(const a of b.split("\n")){const r=new URL(a,i),c=r.hash.replace(/^#?([^?[|]*).*$/,"$1")||"default",f=performance.now(),b=import(r.href.split("#")[0]);l(o);const p=(await b)[c],u=e[n];if(t.isConnected)try{e[n]=[t,s,r],d("qsymbol",{symbol:c,element:t,reqTime:f}),await p(s,t)}finally{e[n]=u}}}},d=(t,n)=>{e.dispatchEvent(c(t,n))},b=e=>e.replace(/([A-Z])/g,(e=>"-"+e.toLowerCase())),p=async e=>{let t=b(e.type),n=e.target;for(a("-document",e,t);n&&n.getAttribute;)await f(n,"",e,t),n=e.bubbles&&!0!==e.cancelBubble?n.parentElement:null},u=e=>{a("-window",e,b(e.type))},w=()=>{var n;const a=e.readyState;if(!t&&("interactive"==a||"complete"==a)&&(t=1,d("qinit"),(null!=(n=o.requestIdleCallback)?n:o.setTimeout).bind(o)((()=>d("qidle"))),s.has("qvisible"))){const e=i("[on\\:qvisible]"),t=new IntersectionObserver((e=>{for(const n of e)n.isIntersecting&&(t.unobserve(n.target),f(n.target,"",c("qvisible",n)))}));e.forEach((e=>t.observe(e)))}},q=(e,t,n,o=!1)=>e.addEventListener(t,n,{capture:o,passive:!1}),v=t=>{for(const n of t)s.has(n)||(q(e,n,p,!0),q(o,n,u),s.add(n))};if(!e.qR){const t=o.qwikevents;Array.isArray(t)&&v(t),o.qwikevents={push:(...e)=>v(e)},q(e,"readystatechange",w),w()}})(document);</script><script>window.qwikevents.push("qvisible")</script></html>

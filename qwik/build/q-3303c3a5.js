@@ -1,0 +1,5 @@
+import{d as o,F as i,H as t,g as a}from"./q-71956c83.js";const s={title:"Binding Expressions",meta:[],styles:[],links:[],frontmatter:{contributors:["adamdbradley"]}},l={title:"Binding Expressions",contributors:["adamdbradley"]};function r(n){const e=Object.assign({p:"p",code:"code",ul:"ul",li:"li"},n.components);return t(a,{children:[t(e.p,{children:["The purpose of components is to merge data with the JSX template. You use the ",t(e.code,{children:"{expression}"})," to inject data into a template. Expressions are placed either as a text node or attribute on an element."]}),`
+`,t(e.ul,{children:[`
+`,t(e.li,{children:["Bind ",t(e.code,{children:"data.name"})," to the ",t(e.code,{children:"value"})," attribute of ",t(e.code,{children:"<input/>"}),"."]}),`
+`,t(e.li,{children:["Bind ",t(e.code,{children:"data.description"})," to the value of ",t(e.code,{children:"<textarea/>"}),"."]}),`
+`]})]})}function d(n={}){const{wrapper:e}=n.components||{};return e?t(e,Object.assign({},n,{children:t(r,n)})):r(n)}const h=()=>o(i,{children:o(d,{},3,null)},3,"WRnDqSVG");export{h as default,l as frontmatter,s as head};

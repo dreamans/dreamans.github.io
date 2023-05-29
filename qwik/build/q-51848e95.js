@@ -1,0 +1,1 @@
+import{s,_}from"./q-71956c83.js";const r=async()=>alert(await s(()=>_(()=>import("./q-3240c5fa.js"),["build/q-3240c5fa.js","build/q-71956c83.js","build/q-17fdbb02.js","build/q-9b8e80aa.js","build/q-4a129f99.js","build/q-51e784cc.js","build/q-8ae4b5a3.js","build/q-7cfb350c.js"]),"s_yImYiU28Umk").resolve());export{r as s_2QksjzXA0I0};

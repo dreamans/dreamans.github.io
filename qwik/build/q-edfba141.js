@@ -1,0 +1,1 @@
+import{Q as l}from"./q-03bf0c96.js";import{c as r,d as o}from"./q-71956c83.js";import"./q-307c928d.js";import"./q-226b22b4.js";import"./q-725317a4.js";import"./q-ec898bcd.js";const s=()=>r("main",null,null,[r("p",null,null,"Hello from Qwik",3,null),o(l,null,3,"Ut_0")],1,"Ut_1");export{s as s_HIVZywiTP00};

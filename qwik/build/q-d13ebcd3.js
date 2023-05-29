@@ -1,0 +1,1 @@
+import{c as o,w as t}from"./q-71956c83.js";import{useDadJoke as n}from"./q-392be302.js";import"./q-d84644e3.js";const i=()=>{const l=n();return o("section",null,{class:"section bright"},o("p",null,null,t(r=>r.value.joke,[l]),3,null),3,"ZP_0")};export{i as s_CZZ0rYl92rk};

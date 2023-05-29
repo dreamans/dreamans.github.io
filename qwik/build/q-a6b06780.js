@@ -1,0 +1,1 @@
+const t={text:"Community",items:[{text:"Community",items:[{text:"Groups",href:"/community/groups/"},{text:"Projects",href:"/community/projects/"},{text:"Values",href:"/community/values/"}]}]};export{t as default};

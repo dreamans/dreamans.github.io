@@ -1,0 +1,1 @@
+import{b as s,h as r,s as o,_ as a}from"./q-71956c83.js";import{r as e}from"./q-d84644e3.js";const i=e(r("s_Fi4TYPmX90s")),m=s(o(()=>a(()=>import("./q-249bb5f9.js"),["build/q-249bb5f9.js","build/q-71956c83.js","build/q-d84644e3.js"]),"s_ir6eShU3HAM"));export{m as default,i as useQueryData};

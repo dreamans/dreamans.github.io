@@ -1,0 +1,1 @@
+import{i as s}from"./q-71956c83.js";const e=async()=>{const[t]=s();t.selectedOutputDetail="options"},c=async()=>{const[t]=s();t.selectedOutputDetail="console"};export{c as s_J7Cd0jO05IY,e as s_MbH3hL9RTzs};

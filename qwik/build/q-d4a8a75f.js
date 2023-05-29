@@ -1,0 +1,1 @@
+import{MyButton as r}from"./q-4c238d1f.js";import{c as o,d as e,v as t}from"./q-71956c83.js";const l=()=>o("p",null,null,["Some text:",e(r,{text:"Click me",[t]:{text:t}},3,"99_1")],1,"99_2");export{l as s_2y2nxB87G0c};

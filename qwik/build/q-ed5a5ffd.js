@@ -1,0 +1,1 @@
+import{d as e,w as s,g as n}from"./q-71956c83.js";const c=o=>(console.log("Render: <DisplayB>"),e(n,{children:s(r=>r.store.countB,[o])},3,"8c_4")),l=o=>(console.log("Render: <DisplayB>"),e(n,{children:s(r=>r.store.countB,[o])},3,"yW_4"));export{c as s_I36AgVbb6Q0,l as s_IbhEBS0JG2E};

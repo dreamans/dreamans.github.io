@@ -1,0 +1,1 @@
+import{b as s,s as t,_ as e}from"./q-71956c83.js";const i=s(t(()=>e(()=>import("./q-8bccf424.js"),["build/q-8bccf424.js","build/q-4bc7de01.js","build/q-b02a0988.js","build/q-71956c83.js","build/q-d84644e3.js"]),"s_w5MYBhIX0cA"));function a(){window.symbols=[],document.addEventListener("qsymbol",o=>window.symbols.push(o.detail))}export{a as collectSymbols,i as default};

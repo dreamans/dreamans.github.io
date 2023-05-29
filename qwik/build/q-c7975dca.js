@@ -1,0 +1,1 @@
+import{_auto_Accordion as r}from"./q-08966f86.js";import{d as e}from"./q-71956c83.js";const n=()=>e(r,{children:"I am pre-rendered on the Server and hidden until needed."},3,"fF_2");export{n as s_BEsg0K0NLHI};

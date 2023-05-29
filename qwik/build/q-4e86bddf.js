@@ -1,0 +1,1 @@
+import{_auto_Child as l}from"./q-93c2bf30.js";import{d as r,c as t,g as n}from"./q-71956c83.js";const o=()=>r(n,{children:[t("p",null,null,"Parent Text",3,null),r(l,null,3,"yu_0")]},1,"yu_1");export{o as s_edY0L0xtgLg};

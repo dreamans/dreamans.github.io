@@ -1,0 +1,1 @@
+import{b as _,s,_ as o}from"./q-71956c83.js";const i=_(s(()=>o(()=>import("./q-6cc4efc6.js"),["build/q-6cc4efc6.js","build/q-71956c83.js"]),"s_2BdntuTwN00")),e=_(s(()=>o(()=>import("./q-18bea2fb.js"),["build/q-18bea2fb.js","build/q-71956c83.js"]),"s_J20fEZTqGFw"));export{i as Collapsible,e as default};

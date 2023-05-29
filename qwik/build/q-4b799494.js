@@ -1,0 +1,46 @@
+import{d as t,F as r,H as n,g as i}from"./q-71956c83.js";const s=[{text:"Qwikloader",id:"qwikloader",level:1},{text:"How does it work",id:"how-does-it-work",level:2},{text:"Events and qwikloader",id:"events-and-qwikloader",level:2}],d={title:"Qwikloader",meta:[],styles:[],links:[],frontmatter:{contributors:["manucorporat","adamdbradley","literalpie","mhevery"]}},h={title:"Qwikloader",contributors:["manucorporat","adamdbradley","literalpie","mhevery"]};function o(l){const e=Object.assign({h1:"h1",a:"a",span:"span",p:"p",ul:"ul",li:"li",code:"code",h2:"h2",div:"div",pre:"pre",ol:"ol",strong:"strong"},l.components);return n(i,{children:[n(e.h1,{id:"qwikloader",children:[n(e.a,{"aria-hidden":"true",tabindex:"-1",href:"#qwikloader",children:n(e.span,{class:"icon icon-link"})}),"Qwikloader"]}),`
+`,n(e.p,{children:"Qwik is designed for fine-grained lazy loading of your application. To achieve lazy-loading, Qwik requires a tiny piece of JavaScript to load at the beginning that knows how to download the rest of the application on an as-needed basis. We refer to that JavaScript as Qwikloader."}),`
+`,n(e.p,{children:"Qwikloader is:"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Small: about 1 kb minified."}),`
+`,n(e.li,{children:"Fast: it executes in less than 5ms even on mobile devices. (Initial cost, not per event cost.)"}),`
+`]}),`
+`,n(e.p,{children:"How it is delivered:"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:["Because of its size, we recommend delivering Qwikloader in an inlined ",n(e.code,{children:"<script>"})," tag. This way, the browser does not have to pay the cost of creating another connection to the server."]}),`
+`]}),`
+`,n(e.p,{children:"Qwikloader's Purpose:"}),`
+`,n(e.ul,{children:[`
+`,n(e.li,{children:"Register global browser events."}),`
+`,n(e.li,{children:"If an event occurs, search the DOM for the corresponding event attribute pointing to the QRL that should be lazy-loaded."}),`
+`,n(e.li,{children:"Lazy-load the event handler and execute it."}),`
+`]}),`
+`,n(e.h2,{id:"how-does-it-work",children:[n(e.a,{"aria-hidden":"true",tabindex:"-1",href:"#how-does-it-work",children:n(e.span,{class:"icon icon-link"})}),"How does it work"]}),`
+`,n(e.p,{children:"Below you can find simple HTML with Qwikloader and a button with associated behavior."}),`
+`,n(e.div,{"data-rehype-pretty-code-fragment":"",children:n(e.pre,{"data-language":"html","data-theme":"default",children:n(e.code,{"data-language":"html","data-theme":"default",children:[n(e.span,{class:"line",children:[n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"html"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"  "}),n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"body"}),n(e.span,{style:{color:"#D4D4D4"},children:" "}),n(e.span,{style:{color:"#9CDCFE"},children:"q:base"}),n(e.span,{style:{color:"#D4D4D4"},children:"="}),n(e.span,{style:{color:"#CE9178"},children:'"/build/"'}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"    "}),n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"button"}),n(e.span,{style:{color:"#D4D4D4"},children:" "}),n(e.span,{style:{color:"#9CDCFE"},children:"on:click"}),n(e.span,{style:{color:"#D4D4D4"},children:"="}),n(e.span,{style:{color:"#CE9178"},children:'"./myHandler.js#clickHandler"'}),n(e.span,{style:{color:"#808080"},children:">"}),n(e.span,{style:{color:"#D4D4D4"},children:"push me"}),n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"button"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"    "}),n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"script"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"      "}),n(e.span,{style:{color:"#6A9955"},children:"/* Qwikloader */"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"    "}),n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"script"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"  "}),n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"body"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"html"}),n(e.span,{style:{color:"#808080"},children:">"})]})]})})}),`
+`,n(e.ol,{children:[`
+`,n(e.li,{children:"The browser downloads the HTML and executes the inlined Qwikloader script. The Qwikloader sets up global listeners for all browser events."}),`
+`,n(e.li,{children:["The user clicks on the ",n(e.code,{children:"<button>"}),". The browser generates a ",n(e.code,{children:"click"})," event that bubbles up the DOM until the Qwikloader's global listener intercepts it."]}),`
+`,n(e.li,{children:["The Qwikloader retraces the event path and searches for ",n(e.code,{children:"on:click"})," attribute on the elements."]}),`
+`,n(e.li,{children:["The Qwikloader uses the ",n(e.code,{children:"on:click"})," and ",n(e.code,{children:"q:base"})," attributes along with the ",n(e.code,{children:"document.baseURI"})," to build a full URL for fetching the lazy-loaded handler. Assuming the original page was served up from ",n(e.code,{children:"http://localhost/"})," the fetch URL becomes ",n(e.code,{children:"http://localhost/build/myHandler.js"}),"."]}),`
+`,n(e.li,{children:["Qwikloader retrieves the ",n(e.code,{children:"clickHandler"})," symbol, exported from ",n(e.code,{children:"http://localhost/build/myHandler.js"})," and invokes it."]}),`
+`]}),`
+`,n(e.h2,{id:"events-and-qwikloader",children:[n(e.a,{"aria-hidden":"true",tabindex:"-1",href:"#events-and-qwikloader",children:n(e.span,{class:"icon icon-link"})}),"Events and qwikloader"]}),`
+`,n(e.p,{children:"The registration of the listener creates two problems in the context of SSR/SSG that Qwik needs to solve. (For context, remember that Qwik is resumable, that is, it can continue executing the application from where the server paused without being forced to download and execute code eagerly.)"}),`
+`,n(e.ol,{children:[`
+`,n(e.li,{children:[n(e.strong,{children:"listener location"}),": Qwik needs to know where the events are in the HTML which came from the SSR/SSG."]}),`
+`,n(e.li,{children:[n(e.strong,{children:"listener code"}),": Qwik needs to know what code should run if the event is triggered."]}),`
+`]}),`
+`,n(e.p,{children:"Without the above information, Qwik would be forced to download the component template and execute it so that the listener location and closure can be recovered. This process is known as hydration, and Qwik explicitly tries to avoid hydration."}),`
+`,n(e.p,{children:["Qwik serializes the event listeners into the DOM in the form of ",n(e.a,{href:"/docs/advanced/qrl/",children:"QRLs"}),". For example:"]}),`
+`,n(e.div,{"data-rehype-pretty-code-fragment":"",children:n(e.pre,{"data-language":"html","data-theme":"default",children:n(e.code,{"data-language":"html","data-theme":"default",children:[n(e.span,{class:"line",children:[n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"div"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#D4D4D4"},children:"  "}),n(e.span,{style:{color:"#808080"},children:"<"}),n(e.span,{style:{color:"#569CD6"},children:"button"}),n(e.span,{style:{color:"#D4D4D4"},children:" "}),n(e.span,{style:{color:"#9CDCFE"},children:"on:click"}),n(e.span,{style:{color:"#D4D4D4"},children:"="}),n(e.span,{style:{color:"#CE9178"},children:'"./chunk-a.js#Counter_button_onClick[0]"'}),n(e.span,{style:{color:"#808080"},children:">"}),n(e.span,{style:{color:"#D4D4D4"},children:"0"}),n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"button"}),n(e.span,{style:{color:"#808080"},children:">"})]}),`
+`,n(e.span,{class:"line",children:[n(e.span,{style:{color:"#808080"},children:"</"}),n(e.span,{style:{color:"#569CD6"},children:"div"}),n(e.span,{style:{color:"#808080"},children:">"})]})]})})}),`
+`,n(e.p,{children:["The critical thing to notice is that Qwik generated an ",n(e.code,{children:"on:click"})," attribute, containing the value ",n(e.code,{children:"./chunk-a.js#Counter_button_onClick[0]"}),". In the above example the ",n(e.code,{children:"on:click"})," attribute solves the listener location problem, and the attribute value solves the listener code problem. By serializing the listeners into the HTML Qwik applications do not need to perform hydration on startup."]})]})}function a(l={}){const{wrapper:e}=l.components||{};return e?n(e,Object.assign({},l,{children:n(o,l)})):o(l)}const p=()=>t(r,{children:t(a,{},3,null)},3,"jCTGhJCL");export{p as default,h as frontmatter,d as head,s as headings};

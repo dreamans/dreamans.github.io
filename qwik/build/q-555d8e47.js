@@ -1,0 +1,1 @@
+import{c as n,w as i}from"./q-71956c83.js";const e=u=>n("ul",null,null,[n("li",null,null,["name: ",i(l=>l.name,[u])],3,null),n("li",null,null,["quantity: ",i(l=>l.quantity,[u])],3,null),n("li",null,null,["description: ",i(l=>l.description,[u])],3,null),n("li",null,null,["price: ",i(l=>l.price,[u])],3,null)],3,"nf_0");export{e as s_ze894ZnKDRY};

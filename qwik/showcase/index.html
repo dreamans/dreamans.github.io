@@ -1,0 +1,991 @@
+<!DOCTYPE html><html lang="en" q:render="static-ssr" q:container="paused" q:version="1.1.4" q:base="/build/" q:locale><!--qv q:id=0 q:key=w5MY:OG_0--><!--qv q:id=1 q:key=TxCF:eW_4--><!--qv q:s q:sref=1 q:key=--><head q:head><meta charSet="utf-8" q:head><!--qv q:id=2 q:key=pTmg:eW_0--><!--qv q:key=Py_7--><title q:head>Qwik Sites Showcase - Qwik</title><meta name="description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><link rel="canonical" href="https://qwik.builder.io/showcase/" q:id="3" q:head><meta name="viewport" content="width=device-width, initial-scale=1" q:head><meta name="apple-mobile-web-app-title" content="Qwik" q:head><meta name="application-name" content="Qwik" q:head><meta name="apple-mobile-web-app-title" content="Qwik" q:head><meta name="theme-color" content="#006ce9" q:head><meta name="color-scheme" content="dark light" q:head><link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" q:head><link rel="icon" href="/favicons/favicon.svg" type="image/svg+xml" q:head><!--qv q:key=Py_2--><!--qv q:key=Jw_0--><meta property="og:url" content="https://qwik.builder.io/showcase/" q:head><meta property="og:title" content="Qwik Sites Showcase - Qwik" q:head><meta property="og:description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><meta property="og:image" content="https://qwik.builder.io/logos/social-card.png?v=3" q:head><meta property="og:image:alt" content="Image of Qwik Framework Logo, Framework reimagined for the edge. Code snippet npm create qwik@latest" q:head><meta property="og:image:width" content="800" q:head><meta property="og:image:height" content="418" q:head><meta property="og:type" content="website" q:head><meta property="og:site_name" content="Qwik" q:head><meta property="og:locale" content="en_US" q:head><meta name="twitter:card" content="summary_large_image" q:head><meta name="twitter:site" content="@QwikDev" q:head><meta name="twitter:title" content="Qwik Sites Showcase - Qwik" q:head><meta name="twitter:description" content="No hydration, auto lazy-loading, edge-optimized, and fun 🎉!" q:head><meta name="twitter:image" content="https://qwik.builder.io/logos/social-card.png?v=3" q:head><meta name="twitter:image:alt" content="Image of Qwik Framework Logo, Framework reimagined for the edge. Code snippet npm create qwik@latest" q:head><meta property="fb:app_id" content="676395883130092" q:head><!--/qv--><!--qv q:key=Vt_0--><script q:head>!(function(w,p,f,c){c=w[p]=w[p]||{};c[f]=(c[f]||[]).concat(["dataLayer.push"])})(window,'partytown','forward');/* Partytown 0.8.0 - MIT builder.io */
+!function(t,e,n,i,r,o,a,d,s,c,l,p){function u(){p||(p=1,"/"==(a=(o.lib||"/~partytown/")+(o.debug?"debug/":""))[0]&&(s=e.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(f,1e4),e.addEventListener("pt0",w),r?h(1):n.serviceWorker?n.serviceWorker.register(a+(o.swPath||"partytown-sw.js"),{scope:a}).then((function(t){t.active?h():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&h()}))}),console.error):f())))}function h(t){c=e.createElement(t?"script":"iframe"),t||(c.setAttribute("style","display:block;width:0;height:0;border:0;visibility:hidden"),c.setAttribute("aria-hidden",!0)),c.src=a+"partytown-"+(t?"atomics.js?v=0.8.0":"sandbox-sw.html?"+Date.now()),e.querySelector(o.sandboxParent||"body").appendChild(c)}function f(n,r){for(w(),i==t&&(o.forward||[]).map((function(e){delete t[e.split(".")[0]]})),n=0;n<s.length;n++)(r=e.createElement("script")).innerHTML=s[n].innerHTML,e.head.appendChild(r);c&&c.parentNode.removeChild(c)}function w(){clearTimeout(d)}o=t.partytown||{},i==t&&(o.forward||[]).map((function(e){l=t,e.split(".").map((function(e,n,i){l=l[i[n]]=n+1<i.length?"push"==i[n+1]?[]:l[i[n]]||{}:function(){(t._ptf=t._ptf||[]).push(i,arguments)}}))})),"complete"==e.readyState?u():(t.addEventListener("DOMContentLoaded",u),t.addEventListener("load",u))}(window,document,navigator,top,window.crossOriginIsolated);</script><script type="text/partytown" q:head>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NR2STLN');</script><script type="text/partytown" src="https://cdn.jsdelivr.net/npm/@builder.io/persist-attribution@0.0.1-beta-2/dist/persist-attribution.min.js" id="persist-attribution-init" data-send-page-view-events="true" q:head></script><link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" q:head><link rel="dns-prefetch" href="https://cdn.builder.io/" q:head><!--/qv--><!--/qv--><!--qv q:key=Py_6--><script q:key="XY_0" q:head>
+        document.firstElementChild
+            .setAttribute('data-theme',
+                localStorage.getItem('theme-preference') ??
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+            )</script><!--/qv--><!--/qv--><!--/qv--><link rel="stylesheet" href="/build/q-114aca15.css"><style q:style="lcydw1-0" hidden>:root{view-transition-name:none}</style></head><body q:id="4"><!--qv q:id=5 q:key=e0ss:eW_1--><!--qv q:key=zl_1--><!--qv q:id=6 q:key=RZvE:zl_0--><!--qv q:s q:sref=6 q:key=--><!--qv q:id=7 q:key=FSwc:zl_0--><!--qv q:key=2n_3--><!--qv q:id=8 q:key=rQT2:2n_0--><style q:style="m9eern-0" hidden>.header-container {
+  height: var(--header-height);
+  background: var(--bg-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media (min-width: 1024px) {
+  .header-container {
+    background: var(--bg-header-color);
+    -webkit-backdrop-filter: blur(23px) saturate(4.5);
+            backdrop-filter: blur(23px) saturate(4.5);
+  }
+}
+
+.header-container.home-page-header {
+  background: transparent !important;
+  color: white;
+}
+
+.header-open .header-container.home-page-header .menu-toolkit {
+  background: #101010 !important;
+}
+
+.home-page-header .sun-and-moon:not(:hover) > :is(.moon, .sun, .sun-beams) {
+  fill: #e3e2e9 !important;
+  stroke: #e3e2e9 !important;
+}
+
+.home-page-header.sun-and-moon:is(:hover) > :is(.moon, .sun, .sun-beams) {
+  fill: #b9b8be !important;
+  stroke: #b9b8be !important;
+}
+
+.fixed-header .header-container {
+  width: 100%;
+  z-index: 40;
+}
+
+.builder-bar {
+  position: relative;
+  z-index: 50;
+}
+
+header li {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+
+  header li {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+header li {
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+header a.active {
+  color: var(--interactive-text-color);
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header li a:hover svg {
+  opacity: 0.8;
+}
+
+header .mobile-menu {
+  height: var(--header-height);
+  position: absolute;
+  right: 0;
+  padding: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+
+  header .mobile-menu {
+    display: none;
+  }
+}
+
+header .menu-toolkit {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+
+  header .menu-toolkit {
+    display: flex;
+  }
+}
+
+header .menu-toolkit {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+@media (min-width: 1024px) {
+
+  header .menu-toolkit {
+    padding-top: 0px;
+  }
+}
+
+header .menu-toolkit {
+  height: 100%;
+  align-items: center;
+}
+
+header .more-icon {
+  display: block;
+}
+
+header .close-icon {
+  display: none;
+}
+
+header .header-inner {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: var(--header-height);
+}
+
+.full-width header .header-inner {
+  max-width: 100%;
+}
+
+header .header-logo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: max(0px, calc(50% - 45rem));
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+}
+
+.full-width header .header-logo {
+  left: 0;
+}
+
+@media (max-width: 1023px) {
+  header .qwik-logo {
+    width: auto;
+    height: 33px;
+    margin-left: 0.5rem;
+  }
+
+  header .header-logo {
+    padding-left: 0.5rem;
+  }
+
+  header .mobile-menu {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-open header ul:not([role='listbox']) {
+    position: absolute;
+    z-index: 10;
+    display: block;
+    top: var(--header-height);
+    width: 100%;
+    background: var(--bg-color);
+    height: auto;
+  }
+
+  .header-open header .more-icon {
+    display: none;
+  }
+
+  .header-open header .close-icon {
+    display: block;
+  }
+
+  .header-open .menu-toolkit li {
+    text-align: center;
+  }
+}
+</style><!--qv q:key=nO_10--><div class="builder-bar" on:qvisible="q-63d85f9e.js#_hW[0]" q:key="nO_1" q:id="9"><!--qv q:id=a q:key=sya2:nO_0--><div class="builder" q:key="ep_1"><!--cq--><div q:container="paused" q:version="0.100.0" q:render="ssr-dev" q:base="https://cdn.builder.io/api/v1/qwik-js/oss-top-bar/8530d4c1631345708e503f7852d7e9ec/YJIGb4i01jvw0SRdL5Bt/06a85a2a44f76efac004d983da64318fa95b5a9b/fragment/" class="qc📦"><div builder-content-id="8530d4c1631345708e503f7852d7e9ec"><style>.oss-top-bar .builder-text p {
+  color: inherit;
+}</style><!--qv q:id=0 q:key=Comp:--><style q:style="7y1lv2-1" hidden>.co6ceyd{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;background-color:rgba(0, 0, 0, 1);padding-left:0px;padding-right:0px}.cx4gv48{position:relative;flex-shrink:0;box-sizing:border-box;width:100%;margin-left:auto;margin-right:auto;max-width:1400px;display:flex;flex-direction:row;padding-left:21px;padding-right:19px;background-color:rgba(0, 0, 0, 1)}.cx1uur9{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;overflow:hidden;margin-bottom:15px;margin-top:15px;max-width:105px;margin-left:3px;cursor:pointer;pointer-events:auto;width:100%}.cxosoj2{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:auto;line-height:normal;height:auto;color:rgba(255, 255, 255, 1);margin-bottom:auto;margin-left:auto;margin-right:0;font-family:"Poppins", sans-serif;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;pointer-events:auto}@media (max-width: 640px){.co6ceyd{padding-bottom:0px}}@media (max-width: 991px){.cx4gv48{padding-left:16px}}@media (max-width: 640px){.cx4gv48{display:flex;flex-direction:row;padding-left:13px;padding-right:3px;margin-top:0px}}@media (max-width: 991px){.cx1uur9{width:100%;margin-left:4px}}@media (max-width: 640px){.cx1uur9{margin-right:13px;max-width:86px;margin-top:11px;margin-bottom:11px}}@media (max-width: 640px){.cxosoj2{margin-left:auto;text-align:center;font-size:12px;margin-right:7px}}</style><style q:style="pzbs3a-2" hidden>.oss-top-bar .builder-text p {
+  color: inherit;
+}</style><div builder-id="builder-265b49b53bcf4deeb5ee08909f1a5d8e" class="co6ceyd builder-block"><div builder-id="builder-2923e291d7eb43c3a168c97f6e220056" class="cx4gv48 oss-top-bar" on:click="high.js#Component8530D4C1631345708E503F7852D7E9EC_onClick_0[0 1]" q:id="1"><a href="https://www.builder.io" class="cx1uur9"><img src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F51b3f48a48514f79850f8366fa6f0248?width=105" style="object-fit:cover;object-position:center;position:absolute;height:100%;width:100%;top:0;left:0" sizes="(max-width: 638px) 14vw, (max-width: 998px) 11vw, 8vw" alt="Builder.io" loading="lazy"><div style="width:100%;padding-top:21.5%;pointer-events:none;font-size:0" class="builder-image-sizer"></div></a><a href="https://www.builder.io/m/developers?utm_campaign=Visits%20and%20sign-ups%20from%20builder.io%20bar%20on%20qwik%20and%20partytown%20docs&amp;utm_source=OSS%20referral&amp;utm_medium=qwik%20and%20partytown%20banner" block-id="builder-68bc07eb7bce4bac958964e2cb83b1bf" class="cxosoj2"><div class="builder-text" q:key="builder-894d330bcf6a405581c084dd888b9f12"><p><span style="color: rgb(255, 255, 255);">Visual Headless CMS for Qwik →</span></p></div></a></div></div><!--/qv--></div><script type="qwik/json">{"refs":{"1":"3! a"},"ctx":{},"objs":[["6","7","8"],{},{"pathname":"5","path":"0","query":"1"},{"deviceSize":"4","location":"2","serverStateId":"9"},"large","/docs/advanced/dollar","docs","advanced","dollar","ROOT_COMPONENT_STATE",{}],"subs":[["_1"],["_1"],["_1"],["_1"]]}</script><script>window.qwikevents||=[];window.qwikevents.push("click")</script></div><!--/cq--></div><!--/qv--></div><header class="header-container"><div class="header-inner"><div class="header-logo"><a href="/"><span class="sr-only">Qwik Homepage</span><!--qv q:key=nO_2--><svg viewBox="0 0 167 53" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Qwik Logo" width="130" height="44" class="qwik-logo" q:key="g0_0"><path d="M81.9545 46.5859H75.5513V35.4045C73.4363 36.8579 71.0496 37.5749 68.4884 37.5749C65.0151 37.5749 62.4344 36.6253 60.8239 34.6487C59.2134 32.6915 58.3984 29.2034 58.3984 24.2231C58.3984 19.1266 59.3492 15.5997 61.2702 13.5456C63.23 11.4721 66.3734 10.4644 70.7004 10.4644C74.7946 10.4644 78.5201 11.0264 81.9545 12.131V46.5859ZM75.5513 16.278C74.096 15.8323 72.4661 15.6191 70.7004 15.6191C68.5272 15.6191 66.9749 16.1811 66.1017 17.3244C65.2479 18.4871 64.7823 20.6962 64.7823 23.9712C64.7823 27.0524 65.1897 29.1065 66.0435 30.2304C66.8973 31.335 68.3719 31.897 70.5452 31.897C73.3781 31.897 75.5513 30.7343 75.5513 29.2809V16.278Z" fill="currentColor"></path><path d="M91.133 11.1426C93.4033 17.4406 95.3242 23.7386 96.993 30.0948C99.205 23.5836 101.087 17.2856 102.542 11.1426H108.15C110.265 17.4406 112.031 23.7386 113.447 30.0948C115.97 23.196 117.949 16.8787 119.404 11.1426H125.71C123.033 20.173 120.064 28.777 116.785 36.8966H109.256C108.402 32.3039 107.044 26.7617 105.22 20.1536C104.056 25.2889 102.445 30.8893 100.33 36.8966H92.8018C90.2793 27.5174 87.5434 18.9522 84.6328 11.1426H91.133Z" fill="currentColor"></path><path d="M132.832 7.55758C129.999 7.55758 129.203 6.85996 129.203 3.97257C129.203 1.39523 130.018 0.794495 132.832 0.794495C135.665 0.794495 136.46 1.39523 136.46 3.97257C136.46 6.85996 135.665 7.55758 132.832 7.55758ZM129.649 11.1426H136.053V36.8966H129.649V11.1426Z" fill="currentColor"></path><path d="M166.303 11.1426C161.763 17.5956 158.581 21.5295 156.815 22.9441C158.27 23.8937 162.17 28.8933 167.002 36.916H159.628C153.613 27.7887 150.742 23.8549 149.325 23.2542V36.916H142.922V0H149.325V23.2348C150.78 22.169 153.963 18.1382 158.872 11.1426H166.303Z" fill="currentColor"></path><path d="M40.973 52.5351L32.0861 43.6985L31.9503 43.7179V43.621L13.0511 24.9595L17.708 20.4637L14.9721 4.76715L1.99103 20.8513C-0.220992 23.0798 -0.628467 26.7036 0.962635 29.3778L9.07337 42.8265C10.3152 44.9 12.566 46.1402 14.9915 46.1208L19.0081 46.082L40.973 52.5351Z" fill="#18B6F6"></path><path d="M45.8232 20.5411L44.038 17.2468L43.1066 15.5609L42.738 14.902L42.6992 14.9408L37.8094 6.47238C36.587 4.34075 34.2974 3.02301 31.8137 3.04239L27.5255 3.15865L14.7384 3.19741C12.313 3.21679 10.101 4.49577 8.87853 6.56927L1.09766 21.9945L15.0101 4.72831L33.2496 24.7656L30.0091 28.0406L31.9495 43.7178L31.9689 43.679V43.7178H31.9301L31.9689 43.7565L33.4824 45.2293L40.8364 52.4187C41.1469 52.7094 41.6514 52.3606 41.4379 51.9924L36.8975 43.0589L44.8142 28.4282L45.0664 28.1375C45.1634 28.0212 45.2604 27.905 45.3381 27.7887C46.8904 25.6764 47.1038 22.8472 45.8232 20.5411Z" fill="#AC7EF4"></path><path d="M33.3076 24.6882L15.0099 4.74774L17.61 20.3668L12.9531 24.882L31.9105 43.6985L30.203 28.0794L33.3076 24.6882Z" fill="white"></path></svg><!--/qv--></a></div><button type="button" title="Toggle right menu" aria-label="Toggle right menu" class="mobile-menu" on:click="q-63d85f9e.js#s_S0wV0vUzzSo[0]" q:id="b"><span class="more-icon"><!--qv q:key=nO_3--><svg fill="currentColor" viewBox="0 0 512 512" aria-hidden="true" width="30" height="30" q:key="0I_0"><circle cx="256" cy="256" r="48"></circle><circle cx="256" cy="416" r="48"></circle><circle cx="256" cy="96" r="48"></circle></svg><!--/qv--></span><span class="close-icon"><!--qv q:key=nO_4--><svg viewBox="0 0 10 10" role="img" aria-label="Close Icon" width="30" height="30" q:key="w7_0"><path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><!--/qv--></span></button><ul class="lg:grow lg:flex lg:justify-end lg:p-4 menu-toolkit"><li><a href="/docs/"><span>Docs</span></a></li><li><a href="/ecosystem/"><span>Ecosystem</span></a></li><li><a href="/tutorial/welcome/overview/"><span>Tutorial</span></a></li><li><a href="/examples/introduction/hello-world/"><span>Playground</span></a></li><li><!--qv q:id=c q:key=Nsni:nO_5--><style q:style="gcz2wk-0" hidden>/*! @docsearch/css 3.3.4 | MIT License | © Algolia, Inc. and contributors | https://docsearch.algolia.com */
+:root{--docsearch-primary-color:#5468ff;--docsearch-text-color:#1c1e21;--docsearch-spacing:12px;--docsearch-icon-stroke-width:1.4;--docsearch-highlight-color:var(--docsearch-primary-color);--docsearch-muted-color:#969faf;--docsearch-container-background:rgba(101,108,133,0.8);--docsearch-logo-color:#5468ff;--docsearch-modal-width:560px;--docsearch-modal-height:600px;--docsearch-modal-background:#f5f6f7;--docsearch-modal-shadow:inset 1px 1px 0 0 hsla(0,0%,100%,0.5),0 3px 8px 0 #555a64;--docsearch-searchbox-height:56px;--docsearch-searchbox-background:#ebedf0;--docsearch-searchbox-focus-background:#fff;--docsearch-searchbox-shadow:inset 0 0 0 2px var(--docsearch-primary-color);--docsearch-hit-height:56px;--docsearch-hit-color:#444950;--docsearch-hit-active-color:#fff;--docsearch-hit-background:#fff;--docsearch-hit-shadow:0 1px 3px 0 #d4d9e1;--docsearch-key-gradient:linear-gradient(-225deg,#d5dbe4,#f8f8f8);--docsearch-key-shadow:inset 0 -2px 0 0 #cdcde6,inset 0 0 1px 1px #fff,0 1px 2px 1px rgba(30,35,90,0.4);--docsearch-footer-height:44px;--docsearch-footer-background:#fff;--docsearch-footer-shadow:0 -1px 0 0 #e0e3e8,0 -3px 6px 0 rgba(69,98,155,0.12)}
+html[data-theme=dark]{--docsearch-text-color:#f5f6f7;--docsearch-container-background:rgba(9,10,17,0.8);--docsearch-modal-background:#15172a;--docsearch-modal-shadow:inset 1px 1px 0 0 #2c2e40,0 3px 8px 0 #000309;--docsearch-searchbox-background:#090a11;--docsearch-searchbox-focus-background:#000;--docsearch-hit-color:#bec3c9;--docsearch-hit-shadow:none;--docsearch-hit-background:#090a11;--docsearch-key-gradient:linear-gradient(-26.5deg,#565872,#31355b);--docsearch-key-shadow:inset 0 -2px 0 0 #282d55,inset 0 0 1px 1px #51577d,0 2px 2px 0 rgba(3,4,9,0.3);--docsearch-footer-background:#1e2136;--docsearch-footer-shadow:inset 0 1px 0 0 rgba(73,76,106,0.5),0 -4px 8px 0 rgba(0,0,0,0.2);--docsearch-logo-color:#fff;--docsearch-muted-color:#7f8497}
+.DocSearch-Button{align-items:center;background:var(--docsearch-searchbox-background);border:0;border-radius:40px;color:var(--docsearch-muted-color);cursor:pointer;display:flex;font-weight:500;height:36px;justify-content:space-between;margin:0 0 0 16px;padding:0 8px;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+.DocSearch-Button:active,.DocSearch-Button:focus,.DocSearch-Button:hover{background:var(--docsearch-searchbox-focus-background);box-shadow:var(--docsearch-searchbox-shadow);color:var(--docsearch-text-color);outline:none}
+.DocSearch-Button-Container{align-items:center;display:flex}
+.DocSearch-Search-Icon{stroke-width:1.6}
+.DocSearch-Button .DocSearch-Search-Icon{color:var(--docsearch-text-color)}
+.DocSearch-Button-Placeholder{font-size:1rem;padding:0 12px 0 6px}
+.DocSearch-Button-Keys{display:flex;min-width:calc(40px + .8em)}
+.DocSearch-Button-Key{align-items:center;background:var(--docsearch-key-gradient);border-radius:3px;box-shadow:var(--docsearch-key-shadow);color:var(--docsearch-muted-color);display:flex;height:18px;justify-content:center;margin-right:.4em;position:relative;padding:0 0 2px;border:0;top:-1px;width:20px}
+@media (max-width:768px){.DocSearch-Button-Keys,.DocSearch-Button-Placeholder{display:none}}
+.DocSearch--active{overflow:hidden!important}
+.DocSearch-Container,.DocSearch-Container *{box-sizing:border-box}
+.DocSearch-Container{background-color:var(--docsearch-container-background);height:100vh;left:0;position:fixed;top:0;width:100vw;z-index:200}
+.DocSearch-Container a{text-decoration:none}
+.DocSearch-Link{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;color:var(--docsearch-highlight-color);cursor:pointer;font:inherit;margin:0;padding:0}
+.DocSearch-Modal{background:var(--docsearch-modal-background);border-radius:6px;box-shadow:var(--docsearch-modal-shadow);flex-direction:column;margin:60px auto auto;max-width:var(--docsearch-modal-width);position:relative}
+.DocSearch-SearchBar{display:flex;padding:var(--docsearch-spacing) var(--docsearch-spacing) 0}
+.DocSearch-Form{align-items:center;background:var(--docsearch-searchbox-focus-background);border-radius:4px;box-shadow:var(--docsearch-searchbox-shadow);display:flex;height:var(--docsearch-searchbox-height);margin:0;padding:0 var(--docsearch-spacing);position:relative;width:100%}
+.DocSearch-Input{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:transparent;border:0;color:var(--docsearch-text-color);flex:1;font:inherit;font-size:1.2em;height:100%;outline:none;padding:0 0 0 8px;width:80%}
+.DocSearch-Input::-moz-placeholder{color:var(--docsearch-muted-color);opacity:1}
+.DocSearch-Input::placeholder{color:var(--docsearch-muted-color);opacity:1}
+.DocSearch-Input::-webkit-search-cancel-button,.DocSearch-Input::-webkit-search-decoration,.DocSearch-Input::-webkit-search-results-button,.DocSearch-Input::-webkit-search-results-decoration{display:none}
+.DocSearch-LoadingIndicator,.DocSearch-MagnifierLabel,.DocSearch-Reset{margin:0;padding:0}
+.DocSearch-MagnifierLabel,.DocSearch-Reset{align-items:center;color:var(--docsearch-highlight-color);display:flex;justify-content:center}
+.DocSearch-Container--Stalled .DocSearch-MagnifierLabel,.DocSearch-LoadingIndicator{display:none}
+.DocSearch-Container--Stalled .DocSearch-LoadingIndicator{align-items:center;color:var(--docsearch-highlight-color);display:flex;justify-content:center}
+@media screen and (prefers-reduced-motion:reduce){.DocSearch-Reset{animation:none;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;border-radius:50%;color:var(--docsearch-icon-color);cursor:pointer;right:0;stroke-width:var(--docsearch-icon-stroke-width)}}
+.DocSearch-Reset{animation:fade-in .1s ease-in forwards;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;border-radius:50%;color:var(--docsearch-icon-color);cursor:pointer;padding:2px;right:0;stroke-width:var(--docsearch-icon-stroke-width)}
+.DocSearch-Reset[hidden]{display:none}
+.DocSearch-Reset:hover{color:var(--docsearch-highlight-color)}
+.DocSearch-LoadingIndicator svg,.DocSearch-MagnifierLabel svg{height:24px;width:24px}
+.DocSearch-Cancel{display:none}
+.DocSearch-Dropdown{max-height:calc(var(--docsearch-modal-height) - var(--docsearch-searchbox-height) - var(--docsearch-spacing) - var(--docsearch-footer-height));min-height:var(--docsearch-spacing);overflow-y:auto;overflow-y:overlay;padding:0 var(--docsearch-spacing);scrollbar-color:var(--docsearch-muted-color) var(--docsearch-modal-background);scrollbar-width:thin}
+.DocSearch-Dropdown::-webkit-scrollbar{width:12px}
+.DocSearch-Dropdown::-webkit-scrollbar-track{background:transparent}
+.DocSearch-Dropdown::-webkit-scrollbar-thumb{background-color:var(--docsearch-muted-color);border:3px solid var(--docsearch-modal-background);border-radius:20px}
+.DocSearch-Dropdown ul{list-style:none;margin:0;padding:0}
+.DocSearch-Label{font-size:.75em;line-height:1.6em}
+.DocSearch-Help,.DocSearch-Label{color:var(--docsearch-muted-color)}
+.DocSearch-Help{font-size:.9em;margin:0;-webkit-user-select:none;-moz-user-select:none;user-select:none}
+.DocSearch-Title{font-size:1.2em}
+.DocSearch-Logo a{display:flex}
+.DocSearch-Logo svg{color:var(--docsearch-logo-color);margin-left:8px}
+.DocSearch-Hits:last-of-type{margin-bottom:24px}
+.DocSearch-Hits mark{background:none;color:var(--docsearch-highlight-color)}
+.DocSearch-HitsFooter{color:var(--docsearch-muted-color);display:flex;font-size:.85em;justify-content:center;margin-bottom:var(--docsearch-spacing);padding:var(--docsearch-spacing)}
+.DocSearch-HitsFooter a{border-bottom:1px solid;color:inherit}
+.DocSearch-Hit{border-radius:4px;display:flex;padding-bottom:4px;position:relative}
+@media screen and (prefers-reduced-motion:reduce){.DocSearch-Hit--deleting{transition:none}}
+.DocSearch-Hit--deleting{opacity:0;transition:all .25s linear}
+@media screen and (prefers-reduced-motion:reduce){.DocSearch-Hit--favoriting{transition:none}}
+.DocSearch-Hit--favoriting{transform:scale(0);transform-origin:top center;transition:all .25s linear;transition-delay:.25s}
+.DocSearch-Hit a{background:var(--docsearch-hit-background);border-radius:4px;box-shadow:var(--docsearch-hit-shadow);display:block;padding-left:var(--docsearch-spacing);width:100%}
+.DocSearch-Hit-source{background:var(--docsearch-modal-background);color:var(--docsearch-highlight-color);font-size:.85em;font-weight:600;line-height:32px;margin:0 -4px;padding:8px 4px 0;position:sticky;top:0;z-index:10}
+.DocSearch-Hit-Tree{color:var(--docsearch-muted-color);height:var(--docsearch-hit-height);opacity:.5;stroke-width:var(--docsearch-icon-stroke-width);width:24px}
+.DocSearch-Hit[aria-selected=true] a{background-color:var(--docsearch-highlight-color)}
+.DocSearch-Hit[aria-selected=true] mark{text-decoration:underline}
+.DocSearch-Hit-Container{align-items:center;color:var(--docsearch-hit-color);display:flex;flex-direction:row;height:var(--docsearch-hit-height);padding:0 var(--docsearch-spacing) 0 0}
+.DocSearch-Hit-icon{height:20px;width:20px}
+.DocSearch-Hit-action,.DocSearch-Hit-icon{color:var(--docsearch-muted-color);stroke-width:var(--docsearch-icon-stroke-width)}
+.DocSearch-Hit-action{align-items:center;display:flex;height:22px;width:22px}
+.DocSearch-Hit-action svg{display:block;height:18px;width:18px}
+.DocSearch-Hit-action+.DocSearch-Hit-action{margin-left:6px}
+.DocSearch-Hit-action-button{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;border-radius:50%;color:inherit;cursor:pointer;padding:2px}
+svg.DocSearch-Hit-Select-Icon{display:none}
+.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Select-Icon{display:block}
+.DocSearch-Hit-action-button:focus,.DocSearch-Hit-action-button:hover{background:rgba(0,0,0,.2);transition:background-color .1s ease-in}
+@media screen and (prefers-reduced-motion:reduce){.DocSearch-Hit-action-button:focus,.DocSearch-Hit-action-button:hover{transition:none}}
+.DocSearch-Hit-action-button:focus path,.DocSearch-Hit-action-button:hover path{fill:#fff}
+.DocSearch-Hit-content-wrapper{display:flex;flex:1 1 auto;flex-direction:column;font-weight:500;justify-content:center;line-height:1.2em;margin:0 8px;overflow-x:hidden;position:relative;text-overflow:ellipsis;white-space:nowrap;width:80%}
+.DocSearch-Hit-title{font-size:.9em}
+.DocSearch-Hit-path{color:var(--docsearch-muted-color);font-size:.75em}
+.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-action,.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-icon,.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-path,.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-text,.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-title,.DocSearch-Hit[aria-selected=true] .DocSearch-Hit-Tree,.DocSearch-Hit[aria-selected=true] mark{color:var(--docsearch-hit-active-color)!important}
+@media screen and (prefers-reduced-motion:reduce){.DocSearch-Hit-action-button:focus,.DocSearch-Hit-action-button:hover{background:rgba(0,0,0,.2);transition:none}}
+.DocSearch-ErrorScreen,.DocSearch-NoResults,.DocSearch-StartScreen{font-size:.9em;margin:0 auto;padding:36px 0;text-align:center;width:80%}
+.DocSearch-Screen-Icon{color:var(--docsearch-muted-color);padding-bottom:12px}
+.DocSearch-NoResults-Prefill-List{display:inline-block;padding-bottom:24px;text-align:left}
+.DocSearch-NoResults-Prefill-List ul{display:inline-block;padding:8px 0 0}
+.DocSearch-NoResults-Prefill-List li{list-style-position:inside;list-style-type:"» "}
+.DocSearch-Prefill{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;border-radius:1em;color:var(--docsearch-highlight-color);cursor:pointer;display:inline-block;font-size:1em;font-weight:700;padding:0}
+.DocSearch-Prefill:focus,.DocSearch-Prefill:hover{outline:none;text-decoration:underline}
+.DocSearch-Footer{align-items:center;background:var(--docsearch-footer-background);border-radius:0 0 8px 8px;box-shadow:var(--docsearch-footer-shadow);display:flex;flex-direction:row-reverse;flex-shrink:0;height:var(--docsearch-footer-height);justify-content:space-between;padding:0 var(--docsearch-spacing);position:relative;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;z-index:300}
+.DocSearch-Commands{color:var(--docsearch-muted-color);display:flex;list-style:none;margin:0;padding:0}
+.DocSearch-Commands li{align-items:center;display:flex}
+.DocSearch-Commands li:not(:last-of-type){margin-right:.8em}
+.DocSearch-Commands-Key{align-items:center;background:var(--docsearch-key-gradient);border-radius:2px;box-shadow:var(--docsearch-key-shadow);display:flex;height:18px;justify-content:center;margin-right:.4em;padding:0 0 1px;color:var(--docsearch-muted-color);border:0;width:20px}
+@media (max-width:768px){:root{--docsearch-spacing:10px;--docsearch-footer-height:40px}.DocSearch-Dropdown{height:100%}.DocSearch-Container{height:100vh;height:-webkit-fill-available;height:calc(var(--docsearch-vh, 1vh)*100);position:absolute}.DocSearch-Footer{border-radius:0;bottom:0;position:absolute}.DocSearch-Hit-content-wrapper{display:flex;position:relative;width:80%}.DocSearch-Modal{border-radius:0;box-shadow:none;height:100vh;height:-webkit-fill-available;height:calc(var(--docsearch-vh, 1vh)*100);margin:0;max-width:100%;width:100%}.DocSearch-Dropdown{max-height:calc(var(--docsearch-vh, 1vh)*100 - var(--docsearch-searchbox-height) - var(--docsearch-spacing) - var(--docsearch-footer-height))}.DocSearch-Cancel{-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;border:0;color:var(--docsearch-highlight-color);cursor:pointer;display:inline-block;flex:none;font:inherit;font-size:1em;font-weight:500;margin-left:var(--docsearch-spacing);outline:none;overflow:hidden;padding:0;-webkit-user-select:none;-moz-user-select:none;user-select:none;white-space:nowrap}.DocSearch-Commands,.DocSearch-Hit-Tree{display:none}}
+@keyframes fade-in{0%{opacity:0}to{opacity:1}}
+.docsearch {
+  --docsearch-searchbox-background: rgba(247, 248, 250, 1);
+  --docsearch-searchbox-focus-background: rgba(247, 248, 250, 1);
+  color: rgb(33, 53, 71);
+}
+:root[data-theme='dark'] .docsearch {
+  --docsearch-primary-color: var(--qwik-dark-blue);
+  --docsearch-text-color: var(--text-color);
+  --docsearch-highlight-color: var(--qwik-blue);
+  --docsearch-muted-color: var(--secondary-text-color);
+  --docsearch-logo-color: var(--qwik-dark-blue);
+  --docsearch-modal-background: var(--bg-color);
+  --docsearch-modal-shadow: #1d1d1d;
+  --docsearch-searchbox-background: var(--bg-color);
+  --docsearch-searchbox-focus-background: var(--bg-secondary-color);
+  --docsearch-hit-color: var(--text-color);
+  --docsearch-hit-active-color: var(--bg-color);
+  --docsearch-hit-background: var(--bg-secondary-color);
+  --docsearch-hit-shadow: 0 1px 3px 0 #1d1d1d;
+  --docsearch-key-gradient: linear-gradient(-225deg, var(--bg-secondary-color), #1d1d1d);
+  --docsearch-key-shadow: inset 0 -2px 0 0 var(--bg-color), inset 0 0 1px 1px #1d1d1d,
+    0 1px 2px 1px rgba(30, 35, 90, 0.4);
+  --docsearch-footer-background: var(--bg-color);
+  --docsearch-footer-shadow: 0 -1px 0 0 #525252, 0 -3px 6px 0 rgba(69, 98, 155, 0.12);
+}
+/* to override global.css */
+.docsearch .DocSearch-Button {
+  background-color: var(--docsearch-searchbox-background);
+  --docsearch-text-color: var(--docsearch-muted-color);
+  border: 2px solid var(--interactive-text-color);
+  --docsearch-muted-color: var(--interactive-text-color);
+  margin: 0 16px;
+}
+@media (min-width: 1000px) {
+  .docsearch.ai-result-open {
+    --docsearch-modal-width: 1000px;
+    /* max-width: 1000px; */
+  }
+
+  .docsearch.ai-result-open .DocSearch-Dropdown-Container {
+    max-width: 450px;
+  }
+
+  .docsearch.ai-result-open .qwikgpt-box {
+    position: absolute;
+    left: 475px;
+    top: 80px;
+    right: 15px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    border-radius: 4px;
+    box-shadow: var(--docsearch-hit-shadow);
+    padding: 5px 20px 20px;
+  }
+
+  .docsearch.ai-result-open .DocSearch-Dropdown {
+    min-height: 700px;
+    max-height: 70vh;
+  }
+}
+.docsearch kbd {
+  font-family: system-ui;
+}
+.docsearch ul li {
+  text-align: left;
+  margin: 0 0 4px 0;
+  padding: 0;
+}
+.docsearch a:hover {
+  text-decoration: none;
+}
+@media (max-width: 1023px) {
+  .docsearch {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+</style><div class="docsearch" on-window:keydown="q-eef9fa7b.js#s_uCl5Lf0Typ8[0 1]" q:key="Rg_2" q:id="d"><!--qv q:id=e q:key=Yisz:Rg_0--><button type="button" aria-label="Search" class="DocSearch DocSearch-Button" on:click="q-63d85f9e.js#s_I5CyQjO9FjQ[0]" q:key="bs_1" q:id="f"><span class="DocSearch-Button-Container"><!--qv q:key=bs_0--><svg width="20" height="20" viewBox="0 0 20 20" class="DocSearch-Search-Icon" q:key="4o_0"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><!--/qv--><span class="DocSearch-Button-Placeholder">Search</span></span></button><!--/qv--></div><!--/qv--></li><li><!--qv q:id=g q:key=10of:nO_6--><style q:style="h7lgia-0" hidden>.theme-toggle {
+  --size: 22px;
+  --icon-fill: hsl(210 10% 15%);
+  --icon-fill-hover: hsl(210 10% 30%);
+
+  display: block;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  outline-offset: 5px;
+}
+
+[data-theme='dark'] .theme-toggle {
+  --icon-fill: hsl(210 10% 100%);
+  --icon-fill-hover: hsl(210 15% 70%);
+}
+
+.theme-toggle > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  stroke-linecap: round;
+}
+</style><!--qv q:key=bs_1--><span class="lg:hidden"><button on:click="q-ed8a0226.js#s_3wMt7N3Wmt8[0]" q:id="h"><!--t=i-->Light<!----> theme</button></span><span class="hidden lg:block"><button type="button" id="theme-toggle" title="Toggles light &amp; dark" aria-label="auto" aria-live="polite" class="theme-toggle" on:click="q-ed8a0226.js#s_3wMt7N3Wmt8[0]" q:id="j"><!--qv q:id=k q:key=wYO9:bs_0--><style q:style="cfsuy9-0" hidden>.sun-and-moon {
+  --ease-elastic-3: cubic-bezier(0.5, 1.25, 0.75, 1.25);
+  --ease-elastic-4: cubic-bezier(0.5, 1.5, 0.75, 1.25);
+  --ease-out-5: cubic-bezier(0, 0, 0, 1);
+  --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
+}
+
+.sun-and-moon > :is(.moon, .sun, .sun-beams) {
+  transform-origin: center center;
+}
+
+.sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill);
+}
+
+.theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
+  fill: var(--icon-fill-hover);
+}
+
+.sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill);
+  stroke-width: 2px;
+}
+
+.theme-toggle:is(:hover, :focus-visible) .sun-and-moon > .sun-beams {
+  stroke: var(--icon-fill-hover);
+}
+
+[data-theme='dark'] .sun-and-moon > .sun {
+  transform: scale(1.75);
+}
+
+[data-theme='dark'] .sun-and-moon > .sun-beams {
+  opacity: 0;
+}
+
+[data-theme='dark'] .sun-and-moon > .moon > circle {
+  transform: translateX(-7px);
+}
+
+@supports (cx: 1) {
+  [data-theme='dark'] .sun-and-moon > .moon > circle {
+    transform: translateX(0);
+    cx: 17;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .sun-and-moon > .sun {
+    transition: transform 0.5s var(--ease-elastic-3);
+  }
+
+  .sun-and-moon > .sun-beams {
+    transition: transform 0.5s var(--ease-elastic-4), opacity 0.5s var(--ease-3);
+  }
+
+  .sun-and-moon .moon > circle {
+    transition: transform 0.25s var(--ease-out-5);
+  }
+
+  @supports (cx: 1) {
+    .sun-and-moon .moon > circle {
+      transition: cx 0.25s var(--ease-out-5);
+    }
+  }
+}
+
+[data-theme='dark'] .sun-and-moon > .sun {
+  transform: scale(1.75);
+  transition-timing-function: var(--ease-3);
+  transition-duration: 0.25s;
+}
+
+[data-theme='dark'] .sun-and-moon > .sun-beams {
+  transform: rotateZ(-25deg);
+  transition-duration: 0.15s;
+}
+
+[data-theme='dark'] .sun-and-moon > .moon > circle {
+  transition-delay: 0.25s;
+  transition-duration: 0.5s;
+}
+</style><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" class="sun-and-moon" q:key="nb_0"><mask id="moon-mask" class="moon"><rect x="0" y="0" width="100%" height="100%" fill="white"></rect><circle cx="24" cy="10" r="6" fill="black"></circle></mask><circle cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" class="sun"></circle><g stroke="currentColor" class="sun-beams"><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></g></svg><!--/qv--></button></span><!--/qv--><!--/qv--></li><li><a href="https://github.com/BuilderIO/qwik" target="_blank" title="GitHub"><span class="lg:hidden">GitHub</span><span class="hidden lg:block"><!--qv q:key=nO_7--><svg viewBox="0 0 16 16" fill="currentColor" role="img" aria-label="GitHub Logo" width="22" height="22" q:key="xo_0"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg><!--/qv--></span></a></li><li><a href="https://twitter.com/QwikDev" target="_blank" title="Twitter"><span class="lg:hidden">@QwikDev</span><span class="hidden lg:block"><!--qv q:key=nO_8--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" fill="currentColor" aria-label="Twitter Logo" width="22" height="22" q:key="6N_0"><path d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"></path></svg><!--/qv--></span></a></li><li><a href="https://qwik.builder.io/chat" target="_blank" title="Discord"><span class="lg:hidden">Discord</span><span class="hidden lg:block"><!--qv q:key=nO_9--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" fill="currentColor" aria-label="Discord Logo" width="22" height="22" q:key="yB_0"><path d="M464 66.52A50 50 0 00414.12 17L97.64 16A49.65 49.65 0 0048 65.52V392c0 27.3 22.28 48 49.64 48H368l-13-44 109 100zM324.65 329.81s-8.72-10.39-16-19.32C340.39 301.55 352.5 282 352.5 282a139 139 0 01-27.85 14.25 173.31 173.31 0 01-35.11 10.39 170.05 170.05 0 01-62.72-.24 184.45 184.45 0 01-35.59-10.4 141.46 141.46 0 01-17.68-8.21c-.73-.48-1.45-.72-2.18-1.21-.49-.24-.73-.48-1-.48-4.36-2.42-6.78-4.11-6.78-4.11s11.62 19.09 42.38 28.26c-7.27 9.18-16.23 19.81-16.23 19.81-53.51-1.69-73.85-36.47-73.85-36.47 0-77.06 34.87-139.62 34.87-139.62 34.87-25.85 67.8-25.12 67.8-25.12l2.42 2.9c-43.59 12.32-63.44 31.4-63.44 31.4s5.32-2.9 14.28-6.77c25.91-11.35 46.5-14.25 55-15.21a24 24 0 014.12-.49 205.62 205.62 0 0148.91-.48 201.62 201.62 0 0172.89 22.95s-19.13-18.15-60.3-30.45l3.39-3.86s33.17-.73 67.81 25.16c0 0 34.87 62.56 34.87 139.62 0-.28-20.35 34.5-73.86 36.19z"></path><path d="M212.05 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.8 0 24.7-11.83 24.7-26.57.25-14.76-10.9-26.57-24.7-26.57zM300.43 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.81 0 24.7-11.83 24.7-26.57S314 218 300.43 218z"></path></svg><!--/qv--></span></a></li></ul></div></header><!--/qv--><!--/qv--><main><!--qv q:s q:sref=7 q:key=--><!--qv q:id=l q:key=pAnl:zl_0--><style q:style="dqifpi-0" hidden>.showcase {
+  margin: 10px auto;
+  padding: 0 30px;
+  max-width: 1060px;
+}
+
+.showcase h1 {
+  font-size: 60px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.showcase .grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-auto-flow: row dense;
+  display: grid;
+  gap: 30px;
+}
+
+@media (min-width: 600px) {
+  .showcase .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .showcase li.large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (min-width: 900px) {
+  .showcase .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.showcase li {
+  display: block;
+  position: relative;
+}
+.showcase .card {
+  position: relative;
+  border-radius: 11px;
+  overflow: hidden;
+  display: block;
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+    var(--tw-shadow);
+}
+.showcase li .canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase li .backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.showcase li:hover .backdrop {
+  opacity: 1;
+}
+
+.showcase li .title {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  height: 60px;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.showcase .score {
+  margin-top: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 34px;
+  color: var(--color);
+
+  --color: #0c6;
+  position: absolute;
+  right: -56px;
+  top: -56px;
+  background: #ffffffdb;
+  border-radius: 100%;
+  -webkit-backdrop-filter: blur(4px) saturate(6.5);
+          backdrop-filter: blur(4px) saturate(6.5);
+  transition: scale 0.2s ease-in-out;
+  scale: 0.5;
+  z-index: 10;
+}
+
+.showcase .score:hover {
+  background: #ffffff;
+  scale: 0.6;
+}
+
+.showcase .score-inner {
+  position: relative;
+  margin: auto;
+  width: 100px;
+}
+
+.showcase .score-text {
+  position: absolute;
+  top: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 30px;
+}
+
+.showcase .metrics {
+  color: white;
+  font-size: 26px;
+  font-weight: 900;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.showcase .metrics > div {
+  text-align: center;
+  color: var(--color);
+}
+
+.showcase .metrics p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.showcase .metrics > div {
+  display: block;
+}
+
+.circle-1 {
+  opacity: 0.1;
+  fill: var(--color);
+  stroke: var(--color);
+}
+
+.circle-2 {
+  fill: none;
+  transform-origin: 50% 50%;
+  animation: load-gauge 1s ease forwards;
+  animation-delay: 250ms;
+  stroke-linecap: round;
+  stroke: var(--color);
+}
+
+.showcase section a {
+  font-weight: 400;
+  display: inline-block;
+  padding: 12px 0;
+  color: var(--qwik-dark-blue);
+}
+
+.showcase section a:hover {
+  text-decoration: underline;
+}
+.showcase section {
+  margin: 40px 0;
+}
+
+.showcase h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 15px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+</style><article class="showcase" q:key="68_0"><h1>Showcase</h1><ul class="grid"><!--qv q:id=m q:key=030p:https://wope.com/--><li q:key="68_2" q:id="n"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#ffaa32" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fwope.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:283.50 1000" class="circle-2"></circle></svg><div class="score-text">81</div></div></a><!--/qv--><a href="https://wope.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="o"><img width="1440" height="980" loading="lazy" src="/showcases/wope_com_.webp" aria-hidden="true" q:id="p"><div class="backdrop"><div class="metrics"><div style="--color:#f33"><h3>TTF</h3><p><!--t=q-->8.5 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=r-->1.4 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=s-->2.3 s<!----></p></div></div><p class="title"><!--t=t-->Wope: The New Era Of Rank Tracking<!----></p></div></a></li><!--/qv--><!--qv q:id=u q:key=030p:https://www.builder.io/--><li q:key="68_2" q:id="v"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fwww.builder.io%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:336.00 1000" class="circle-2"></circle></svg><div class="score-text">96</div></div></a><!--/qv--><a href="https://www.builder.io/" target="_blank" rel="nofollow noreferrer" class="card" q:id="w"><img width="1440" height="980" loading="lazy" src="/showcases/www_builder_io_.webp" aria-hidden="true" q:id="x"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=y-->2.4 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=z-->2.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=10-->2.4 s<!----></p></div></div><p class="title"><!--t=11-->Builder.io - Drag and drop Visual CMS<!----></p></div></a></li><!--/qv--><!--qv q:id=12 q:key=030p:https://jose-aguilar.vercel.app/--><li q:key="68_2" q:id="13"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fjose-aguilar.vercel.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://jose-aguilar.vercel.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="14"><img width="1440" height="980" loading="lazy" src="/showcases/jose-aguilar_vercel_app_.webp" aria-hidden="true" q:id="15"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=16-->1.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=17-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=18-->1.4 s<!----></p></div></div><p class="title"><!--t=19-->Jose Aguilar | Web developer 🚀<!----></p></div></a></li><!--/qv--><!--qv q:id=1a q:key=030p:https://shaunchander.me--><li q:key="68_2" q:id="1b"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#ffaa32" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fshaunchander.me" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:294.00 1000" class="circle-2"></circle></svg><div class="score-text">84</div></div></a><!--/qv--><a href="https://shaunchander.me" target="_blank" rel="nofollow noreferrer" class="card" q:id="1c"><img width="1440" height="980" loading="lazy" src="/showcases/shaunchander_me.webp" aria-hidden="true" q:id="1d"><div class="backdrop"><div class="metrics"><div style="--color:#ffaa32"><h3>TTF</h3><p><!--t=1e-->4.3 s<!----></p></div><div style="--color:#f33"><h3>FCP</h3><p><!--t=1f-->3.3 s<!----></p></div><div style="--color:#ffaa32"><h3>LCP</h3><p><!--t=1g-->3.3 s<!----></p></div></div><p class="title"><!--t=1h-->Shaun Chander<!----></p></div></a></li><!--/qv--><!--qv q:id=1i q:key=030p:https://reflect.app/--><li q:key="68_2" q:id="1j"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Freflect.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:318.50 1000" class="circle-2"></circle></svg><div class="score-text">91</div></div></a><!--/qv--><a href="https://reflect.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="1k"><img width="1440" height="980" loading="lazy" src="/showcases/reflect_app_.webp" aria-hidden="true" q:id="1l"><div class="backdrop"><div class="metrics"><div style="--color:#ffaa32"><h3>TTF</h3><p><!--t=1m-->5.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=1n-->1.5 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=1o-->2.1 s<!----></p></div></div><p class="title"><!--t=1p-->Reflect<!----></p></div></a></li><!--/qv--><!--qv q:id=1q q:key=030p:https://img-models.vercel.app/--><li q:key="68_2" q:id="1r"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fimg-models.vercel.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:343.00 1000" class="circle-2"></circle></svg><div class="score-text">98</div></div></a><!--/qv--><a href="https://img-models.vercel.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="1s"><img width="1440" height="980" loading="lazy" src="/showcases/img-models_vercel_app_.webp" aria-hidden="true" q:id="1t"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=1u-->1.7 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=1v-->1.7 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=1w-->2.1 s<!----></p></div></div><p class="title"><!--t=1x-->IMG Models<!----></p></div></a></li><!--/qv--><!--qv q:id=1y q:key=030p:https://qwik-storefront.vendure.io/--><li q:key="68_2" q:id="1z"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fqwik-storefront.vendure.io%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:346.50 1000" class="circle-2"></circle></svg><div class="score-text">99</div></div></a><!--/qv--><a href="https://qwik-storefront.vendure.io/" target="_blank" rel="nofollow noreferrer" class="card" q:id="20"><img width="1440" height="980" loading="lazy" src="/showcases/qwik-storefront_vendure_io_.webp" aria-hidden="true" q:id="21"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=22-->1.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=23-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=24-->2.0 s<!----></p></div></div><p class="title"><!--t=25-->Vendure Qwik Storefront<!----></p></div></a></li><!--/qv--><!--qv q:id=26 q:key=030p:https://qwind.pages.dev/--><li class="large" q:key="68_2" q:id="27"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fqwind.pages.dev%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://qwind.pages.dev/" target="_blank" rel="nofollow noreferrer" class="card" q:id="28"><img width="1440" height="980" loading="lazy" src="/showcases/qwind_pages_dev_.webp" aria-hidden="true" q:id="29"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=2a-->1.1 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=2b-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=2c-->1.0 s<!----></p></div></div><p class="title"><!--t=2d-->Qwind — Free template for starts a website using Qwik + Tailwind CSS<!----></p></div></a></li><!--/qv--><!--qv q:id=2e q:key=030p:https://soundy.cloud/--><li q:key="68_2" q:id="2f"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fsoundy.cloud%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:346.50 1000" class="circle-2"></circle></svg><div class="score-text">99</div></div></a><!--/qv--><a href="https://soundy.cloud/" target="_blank" rel="nofollow noreferrer" class="card" q:id="2g"><img width="1440" height="980" loading="lazy" src="/showcases/soundy_cloud_.webp" aria-hidden="true" q:id="2h"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=2i-->1.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=2j-->1.8 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=2k-->1.8 s<!----></p></div></div><p class="title"><!--t=2l-->Improve your focus, sleep, and working sessions - Soundy<!----></p></div></a></li><!--/qv--><!--qv q:id=2m q:key=030p:https://bot-whatsapp.netlify.app/--><li q:key="68_2" q:id="2n"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fbot-whatsapp.netlify.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:339.50 1000" class="circle-2"></circle></svg><div class="score-text">97</div></div></a><!--/qv--><a href="https://bot-whatsapp.netlify.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="2o"><img width="1440" height="980" loading="lazy" src="/showcases/bot-whatsapp_netlify_app_.webp" aria-hidden="true" q:id="2p"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=2q-->1.3 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=2r-->1.1 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=2s-->1.2 s<!----></p></div></div><p class="title"><!--t=2t-->Crear chatbot WhatsApp en minutos — Servicio de chatbot para whatspp gratis proyecto OpenSource<!----></p></div></a></li><!--/qv--><!--qv q:id=2u q:key=030p:https://usaibis.com/--><li q:key="68_2" q:id="2v"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fusaibis.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:343.00 1000" class="circle-2"></circle></svg><div class="score-text">98</div></div></a><!--/qv--><a href="https://usaibis.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="2w"><img width="1440" height="980" loading="lazy" src="/showcases/usaibis_com_.webp" aria-hidden="true" q:id="2x"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=2y-->2.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=2z-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=30-->2.1 s<!----></p></div></div><p class="title"><!--t=31-->La mejor forma de cambiar — Ibis<!----></p></div></a></li><!--/qv--><!--qv q:id=32 q:key=030p:https://pasha-app.com/--><li q:key="68_2" q:id="33"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fpasha-app.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:329.00 1000" class="circle-2"></circle></svg><div class="score-text">94</div></div></a><!--/qv--><a href="https://pasha-app.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="34"><img width="1440" height="980" loading="lazy" src="/showcases/pasha-app_com_.webp" aria-hidden="true" q:id="35"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=36-->1.7 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=37-->1.1 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=38-->1.1 s<!----></p></div></div><p class="title"><!--t=39-->Pasha | Gagnez et économisez sur tout<!----></p></div></a></li><!--/qv--><!--qv q:id=3a q:key=030p:https://pricing.oasisdigital.com/--><li q:key="68_2" q:id="3b"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fpricing.oasisdigital.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:318.50 1000" class="circle-2"></circle></svg><div class="score-text">91</div></div></a><!--/qv--><a href="https://pricing.oasisdigital.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="3c"><img width="1440" height="980" loading="lazy" src="/showcases/pricing_oasisdigital_com_.webp" aria-hidden="true" q:id="3d"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=3e-->2.5 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=3f-->2.4 s<!----></p></div><div style="--color:#ffaa32"><h3>LCP</h3><p><!--t=3g-->3.0 s<!----></p></div></div><p class="title"><!--t=3h-->Private Training Package Builder - Oasis Digital<!----></p></div></a></li><!--/qv--><!--qv q:id=3i q:key=030p:https://www.burgersonfleek.ca/--><li q:key="68_2" q:id="3j"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fwww.burgersonfleek.ca%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:332.50 1000" class="circle-2"></circle></svg><div class="score-text">95</div></div></a><!--/qv--><a href="https://www.burgersonfleek.ca/" target="_blank" rel="nofollow noreferrer" class="card" q:id="3k"><img width="1440" height="980" loading="lazy" src="/showcases/www_burgersonfleek_ca_.webp" aria-hidden="true" q:id="3l"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=3m-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=3n-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=3o-->0.8 s<!----></p></div></div><p class="title"><!--t=3p-->Burgers on Fleek - Home<!----></p></div></a></li><!--/qv--><!--qv q:id=3q q:key=030p:https://goshi.dev/--><li q:key="68_2" q:id="3r"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fgoshi.dev%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://goshi.dev/" target="_blank" rel="nofollow noreferrer" class="card" q:id="3s"><img width="1440" height="980" loading="lazy" src="/showcases/goshi_dev_.webp" aria-hidden="true" q:id="3t"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=3u-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=3v-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=3w-->0.9 s<!----></p></div></div><p class="title"><!--t=3x-->Guillermo Peralta Scura<!----></p></div></a></li><!--/qv--><!--qv q:id=3y q:key=030p:https://qwik-city-movies-wm.netlify.app/--><li class="large" q:key="68_2" q:id="3z"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fqwik-city-movies-wm.netlify.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:346.50 1000" class="circle-2"></circle></svg><div class="score-text">99</div></div></a><!--/qv--><a href="https://qwik-city-movies-wm.netlify.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="40"><img width="1440" height="980" loading="lazy" src="/showcases/qwik-city-movies-wm_netlify_app_.webp" aria-hidden="true" q:id="41"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=42-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=43-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=44-->2.0 s<!----></p></div></div><p class="title"><!--t=45-->Qwik City Movies<!----></p></div></a></li><!--/qv--><!--qv q:id=46 q:key=030p:https://jbnado.dev/--><li q:key="68_2" q:id="47"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fjbnado.dev%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:332.50 1000" class="circle-2"></circle></svg><div class="score-text">95</div></div></a><!--/qv--><a href="https://jbnado.dev/" target="_blank" rel="nofollow noreferrer" class="card" q:id="48"><img width="1440" height="980" loading="lazy" src="/showcases/jbnado_dev_.webp" aria-hidden="true" q:id="49"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=4a-->2.3 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=4b-->2.3 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=4c-->2.3 s<!----></p></div></div><p class="title"><!--t=4d-->Jbnado - João Bernardo<!----></p></div></a></li><!--/qv--><!--qv q:id=4e q:key=030p:https://cursos.codigoencasa.com/node--><li q:key="68_2" q:id="4f"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fcursos.codigoencasa.com%2Fnode" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:343.00 1000" class="circle-2"></circle></svg><div class="score-text">98</div></div></a><!--/qv--><a href="https://cursos.codigoencasa.com/node" target="_blank" rel="nofollow noreferrer" class="card" q:id="4g"><img width="1440" height="980" loading="lazy" src="/showcases/cursos_codigoencasa_com_node.webp" aria-hidden="true" q:id="4h"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=4i-->1.1 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=4j-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=4k-->0.9 s<!----></p></div></div><p class="title"><!--t=4l-->La programación es el ahora y el futuro<!----></p></div></a></li><!--/qv--><!--qv q:id=4m q:key=030p:https://reduced.to--><li q:key="68_2" q:id="4n"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Freduced.to" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:343.00 1000" class="circle-2"></circle></svg><div class="score-text">98</div></div></a><!--/qv--><a href="https://reduced.to" target="_blank" rel="nofollow noreferrer" class="card" q:id="4o"><img width="1440" height="980" loading="lazy" src="/showcases/reduced_to.webp" aria-hidden="true" q:id="4p"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=4q-->2.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=4r-->1.7 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=4s-->2.0 s<!----></p></div></div><p class="title"><!--t=4t-->The FREE Open-Source URL Shortener | Reduced.to<!----></p></div></a></li><!--/qv--><!--qv q:id=4u q:key=030p:https://sanyamjainqwik.vercel.app/--><li q:key="68_2" q:id="4v"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fsanyamjainqwik.vercel.app%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:339.50 1000" class="circle-2"></circle></svg><div class="score-text">97</div></div></a><!--/qv--><a href="https://sanyamjainqwik.vercel.app/" target="_blank" rel="nofollow noreferrer" class="card" q:id="4w"><img width="1440" height="980" loading="lazy" src="/showcases/sanyamjainqwik_vercel_app_.webp" aria-hidden="true" q:id="4x"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=4y-->1.3 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=4z-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=50-->0.9 s<!----></p></div></div><p class="title"><!--t=51-->Sanyam Jain<!----></p></div></a></li><!--/qv--><!--qv q:id=52 q:key=030p:https://www.blackflag.dev/--><li q:key="68_2" q:id="53"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fwww.blackflag.dev%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://www.blackflag.dev/" target="_blank" rel="nofollow noreferrer" class="card" q:id="54"><img width="1440" height="980" loading="lazy" src="/showcases/www_blackflag_dev_.webp" aria-hidden="true" q:id="55"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=56-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=57-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=58-->0.9 s<!----></p></div></div><p class="title"><!--t=59-->Blackflag Labs<!----></p></div></a></li><!--/qv--><!--qv q:id=5a q:key=030p:https://qwik.builder.io--><li q:key="68_2" q:id="5b"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fqwik.builder.io" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:343.00 1000" class="circle-2"></circle></svg><div class="score-text">98</div></div></a><!--/qv--><a href="https://qwik.builder.io" target="_blank" rel="nofollow noreferrer" class="card" q:id="5c"><img width="1440" height="980" loading="lazy" src="/showcases/qwik_builder_io.webp" aria-hidden="true" q:id="5d"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=5e-->1.3 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=5f-->1.1 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=5g-->2.3 s<!----></p></div></div><p class="title"><!--t=5h-->Framework reimagined for the edge! - Qwik<!----></p></div></a></li><!--/qv--><!--qv q:id=5i q:key=030p:https://pulsestax.com/--><li q:key="68_2" q:id="5j"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#ffaa32" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fpulsestax.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:287.00 1000" class="circle-2"></circle></svg><div class="score-text">82</div></div></a><!--/qv--><a href="https://pulsestax.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="5k"><img width="1440" height="980" loading="lazy" src="/showcases/pulsestax_com_.webp" aria-hidden="true" q:id="5l"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=5m-->2.7 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=5n-->2.6 s<!----></p></div><div style="--color:#ffaa32"><h3>LCP</h3><p><!--t=5o-->3.1 s<!----></p></div></div><p class="title"><!--t=5p-->Pulsestax | Check the uptime and pulse of any website<!----></p></div></a></li><!--/qv--><!--qv q:id=5q q:key=030p:https://www.stockideashq.com/--><li q:key="68_2" q:id="5r"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#ffaa32" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fwww.stockideashq.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:301.00 1000" class="circle-2"></circle></svg><div class="score-text">86</div></div></a><!--/qv--><a href="https://www.stockideashq.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="5s"><img width="1440" height="980" loading="lazy" src="/showcases/www_stockideashq_com_.webp" aria-hidden="true" q:id="5t"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=5u-->2.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=5v-->1.7 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=5w-->1.8 s<!----></p></div></div><p class="title"><!--t=5x-->Get Stockideas!<!----></p></div></a></li><!--/qv--><!--qv q:id=5y q:key=030p:https://promptle.art/--><li q:key="68_2" q:id="5z"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fpromptle.art%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://promptle.art/" target="_blank" rel="nofollow noreferrer" class="card" q:id="60"><img width="1440" height="980" loading="lazy" src="/showcases/promptle_art_.webp" aria-hidden="true" q:id="61"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=62-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=63-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=64-->1.5 s<!----></p></div></div><p class="title"><!--t=65-->Promptle - Can you Guess the AI prompt?<!----></p></div></a></li><!--/qv--><!--qv q:id=66 q:key=030p:https://abdhashem.com--><li q:key="68_2" q:id="67"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fabdhashem.com" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://abdhashem.com" target="_blank" rel="nofollow noreferrer" class="card" q:id="68"><img width="1440" height="980" loading="lazy" src="/showcases/abdhashem_com.webp" aria-hidden="true" q:id="69"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=6a-->1.2 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=6b-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=6c-->1.0 s<!----></p></div></div><p class="title"><!--t=6d-->Abdulrahman Hashem | Full Stack &amp; Front End Enthusiast<!----></p></div></a></li><!--/qv--><!--qv q:id=6e q:key=030p:https://amirhbeigi.ir--><li q:key="68_2" q:id="6f"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Famirhbeigi.ir" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:329.00 1000" class="circle-2"></circle></svg><div class="score-text">94</div></div></a><!--/qv--><a href="https://amirhbeigi.ir" target="_blank" rel="nofollow noreferrer" class="card" q:id="6g"><img width="1440" height="980" loading="lazy" src="/showcases/amirhbeigi_ir.webp" aria-hidden="true" q:id="6h"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=6i-->2.5 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=6j-->2.5 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=6k-->2.5 s<!----></p></div></div><p class="title"><!--t=6l-->Amirhossein Beigi | Front-end Developer<!----></p></div></a></li><!--/qv--><!--qv q:id=6m q:key=030p:https://puzzledbycsharp.com/--><li q:key="68_2" q:id="6n"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fpuzzledbycsharp.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://puzzledbycsharp.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="6o"><img width="1440" height="980" loading="lazy" src="/showcases/puzzledbycsharp_com_.webp" aria-hidden="true" q:id="6p"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=6q-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=6r-->0.9 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=6s-->1.2 s<!----></p></div></div><p class="title"><!--t=6t-->Home Page | Puzzled By CSharp<!----></p></div></a></li><!--/qv--><!--qv q:id=6u q:key=030p:https://necatikcl.dev/--><li class="large" q:key="68_2" q:id="6v"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fnecatikcl.dev%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:346.50 1000" class="circle-2"></circle></svg><div class="score-text">99</div></div></a><!--/qv--><a href="https://necatikcl.dev/" target="_blank" rel="nofollow noreferrer" class="card" q:id="6w"><img width="1440" height="980" loading="lazy" src="/showcases/necatikcl_dev_.webp" aria-hidden="true" q:id="6x"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=6y-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=6z-->0.8 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=70-->2.0 s<!----></p></div></div><p class="title"><!--t=71-->Necati Koçlu - Front-end Developer<!----></p></div></a></li><!--/qv--><!--qv q:id=72 q:key=030p:https://tatbiqit.com/--><li q:key="68_2" q:id="73"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Ftatbiqit.com%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:339.50 1000" class="circle-2"></circle></svg><div class="score-text">97</div></div></a><!--/qv--><a href="https://tatbiqit.com/" target="_blank" rel="nofollow noreferrer" class="card" q:id="74"><img width="1440" height="980" loading="lazy" src="/showcases/tatbiqit_com_.webp" aria-hidden="true" q:id="75"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=76-->3.7 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=77-->1.4 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=78-->1.9 s<!----></p></div></div><p class="title"><!--t=79-->TatbiqIT, the unique software company in Kuwait<!----></p></div></a></li><!--/qv--><!--qv q:id=7a q:key=030p:https://keyboardz.co/--><li q:key="68_2" q:id="7b"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fkeyboardz.co%2F" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:332.50 1000" class="circle-2"></circle></svg><div class="score-text">95</div></div></a><!--/qv--><a href="https://keyboardz.co/" target="_blank" rel="nofollow noreferrer" class="card" q:id="7c"><img width="1440" height="980" loading="lazy" src="/showcases/keyboardz_co_.webp" aria-hidden="true" q:id="7d"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=7e-->2.9 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=7f-->1.7 s<!----></p></div><div style="--color:#ffaa32"><h3>LCP</h3><p><!--t=7g-->2.6 s<!----></p></div></div><p class="title"><!--t=7h-->Mechanikas - Hand-Assembled Keyboardz<!----></p></div></a></li><!--/qv--><!--qv q:id=7i q:key=030p:https://travelcalc.pages.dev--><li q:key="68_2" q:id="7j"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#0c6" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Ftravelcalc.pages.dev" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:350.00 1000" class="circle-2"></circle></svg><div class="score-text">100</div></div></a><!--/qv--><a href="https://travelcalc.pages.dev" target="_blank" rel="nofollow noreferrer" class="card" q:id="7k"><img width="1440" height="980" loading="lazy" src="/showcases/travelcalc_pages_dev.webp" aria-hidden="true" q:id="7l"><div class="backdrop"><div class="metrics"><div style="--color:#0c6"><h3>TTF</h3><p><!--t=7m-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>FCP</h3><p><!--t=7n-->1.0 s<!----></p></div><div style="--color:#0c6"><h3>LCP</h3><p><!--t=7o-->1.5 s<!----></p></div></div><p class="title"><!--t=7p-->Main page - Travel Calculator<!----></p></div></a></li><!--/qv--><!--qv q:id=7q q:key=030p:https://upester.com--><li q:key="68_2" q:id="7r"><!--qv q:key=68_1--><a title="Mobile perf score from PageSpeed Insights" target="_blank" rel="noreferrer" style="--color:#ffaa32" href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fupester.com" class="score" q:key="68_3"><div class="score-inner"><svg viewBox="0 0 120 120"><circle r="56" cx="60" cy="60" stroke-width="8" class="circle-1"></circle><circle r="56" cx="60" cy="60" stroke-width="8" style="transform:rotate(-87.9537deg);stroke-dasharray:283.50 1000" class="circle-2"></circle></svg><div class="score-text">81</div></div></a><!--/qv--><a href="https://upester.com" target="_blank" rel="nofollow noreferrer" class="card" q:id="7s"><img width="1440" height="980" loading="lazy" src="/showcases/upester_com.webp" aria-hidden="true" q:id="7t"><div class="backdrop"><div class="metrics"><div style="--color:#ffaa32"><h3>TTF</h3><p><!--t=7u-->6.0 s<!----></p></div><div style="--color:#ffaa32"><h3>FCP</h3><p><!--t=7v-->2.8 s<!----></p></div><div style="--color:#ffaa32"><h3>LCP</h3><p><!--t=7w-->2.8 s<!----></p></div></div><p class="title"><!--t=7x-->upester<!----></p></div></a></li><!--/qv--></ul><section><h2>Add Site</h2><p>This page missing any great site or in need of an update?</p><p><a href="https://github.com/BuilderIO/qwik/edit/main/packages/docs/scripts/pages.json" target="_blank" class="edit-page">Edit this page!</a></p></section><section><h2>How are the scores calculated?</h2><p>The scores are calculated using the <a href="https://developers.google.com/speed/docs/insights/v5/get-started">PageSpeed Insights API</a>, analyzed with the <a href="https://developers.google.com/speed/docs/insights/rest/v5/pagespeedapi/runpagespeed#strategy">MOBILE strategy</a>.</p></section></article><!--/qv--><!--/qv--></main><div class="px-4"><!--qv q:id=7y q:key=zM2A:2n_2--><footer class="container mx-auto" q:key="Fj_1"><!--qv q:id=7z q:key=sya2:Fj_0--><div class="builder" q:key="ep_1"><!--cq--><div q:container="paused" q:version="0.100.0" q:render="ssr-dev" q:base="https://cdn.builder.io/api/v1/qwik-js/oss-footer/74d38beeb0ba45189ef2373efa3b4d91/YJIGb4i01jvw0SRdL5Bt/348f57aa8b88c884eb09dcdec6e1d84d3583e1e8/fragment/" class="qc📦"><div builder-content-id="74d38beeb0ba45189ef2373efa3b4d91"><style>.builder-footer .builder-text a {
+  color: var(--interactive-text-color, #009dfd);
+}
+
+
+.footer-link &gt; .builder-text {
+  transition: color .2s ease-in-out;
+}
+
+.footer-link &gt; .builder-text :hover{
+  color:  var(--interactive-text-color, #009dfd)
+}</style><!--qv q:id=0 q:key=Comp:--><style q:style="qhq1cm-1" hidden>.cylsjmd{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0px;padding-bottom:37px;padding-top:0px;border-style:solid;border-width:0;padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto;width:100%;max-width:1400px}.cnhf7sw{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-left:auto;margin-right:auto;margin-top:20px;z-index:11px;max-width:940px;width:100%;padding-bottom:77px}.cpvov7b{display:flex;flex-direction:row;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:40px;margin-bottom:80px}.cwwwpfj{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:20px;line-height:normal;height:auto;font-family:"Poppins", sans-serif;font-size:12px;margin-left:-1px}.cc66ipe{display:flex;justify-content:space-between;margin-top:11px}.clhtwc4{border-top:1px solid currentColor;font-size:11px;font-weight:300;margin-top:13.3333px;padding-top:0.35em}.ct53kcb{display:flex;flex-direction:row;position:relative;flex-shrink:0;box-sizing:border-box;justify-content:space-between;margin-top:9px}.c9wz7yc{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0px;width:100%;min-height:20px;min-width:20px;overflow:hidden;margin-left:auto;margin-right:auto;max-width:265px}.caak4bw{margin-top:10px}.cwc7mnz{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;width:200px;flex-grow:0;height:auto;align-self:center;margin-bottom:auto;padding-right:0px;margin-right:55px}.curo1ry{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-left:auto;width:auto;flex-grow:1;max-width:700px}.cjfgdwm{display:none;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box}.cuiuf3t{align-items:center;column-gap:0.5rem;gap:0.5rem;row-gap:0.5rem;text-underline-offset:0.08em}.caq69r4{font-size:12px;font-weight:400;margin-top:1px;padding-top:0.35em;width:auto;align-self:center;font-family:"Poppins", sans-serif}.c7dtyh5{list-style-type:none;text-align:right}.cgit9t0{display:flex}.cfutcgk{display:flex;flex-direction:row;position:relative;flex-shrink:0;box-sizing:border-box;gap:13px;padding-right:0px}.cgpctyx{display:flex}.c3g5v4k{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box}.cizi0cl{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box}.clzbi89{width:160px;height:34px}.cm8uyto{display:inline-block;padding-left:1em;vertical-align:middle}.c4nes27{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(58.333% - 10px);margin-left:0px}.cqhh3j3{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(41.667% - 10px);margin-left:20px}.cqy47o3{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;width:100%;min-height:20px;min-width:20px;overflow:hidden;max-width:50px}.c2ixpw1{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;fill:currentColor;width:auto;align-self:center}.cy6q22x{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(33.333333333333336% - 13.333333333333334px);margin-left:0px}.c6m5dal{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(33.333333333333336% - 13.333333333333334px);margin-left:20px}.cy6jl4u{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;line-height:normal;height:auto;font-family:"Poppins", sans-serif;cursor:pointer;pointer-events:auto;transition:color .3s ease-in-out}.ccyegd3{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0px;min-height:20px;min-width:20px;width:100%;border-radius:5px;overflow:hidden;margin-right:auto}.c1lmddh{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:auto;margin-bottom:auto}.cl5efd8{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;gap:20px;font-size:12px}.cemw9li{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;gap:20px;font-size:12px}.cplnmxl{width:25px;height:25px}.cll733z{position:relative}.cpiyxct{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box}.cwlh6ta{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:16px;width:100%;min-height:20px;min-width:20px;overflow:hidden;border-radius:6px}.csckjv7{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;line-height:normal;height:auto;font-family:"Poppins", sans-serif;cursor:pointer;pointer-events:auto;transition:color .3s ease-in-out}.cvqchck{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:1;position:absolute}.cotyw1f{width:100%;padding-top:66.73%;pointer-events:none;font-size:0}.cev265k{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:-1px;height:auto}.cutbcy2{position:relative;flex-shrink:0;box-sizing:border-box;display:flex;flex-direction:column;align-items:stretch;margin-right:auto;margin-top:14px}.c1lkilf{display:flex}.ctrw85y{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(50% - 10px);margin-left:0px}.cewnya{display:flex;flex-direction:column;align-items:stretch;line-height:normal;width:calc(50% - 10px);margin-left:20px}.cjmbdby{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0px;appearance:none;padding-top:10px;padding-bottom:10px;padding-left:35px;padding-right:35px;background-color:rgba(0, 0, 0, 1);border-radius:8px;text-align:center;cursor:pointer;width:auto;align-self:center;font-family:"Poppins", sans-serif;font-size:16px;line-height:26px;letter-spacing:.5px;margin-right:auto;white-space:nowrap;text-decoration:none !important;color:rgba(255, 255, 255, 1)}.cnj1vr2{display:flex;flex-direction:column;position:relative;flex-shrink:0;box-sizing:border-box;margin-top:0px;appearance:none;padding-top:10px;padding-bottom:10px;padding-left:0px;padding-right:0px;border-radius:8px;text-align:center;cursor:pointer;width:auto;align-self:center;font-family:"Poppins", sans-serif;font-size:16px;line-height:26px;letter-spacing:.5px;margin-right:auto;margin-left:15px}@media (max-width: 991px){.cnhf7sw{margin-left:0;margin-right:0}}@media (max-width: 991px){.cpvov7b{justify-content:space-between;margin-top:47px}}@media (max-width: 640px){.cpvov7b{padding-right:0px;display:flex;flex-direction:column;align-items:stretch;margin-top:40px}}@media (max-width: 991px){.cc66ipe{margin-top:7.3125px}}@media (max-width: 640px){.cc66ipe{margin-top:7.2px}}@media (max-width: 991px){.clhtwc4{margin-top:12.1875px}}@media (max-width: 640px){.clhtwc4{margin-top:12px}}@media (max-width: 991px){.c9wz7yc{margin-top:10px}}@media (max-width: 640px){.cwc7mnz{margin-left:auto;margin-right:auto}}@media (max-width: 991px){.curo1ry{width:auto;flex-grow:1;max-width:400px;display:flex}}@media (max-width: 640px){.curo1ry{width:100%;flex-grow:0;margin-top:27px;display:none}}@media (max-width: 991px){.cjfgdwm{display:none}}@media (max-width: 640px){.cjfgdwm{gap:46px;display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:250px;margin-left:auto;margin-right:auto;margin-top:34px}}@media (max-width: 991px){.caq69r4{margin-top:12.1875px}}@media (max-width: 640px){.caq69r4{margin-top:12px}}@media (max-width: 999px){.cgit9t0{flex-direction:column;align-items:stretch}}@media (max-width: 639px){.cgpctyx{flex-direction:column;align-items:stretch}}@media (max-width: 640px){.c3g5v4k{gap:20px;align-items:flex-start}}@media (max-width: 640px){.cizi0cl{gap:20px;align-items:flex-end}}@media (max-width: 999px){.c4nes27{width:100%;margin-left:0}}@media (max-width: 999px){.cqhh3j3{width:100%;margin-left:0}}@media (max-width: 639px){.cy6q22x{width:100%;margin-left:0}}@media (max-width: 639px){.c6m5dal{width:100%;margin-left:0}}@media (max-width: 640px){.cy6jl4u{font-size:12px}}@media (max-width: 991px){.cl5efd8{margin-bottom:20px}}@media (max-width: 991px){.cev265k{margin-top:13px}}@media (max-width: 991px){.cutbcy2{margin-top:16px}}@media (max-width: 640px){.cutbcy2{margin-top:17px}}@media (max-width: 991px){.cjmbdby{font-size:16px;line-height:18px;padding-left:23px;padding-right:23px;margin-top:0px;padding-top:13px;padding-bottom:13px}}@media (max-width: 991px){.cnj1vr2{font-size:16px;line-height:18px;padding-left:0px;padding-right:18px;margin-top:auto;margin-left:2px;min-width:110px;margin-bottom:auto}}</style><style q:style="21qdvy-2" hidden>.builder-footer .builder-text a {
+  color: var(--interactive-text-color, #009dfd);
+}
+
+
+.footer-link > .builder-text {
+  transition: color .2s ease-in-out;
+}
+
+.footer-link > .builder-text :hover{
+  color:  var(--interactive-text-color, #009dfd)
+}</style><footer builder-id="builder-3eb5580b1d274ec1bb4f6b9d174167de" class="cylsjmd builder-block"><div builder-id="builder-b413e964781d47f885577bfcab465213" class="cpvov7b"><div builder-id="builder-ddd195ac0e764700b8f131c069676982" class="cwc7mnz"><div builder-id="builder-40bfe737b35d44feab379083ea6bb755" class="cfutcgk"><div class="cqy47o3"><img src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F1235f39312924ecbbb55c1fab9e8bb7c" style="object-fit:cover;object-position:center;position:absolute;height:100%;width:100%;top:0;left:0" role="presentation" loading="lazy"><div style="width:100%;padding-top:106.4%;pointer-events:none;font-size:0" class="builder-image-sizer"></div></div><div builder-id="builder-b79c81ebfaab49e2adc3d9fac712bf13" scriptsClientOnly="" class="c2ixpw1 dark-mode-hide"><div q:key="builder-b79c81ebfaab49e2adc3d9fac712bf13"><svg width="119" height="51" viewBox="0 0 119 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.3145 50.7702H19.3361V38.5845C17.0312 40.1685 14.4301 40.9499 11.6388 40.9499C7.85355 40.9499 5.04106 39.915 3.2859 37.7609C1.53073 35.6278 0.642578 31.8264 0.642578 26.3988C0.642578 20.8445 1.67876 17.0009 3.77226 14.7622C5.90807 12.5025 9.33381 11.4043 14.0495 11.4043C18.5114 11.4043 22.5716 12.0167 26.3145 13.2205V50.7702ZM19.3361 17.74C17.7501 17.2543 15.9738 17.022 14.0495 17.022C11.6811 17.022 9.98935 17.6344 9.03776 18.8804C8.10731 20.1476 7.5998 22.5552 7.5998 26.1243C7.5998 29.4822 8.04387 31.7208 8.97432 32.9457C9.90477 34.1495 11.5119 34.762 13.8803 34.762C16.9677 34.762 19.3361 33.4948 19.3361 31.9109V17.74Z" fill="black"/>
+<path d="M36.3165 12.1436C38.7907 19.0072 40.8842 25.8709 42.7028 32.798C45.1135 25.702 47.1647 18.8383 48.7507 12.1436H54.862C57.167 19.0072 59.0913 25.8709 60.635 32.798C63.3841 25.2796 65.541 18.3948 67.127 12.1436H73.9996C71.0814 21.985 67.846 31.3619 64.2722 40.2108H56.0674C55.1369 35.2056 53.6567 29.1655 51.6689 21.9639C50.4001 27.5605 48.645 33.6639 46.34 40.2108H38.1351C35.3861 29.9892 32.4044 20.6545 29.2324 12.1436H36.3165Z" fill="black"/>
+<path d="M81.7591 8.23628C78.6717 8.23628 77.8047 7.47599 77.8047 4.32925C77.8047 1.52042 78.6929 0.865723 81.7591 0.865723C84.8465 0.865723 85.7135 1.52042 85.7135 4.32925C85.7135 7.47599 84.8465 8.23628 81.7591 8.23628ZM78.2911 12.1433H85.2694V40.2105H78.2911V12.1433Z" fill="black"/>
+<path d="M118.239 12.1435C113.291 19.1761 109.823 23.4633 107.899 25.005C109.485 26.0398 113.735 31.4885 119.001 40.2318H110.965C104.41 30.2847 101.28 25.9976 99.7362 25.3429V40.2318H92.7578V0H99.7362V25.3218C101.322 24.1602 104.79 19.7674 110.14 12.1435H118.239Z" fill="black"/>
+</svg></div></div><div builder-id="builder-e6cb5da6c2114c4488d83487234f0f6b" scriptsClientOnly="" class="c2ixpw1 light-mode-hide"><div q:key="builder-e6cb5da6c2114c4488d83487234f0f6b"><svg
+  width="119"
+  height="51"
+  viewBox="0 0 119 51"
+  fill="white"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M26.3145 50.7702H19.3361V38.5845C17.0312 40.1685 14.4301 40.9499 11.6388 40.9499C7.85355 40.9499 5.04106 39.915 3.2859 37.7609C1.53073 35.6278 0.642578 31.8264 0.642578 26.3988C0.642578 20.8445 1.67876 17.0009 3.77226 14.7622C5.90807 12.5025 9.33381 11.4043 14.0495 11.4043C18.5114 11.4043 22.5716 12.0167 26.3145 13.2205V50.7702ZM19.3361 17.74C17.7501 17.2543 15.9738 17.022 14.0495 17.022C11.6811 17.022 9.98935 17.6344 9.03776 18.8804C8.10731 20.1476 7.5998 22.5552 7.5998 26.1243C7.5998 29.4822 8.04387 31.7208 8.97432 32.9457C9.90477 34.1495 11.5119 34.762 13.8803 34.762C16.9677 34.762 19.3361 33.4948 19.3361 31.9109V17.74Z"
+    fill="white"
+  />
+  <path
+    d="M36.3165 12.1436C38.7907 19.0072 40.8842 25.8709 42.7028 32.798C45.1135 25.702 47.1647 18.8383 48.7507 12.1436H54.862C57.167 19.0072 59.0913 25.8709 60.635 32.798C63.3841 25.2796 65.541 18.3948 67.127 12.1436H73.9996C71.0814 21.985 67.846 31.3619 64.2722 40.2108H56.0674C55.1369 35.2056 53.6567 29.1655 51.6689 21.9639C50.4001 27.5605 48.645 33.6639 46.34 40.2108H38.1351C35.3861 29.9892 32.4044 20.6545 29.2324 12.1436H36.3165Z"
+    fill="white"
+  />
+  <path
+    d="M81.7591 8.23628C78.6717 8.23628 77.8047 7.47599 77.8047 4.32925C77.8047 1.52042 78.6929 0.865723 81.7591 0.865723C84.8465 0.865723 85.7135 1.52042 85.7135 4.32925C85.7135 7.47599 84.8465 8.23628 81.7591 8.23628ZM78.2911 12.1433H85.2694V40.2105H78.2911V12.1433Z"
+    fill="white"
+  />
+  <path
+    d="M118.239 12.1435C113.291 19.1761 109.823 23.4633 107.899 25.005C109.485 26.0398 113.735 31.4885 119.001 40.2318H110.965C104.41 30.2847 101.28 25.9976 99.7362 25.3429V40.2318H92.7578V0H99.7362V25.3218C101.322 24.1602 104.79 19.7674 110.14 12.1435H118.239Z"
+    fill="white"
+  />
+</svg>
+</div></div></div></div><div builder-id="builder-7501bbb8efbc458f89e28c5223ebbb74" class="curo1ry"><div class="cgpctyx builder-columns"><div class="cy6q22x builder-column"><div builder-id="builder-04a17be4495e458ca0be3ca2543f8389" class="cl5efd8"><a href="https://qwik.builder.io/docs/" block-id="builder-da9bb79b66db4a728f102a937e7a24b2" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-04a17be4495e458ca0be3ca2543f8389"><p>Docs</p></div></a><a href="https://qwik.builder.io/docs/qwikcity/" block-id="builder-e01cda504fc44cbea6197fdaf7caa248" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-04a17be4495e458ca0be3ca2543f8389"><p>Qwik City</p></div></a><a href="https://qwik.builder.io/ecosystem/" block-id="builder-c04816085b4c4cfb9a56f8af4e6f0d76" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-04a17be4495e458ca0be3ca2543f8389"><p>Ecosystem</p></div></a><a href="https://qwik.builder.io/examples/introduction/hello-world/#version=0.105.0&amp;buildMode=development&amp;entryStrategy=hook&amp;files=JTVCJTdCJTIycGF0aCUyMiUzQSUyMiUyRmFwcC50c3glMjIlMkMlMjJjb2RlJTIyJTNBJTIyaW1wb3J0JTIwJTdCJTIwY29tcG9uZW50JTI0JTIwJTdEJTIwZnJvbSUyMCclNDBidWlsZGVyLmlvJTJGcXdpayclM0IlNUNuJTVDbmV4cG9ydCUyMGRlZmF1bHQlMjBjb21wb25lbnQlMjQoKCklMjAlM0QlM0UlMjAlN0IlNUNuJTIwJTIwcmV0dXJuJTIwJTNDcCUzRUhlbGxvJTIwUXdpayUzQyUyRnAlM0UlM0IlNUNuJTdEKSUzQiU1Q24lMjIlN0QlMkMlN0IlMjJwYXRoJTIyJTNBJTIyJTJGZW50cnkuc2VydmVyLnRzeCUyMiUyQyUyMmNvZGUlMjIlM0ElMjJpbXBvcnQlMjAlN0IlMjByZW5kZXJUb1N0cmluZyUyQyUyMHR5cGUlMjBSZW5kZXJPcHRpb25zJTIwJTdEJTIwZnJvbSUyMCclNDBidWlsZGVyLmlvJTJGcXdpayUyRnNlcnZlciclM0IlNUNuaW1wb3J0JTIwJTdCJTIwUm9vdCUyMCU3RCUyMGZyb20lMjAnLiUyRnJvb3QnJTNCJTVDbiU1Q25leHBvcnQlMjBkZWZhdWx0JTIwZnVuY3Rpb24lMjAob3B0cyUzQSUyMFJlbmRlck9wdGlvbnMpJTIwJTdCJTVDbiUyMCUyMHJldHVybiUyMHJlbmRlclRvU3RyaW5nKCUzQ1Jvb3QlMjAlMkYlM0UlMkMlMjBvcHRzKSUzQiU1Q24lN0QlNUNuJTIyJTdEJTJDJTdCJTIycGF0aCUyMiUzQSUyMiUyRnJvb3QudHN4JTIyJTJDJTIyY29kZSUyMiUzQSUyMmltcG9ydCUyMEFwcCUyMGZyb20lMjAnLiUyRmFwcCclM0IlNUNuJTVDbmV4cG9ydCUyMGNvbnN0JTIwUm9vdCUyMCUzRCUyMCgpJTIwJTNEJTNFJTIwJTdCJTVDbiUyMCUyMHJldHVybiUyMCglNUNuJTIwJTIwJTIwJTIwJTNDJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQ2hlYWQlM0UlNUNuJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDdGl0bGUlM0VIZWxsbyUyMFF3aWslM0MlMkZ0aXRsZSUzRSU1Q24lMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZoZWFkJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQ2JvZHklM0UlNUNuJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDQXBwJTIwJTJGJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmJvZHklM0UlNUNuJTIwJTIwJTIwJTIwJTNDJTJGJTNFJTVDbiUyMCUyMCklM0IlNUNuJTdEJTNCJTVDbiUyMiU3RCU1RA%3D%3D" block-id="builder-b7d90efc21cb4d208ba3b168f48d935d" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-04a17be4495e458ca0be3ca2543f8389"><p>Playground</p></div></a></div></div><div class="c6m5dal builder-column"><div builder-id="builder-87812dbf764a4bf882076a90638a2571" class="cl5efd8"><a href="https://qwik.builder.io/ecosystem/#integrations" block-id="builder-50400352e2864d718dcef986e7448b56" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-87812dbf764a4bf882076a90638a2571"><p>Integrations</p></div></a><a href="https://qwik.builder.io/ecosystem/#deployments" block-id="builder-0cdcd27e35d9403eb5d59e6dcd1a0b1d" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-87812dbf764a4bf882076a90638a2571"><p>Deployments</p></div></a><a href="https://qwik.builder.io/ecosystem/#videos" block-id="builder-7082824feb9244db82b5fd482fca9e72" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-87812dbf764a4bf882076a90638a2571"><p>Media</p></div></a><a href="https://qwik.builder.io/ecosystem/#showcase" block-id="builder-a02e1657485a409ebdc3f8f3075ea9b5" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-87812dbf764a4bf882076a90638a2571"><p>Showcase</p></div></a></div></div><div class="c6m5dal builder-column"><div builder-id="builder-c565054374804eb680895a95f48e6d7c" class="cemw9li"><a href="https://qwik.builder.io/ecosystem/#courses" block-id="builder-f4c44693e3744fd780f08629ebc70651" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-c565054374804eb680895a95f48e6d7c"><p>Tutorial</p></div></a><a href="https://qwik.builder.io/ecosystem/#presentations" block-id="builder-efe3bc16653d4992aa1b32dae0de30dc" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-c565054374804eb680895a95f48e6d7c"><p>Presentations</p></div></a><a href="https://qwik.builder.io/ecosystem/#community" block-id="builder-b1ed190505ea419e999bdd0dab54943d" class="csckjv7 footer-link"><div class="builder-text" q:key="builder-c565054374804eb680895a95f48e6d7c"><p>Community</p></div></a></div></div></div></div><div builder-id="builder-3be277aa6c984a31b92788460bf766ba" class="cjfgdwm"><div builder-id="builder-52d8939ffb974b4ebbc8a8b3a87658d6" class="c3g5v4k"><a href="https://qwik.builder.io/docs/" block-id="builder-4f54c9a6a4e14f5087e55aa46a52618e" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Docs</p></div></a><a href="https://qwik.builder.io/docs/qwikcity/" block-id="builder-1c962b68b2fc461f872eb20472026825" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Qwik City</p></div></a><a href="https://qwik.builder.io/ecosystem/" block-id="builder-728903881f5a4e6aa9e9d1040eb45112" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Ecosystem</p></div></a><a href="https://qwik.builder.io/examples/introduction/hello-world/#version=0.105.0&amp;buildMode=development&amp;entryStrategy=hook&amp;files=JTVCJTdCJTIycGF0aCUyMiUzQSUyMiUyRmFwcC50c3glMjIlMkMlMjJjb2RlJTIyJTNBJTIyaW1wb3J0JTIwJTdCJTIwY29tcG9uZW50JTI0JTIwJTdEJTIwZnJvbSUyMCclNDBidWlsZGVyLmlvJTJGcXdpayclM0IlNUNuJTVDbmV4cG9ydCUyMGRlZmF1bHQlMjBjb21wb25lbnQlMjQoKCklMjAlM0QlM0UlMjAlN0IlNUNuJTIwJTIwcmV0dXJuJTIwJTNDcCUzRUhlbGxvJTIwUXdpayUzQyUyRnAlM0UlM0IlNUNuJTdEKSUzQiU1Q24lMjIlN0QlMkMlN0IlMjJwYXRoJTIyJTNBJTIyJTJGZW50cnkuc2VydmVyLnRzeCUyMiUyQyUyMmNvZGUlMjIlM0ElMjJpbXBvcnQlMjAlN0IlMjByZW5kZXJUb1N0cmluZyUyQyUyMHR5cGUlMjBSZW5kZXJPcHRpb25zJTIwJTdEJTIwZnJvbSUyMCclNDBidWlsZGVyLmlvJTJGcXdpayUyRnNlcnZlciclM0IlNUNuaW1wb3J0JTIwJTdCJTIwUm9vdCUyMCU3RCUyMGZyb20lMjAnLiUyRnJvb3QnJTNCJTVDbiU1Q25leHBvcnQlMjBkZWZhdWx0JTIwZnVuY3Rpb24lMjAob3B0cyUzQSUyMFJlbmRlck9wdGlvbnMpJTIwJTdCJTVDbiUyMCUyMHJldHVybiUyMHJlbmRlclRvU3RyaW5nKCUzQ1Jvb3QlMjAlMkYlM0UlMkMlMjBvcHRzKSUzQiU1Q24lN0QlNUNuJTIyJTdEJTJDJTdCJTIycGF0aCUyMiUzQSUyMiUyRnJvb3QudHN4JTIyJTJDJTIyY29kZSUyMiUzQSUyMmltcG9ydCUyMEFwcCUyMGZyb20lMjAnLiUyRmFwcCclM0IlNUNuJTVDbmV4cG9ydCUyMGNvbnN0JTIwUm9vdCUyMCUzRCUyMCgpJTIwJTNEJTNFJTIwJTdCJTVDbiUyMCUyMHJldHVybiUyMCglNUNuJTIwJTIwJTIwJTIwJTNDJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQ2hlYWQlM0UlNUNuJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDdGl0bGUlM0VIZWxsbyUyMFF3aWslM0MlMkZ0aXRsZSUzRSU1Q24lMjAlMjAlMjAlMjAlMjAlMjAlM0MlMkZoZWFkJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQ2JvZHklM0UlNUNuJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTIwJTNDQXBwJTIwJTJGJTNFJTVDbiUyMCUyMCUyMCUyMCUyMCUyMCUzQyUyRmJvZHklM0UlNUNuJTIwJTIwJTIwJTIwJTNDJTJGJTNFJTVDbiUyMCUyMCklM0IlNUNuJTdEJTNCJTVDbiUyMiU3RCU1RA%3D%3D" block-id="builder-d74b9ffc9d1a4cc492661e376324e066" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Playground</p></div></a><a href="https://qwik.builder.io/ecosystem/#integrations" block-id="builder-41105527f2374c328e0d7ff71ffb827e" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Integrations</p></div></a><a href="https://qwik.builder.io/ecosystem/#deployments" block-id="builder-d648e0dad247413ba56982f02255fb16" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-52d8939ffb974b4ebbc8a8b3a87658d6"><p>Deployments</p></div></a></div><div builder-id="builder-5e0800e028784421abbc6de06682b080" class="cizi0cl"><a href="https://qwik.builder.io/ecosystem/#videos" block-id="builder-8708d25118fb4208805e3c302cfd3865" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-5e0800e028784421abbc6de06682b080"><p>Media</p></div></a><a href="https://qwik.builder.io/ecosystem/#showcase" block-id="builder-a28a923a3a3c4bb89eccf23c548484ec" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-5e0800e028784421abbc6de06682b080"><p>Showcase</p></div></a><a href="https://qwik.builder.io/ecosystem/#courses" block-id="builder-10e5f5f4f9034b85acae8443e9f402d3" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-5e0800e028784421abbc6de06682b080"><p>Tutorial</p></div></a><a href="https://qwik.builder.io/ecosystem/#presentations" block-id="builder-a468b32b9ad6475b902f0a053467df98" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-5e0800e028784421abbc6de06682b080"><p>Presentations</p></div></a><a href="https://qwik.builder.io/ecosystem/#community" block-id="builder-42030c1afa7b4a5aa6f3a4ab63ae45da" class="cy6jl4u footer-link"><div class="builder-text" q:key="builder-5e0800e028784421abbc6de06682b080"><p>Community</p></div></a></div></div></div><div block-id="builder-01f2710f21244a6bbaa036fa6f612b39" class="cwwwpfj"><div class="builder-text" q:key="builder-b413e964781d47f885577bfcab465213"><p>Made with ❤️ by</p></div></div><div builder-id="builder-233a3cb0124841e0ac86cf19f76b18f5" class="cc66ipe"><a target="_blank" builder-id="builder-4c7add4a31794f968600fc0712f3044b" href="https://www.builder.io/" class="cuiuf3t"><div width="160" height="34" viewBox="0 0 312 67" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Builder Logo" builder-id="builder-96359463fb5442aabb88931af291cdbb" class="clzbi89"><div q:key="builder-96359463fb5442aabb88931af291cdbb"><svg
+  width="160"
+  height="34"
+  viewBox="0 0 312 67"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Builder Logo"
+  class=""
+  style="
+  width: 160px;
+  height: 34px;"
+>
+  <g clip-path="url(#clip0_2_46)" class="">
+    <path
+      d="M58.5952 18.8422C58.5983 21.6525 57.9717 24.4278 56.7617 26.964C55.5516 29.5002 53.7889 31.7328 51.6029 33.4978L1.32849 4.94869C1.13619 4.83906 0.957774 4.70667 0.797093 4.55439C0.54498 4.30715 0.344641 4.01213 0.207782 3.68656C0.070922 3.36099 0.000285894 3.01139 0 2.6582C0 1.9532 0.279931 1.27708 0.778211 0.77857C1.27649 0.28006 1.9523 0 2.65698 0L39.7617 0C44.7566 0 49.547 1.98516 53.079 5.51876C56.611 9.05236 58.5952 13.845 58.5952 18.8422Z"
+      fill="#18B4F4"
+      class=""
+    ></path>
+    <path
+      d="M58.5952 48.1533C58.5958 50.6281 58.1091 53.0787 57.1628 55.3653C56.2166 57.6518 54.8295 59.7295 53.0805 61.4797C51.3316 63.2298 49.2552 64.6181 46.97 65.5653C44.6847 66.5125 42.2353 67 39.7617 67H2.65697C2.13137 66.9943 1.61925 66.8329 1.1854 66.536C0.75156 66.2391 0.415485 65.8201 0.219699 65.3321C0.0239124 64.844 -0.0227877 64.3089 0.0855068 63.7943C0.193801 63.2797 0.452224 62.8088 0.82808 62.4412C0.977894 62.2907 1.14601 62.1598 1.32848 62.0513L21.1141 50.816L51.5985 33.5022C53.7842 35.2667 55.5471 37.4985 56.7579 40.0338C57.9686 42.5691 58.5964 45.3435 58.5952 48.1533Z"
+      fill="#FD6B3C"
+      class=""
+    ></path>
+    <path
+      d="M51.6029 33.4978L21.1141 50.816L1.32851 62.0513C1.13852 62.1568 0.962902 62.2864 0.805969 62.4367C8.35007 54.6957 12.5682 44.3093 12.5587 33.4978C12.5729 22.6849 8.35596 12.2959 0.810398 4.55438C0.971079 4.70667 1.14949 4.83905 1.34179 4.94868L51.6029 33.4978Z"
+      fill="#A97FF2"
+      class=""
+    ></path>
+    <path
+      d="M99.8005 24.5706C108.493 24.5706 113.404 31.5174 113.404 39.9306C113.404 48.3438 108.493 55.2374 99.8005 55.2374C95.2836 55.2374 91.8295 53.4299 89.9209 50.3641L89.1327 54.5463H83.6948V14.1771H90.4258V29.0852C92.0642 26.582 95.2836 24.5706 99.8005 24.5706ZM98.4454 49.3052C103.525 49.3052 106.686 45.185 106.686 39.9306C106.686 34.5655 103.525 30.4984 98.4454 30.4984C93.3662 30.4984 90.1999 34.5566 90.1999 39.9306C90.1999 45.1894 93.3086 49.3052 98.4454 49.3052Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M137.056 42.4737V25.2529H143.773V42.1325C143.773 49.6641 140.333 55.2375 130.847 55.2375C121.362 55.2375 117.921 49.6464 117.921 42.1325V25.2529H124.639V42.4737C124.639 47.0458 126.782 49.3052 130.838 49.3052C134.895 49.3052 137.056 47.0458 137.056 42.4737Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M149.149 16.215C149.127 15.6253 149.227 15.0373 149.443 14.488C149.659 13.9388 149.986 13.4404 150.404 13.0241C150.822 12.6078 151.322 12.2827 151.872 12.0694C152.422 11.8561 153.011 11.7592 153.6 11.7847C156.151 11.7847 157.988 13.6233 157.988 16.2372C157.988 18.8511 156.151 20.5656 153.6 20.5656C151.049 20.5656 149.149 18.7625 149.149 16.215Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M268.997 16.215C268.974 15.6272 269.074 15.0411 269.288 14.4935C269.503 13.9458 269.828 13.4485 270.244 13.0325C270.66 12.6166 271.157 12.291 271.704 12.0763C272.252 11.8616 272.838 11.7623 273.425 11.7847C275.976 11.7847 277.814 13.6233 277.814 16.2372C277.814 18.8511 275.976 20.5656 273.425 20.5656C270.874 20.5656 268.997 18.7625 268.997 16.215Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M256.071 50.466C256.048 49.878 256.146 49.2916 256.361 48.7436C256.575 48.1957 256.901 47.698 257.316 47.282C257.732 46.8659 258.23 46.5404 258.777 46.3259C259.325 46.1114 259.911 46.0126 260.499 46.0356C263.05 46.0356 264.887 47.8742 264.887 50.466C264.887 53.0577 263.05 54.7988 260.499 54.7988C257.948 54.7988 256.071 53.0178 256.071 50.466Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M156.93 25.2485H150.212V54.5596H156.93V25.2485Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M163.648 54.5596V14.1771H170.365V54.5685L163.648 54.5596Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M198.082 14.1771H204.8V54.5685H199.375L198.587 50.3862C196.727 53.4387 193.273 55.2596 188.712 55.2596C180.072 55.2596 175.161 48.3128 175.161 39.9528C175.161 31.5927 180.072 24.5928 188.712 24.5928C193.282 24.5928 196.444 26.6219 198.082 29.1073V14.1771ZM190.111 30.5073C185.032 30.5073 181.87 34.5743 181.87 39.9395C181.87 45.1939 185.032 49.3141 190.111 49.3141C195.19 49.3141 198.352 45.1939 198.352 39.9395C198.361 34.5566 195.257 30.4984 190.12 30.4984L190.111 30.5073Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M237.596 46.5407C235.51 51.7907 230.652 55.2375 224.275 55.2375C215.419 55.2375 209.662 48.6274 209.662 39.8731C209.662 31.3447 215.534 24.5707 224.227 24.5707C232.92 24.5707 238.623 31.1763 238.623 39.7623C238.651 40.4627 238.59 41.1639 238.442 41.849H216.26C216.765 46.4831 219.759 49.4736 224.444 49.4736C227.663 49.4736 230.316 47.892 231.556 44.9591L237.596 46.5407ZM216.371 36.8826H231.954C231.387 32.8155 228.567 30.0466 224.218 30.0466C219.869 30.0466 217.049 32.8731 216.371 36.8826Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M259.162 31.2915C258.657 31.2213 258.148 31.1829 257.638 31.1763C252.896 31.1763 250.075 33.6617 250.075 39.3104V54.5596H243.357V25.2529H248.782L249.565 29.3155C250.637 27.4548 253.108 24.9694 258.205 24.9694C258.484 24.9694 259.162 25.027 259.162 25.027V31.2915Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M276.777 25.2485H270.06V54.5596H276.777V25.2485Z"
+      fill="currentColor"
+      class=""
+    ></path>
+    <path
+      d="M281.573 39.9307C281.573 31.6858 287.445 24.5707 296.758 24.5707C306.071 24.5707 312 31.6858 312 39.9307C312 48.1755 306.133 55.2375 296.758 55.2375C287.383 55.2375 281.573 48.1755 281.573 39.9307ZM296.758 49.3053C301.673 49.3053 305.282 45.5793 305.282 39.9307C305.282 34.282 301.673 30.4985 296.758 30.4985C291.842 30.4985 288.282 34.2244 288.282 39.9307C288.282 45.6369 291.904 49.3053 296.758 49.3053Z"
+      fill="currentColor"
+      class=""
+    ></path>
+  </g>
+  <defs class="">
+    <clipPath id="clip0_2_46" class="">
+      <rect width="312" height="67" fill="white" class=""></rect>
+    </clipPath>
+  </defs>
+</svg>
+</div></div></a></div><div block-id="builder-0030d7fd26b346089e6155896c4972ea" class="clhtwc4"><div class="builder-text" q:key="builder-233a3cb0124841e0ac86cf19f76b18f5"><p> </p></div></div><div builder-id="builder-b91f9d990b0c4266ba85af2f83934141" class="ct53kcb"><div block-id="builder-c67cff0e5e874c2ab0ec0df27be2c655" class="caq69r4"><div class="builder-text" q:key="builder-b91f9d990b0c4266ba85af2f83934141"><p>© 2023 Builder.io, Inc.</p></div></div><ul builder-id="builder-1ea7458c28884afba64f8bb6fe08735f" class="c7dtyh5"><li builder-id="builder-bbadf98d0316459e89d2d27375f29ede" class="cm8uyto"><a target="_blank" title="Discord" builder-id="builder-6595e530bd9f4149a9b5d1475e382536" href="https://qwik.builder.io/chat" class="cuiuf3t"><div xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" role="img" fill="currentColor" aria-label="Discord Logo" builder-id="builder-fa3a12dfe4c04f41b4577d85c0a7b559" class="cplnmxl"><div q:key="builder-fa3a12dfe4c04f41b4577d85c0a7b559"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="25"
+  height="25"
+  viewBox="0 0 512 512"
+  role="img"
+  fill="currentColor"
+  aria-label="Discord Logo"
+  style="
+  width: 25px;
+  height: 25px;"
+>
+  <path
+    d="M464 66.52A50 50 0 00414.12 17L97.64 16A49.65 49.65 0 0048 65.52V392c0 27.3 22.28 48 49.64 48H368l-13-44 109 100zM324.65 329.81s-8.72-10.39-16-19.32C340.39 301.55 352.5 282 352.5 282a139 139 0 01-27.85 14.25 173.31 173.31 0 01-35.11 10.39 170.05 170.05 0 01-62.72-.24 184.45 184.45 0 01-35.59-10.4 141.46 141.46 0 01-17.68-8.21c-.73-.48-1.45-.72-2.18-1.21-.49-.24-.73-.48-1-.48-4.36-2.42-6.78-4.11-6.78-4.11s11.62 19.09 42.38 28.26c-7.27 9.18-16.23 19.81-16.23 19.81-53.51-1.69-73.85-36.47-73.85-36.47 0-77.06 34.87-139.62 34.87-139.62 34.87-25.85 67.8-25.12 67.8-25.12l2.42 2.9c-43.59 12.32-63.44 31.4-63.44 31.4s5.32-2.9 14.28-6.77c25.91-11.35 46.5-14.25 55-15.21a24 24 0 014.12-.49 205.62 205.62 0 0148.91-.48 201.62 201.62 0 0172.89 22.95s-19.13-18.15-60.3-30.45l3.39-3.86s33.17-.73 67.81 25.16c0 0 34.87 62.56 34.87 139.62 0-.28-20.35 34.5-73.86 36.19z"
+  ></path>
+  <path
+    d="M212.05 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.8 0 24.7-11.83 24.7-26.57.25-14.76-10.9-26.57-24.7-26.57zM300.43 218c-13.8 0-24.7 11.84-24.7 26.57s11.14 26.57 24.7 26.57c13.81 0 24.7-11.83 24.7-26.57S314 218 300.43 218z"
+  ></path>
+</svg>
+</div></div></a></li><li builder-id="builder-73316b5ffdc1412c87a9c0b38f3eb655" class="cm8uyto"><a target="_blank" title="GitHub" builder-id="builder-14ea884a90f5455c8bc2ae4686350a1d" href="https://github.com/BuilderIO/partytown" class="cuiuf3t"><div viewBox="0 0 16 16" width="25" height="25" fill="currentColor" role="img" aria-label="GitHub Logo" builder-id="builder-85fb077ef45d4724a1337a00946f43db" class="cplnmxl"><div q:key="builder-85fb077ef45d4724a1337a00946f43db"><svg
+  viewBox="0 0 16 16"
+  width="25"
+  height="25"
+  fill="currentColor"
+  role="img"
+  aria-label="GitHub Logo"
+  style="
+  width: 25px;
+  height: 25px;"
+>
+  <path
+    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+  ></path>
+</svg>
+</div></div></a></li><li builder-id="builder-d63ab09bd57240ceb762d27d362796b7" class="cm8uyto"><a target="_blank" title="Twitter" builder-id="builder-06744095eb36413ba4e6095fc34dcb84" href="https://twitter.com/qwikdev" class="cuiuf3t"><div xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 512 512" role="img" fill="currentColor" aria-label="Twitter Logo" builder-id="builder-936e273445674519b67e73487b244810" class="cplnmxl"><div q:key="builder-936e273445674519b67e73487b244810"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="25"
+  height="25"
+  viewBox="0 0 512 512"
+  role="img"
+  fill="currentColor"
+  aria-label="Twitter Logo"
+  style="
+  width: 25px;
+  height: 25px;"
+>
+  <path
+    d="M496 109.5a201.8 201.8 0 01-56.55 15.3 97.51 97.51 0 0043.33-53.6 197.74 197.74 0 01-62.56 23.5A99.14 99.14 0 00348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.21 93.21 0 002.54 22.1 280.7 280.7 0 01-203-101.3A95.69 95.69 0 0036 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0135.22 199v1.2c0 47 34 86.1 79 95a100.76 100.76 0 01-25.94 3.4 94.38 94.38 0 01-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.59 199.59 0 0139.5 405.6a203 203 0 01-23.5-1.4A278.68 278.68 0 00166.74 448c181.36 0 280.44-147.7 280.44-275.8 0-4.2-.11-8.4-.31-12.5A198.48 198.48 0 00496 109.5z"
+  ></path>
+</svg>
+</div></div></a></li></ul></div></footer><div builder-id="builder-6ff6a5fff8434ad0aaa35c82f34a9209" class="cnhf7sw builder-footer builder-block"><div class="c9wz7yc light-mode-hide"><picture><source type="image/webp" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=2000 2000w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=265 265w"><img src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a" style="object-fit:cover;object-position:center;position:absolute;height:100%;width:100%;top:0;left:0" sizes="(max-width: 638px) 64vw, (max-width: 998px) 41vw, 29vw" role="presentation" loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=2000 2000w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F9b8a500b5a51428ab383354feb13f91a?format=webp&amp;width=265 265w"></picture><div style="width:100%;padding-top:38.7%;pointer-events:none;font-size:0" class="builder-image-sizer"></div></div><div class="c9wz7yc dark-mode-hide"><picture><source type="image/webp" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=2000 2000w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=265 265w"><img src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8" style="object-fit:cover;object-position:center;position:absolute;height:100%;width:100%;top:0;left:0" sizes="(max-width: 638px) 64vw, (max-width: 998px) 41vw, 29vw" role="presentation" loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=2000 2000w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fc3aafd1ff55c475aa37e8d95cb32cdf8?format=webp&amp;width=265 265w"></picture><div style="width:100%;padding-top:40.5%;pointer-events:none;font-size:0" class="builder-image-sizer"></div></div><div builder-id="builder-701f4e97981d47a5996d6c4f455b3ff5" class="caak4bw"><div class="cgit9t0 builder-columns"><div class="c4nes27 builder-column"><div builder-id="builder-acb25d4daa834026b8d2c6d605738b4a" class="ccyegd3"><div class="cll733z"><video autoplay="" muted="" playsinline="" loop="" class="cvqchck"><source type="video/mp4" src="https://cdn.builder.io/o/assets%2FYJIGb4i01jvw0SRdL5Bt%2Fcf9b1c94e76e4b3bbad3ca41fc8ec1eb%2Fcompressed?apiKey=YJIGb4i01jvw0SRdL5Bt&amp;token=cf9b1c94e76e4b3bbad3ca41fc8ec1eb&amp;alt=media&amp;optimized=true"></video><div class="cotyw1f"></div></div></div></div><div class="cqhh3j3 builder-column"><div builder-id="builder-2106fa56c2e14ff4bb3957a72cd4f35f" class="c1lmddh"><div builder-id="builder-88f6fedd568b4125805714200355f28c" class="cpiyxct"><div block-id="builder-723829d447b2419c954c1f11366fbefa" class="cev265k fix-line-height"><div class="builder-text" q:key="builder-88f6fedd568b4125805714200355f28c"><p><a href="https://www.builder.io/m/developers" rel="noopener noreferrer" target="_blank">Builder.io</a> is the headless CMS that lets you <a href="https://www.builder.io/m/products" rel="noopener noreferrer" target="_blank">drag &amp; drop</a> with <a href="https://www.builder.io/m/developers" rel="noopener noreferrer" target="_blank">your components</a>.</p></div></div><div builder-id="builder-8f5418688ec5488ca695080c52b17486" class="cutbcy2"><div class="c1lkilf builder-columns"><div class="ctrw85y builder-column"><a href="https://www.builder.io/signup" target="_self" style="" class="cjmbdby">Try it out</a></div><div class="cewnya builder-column"><a href="https://www.builder.io/m/developers" target="_self" style="" class="cnj1vr2">Learn more</a></div></div></div></div><div class="cwlh6ta"><picture><source type="image/webp" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=2000 2000w"><img src="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8" style="object-fit:cover;object-position:center;position:absolute;height:100%;width:100%;top:0;left:0" role="presentation" loading="lazy" srcset="https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=100 100w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=200 200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=400 400w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=800 800w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=1200 1200w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=1600 1600w,https://cdn.builder.io/api/v1/image/assets%2FYJIGb4i01jvw0SRdL5Bt%2F8e038d68bea44b0ca7a6811d7c643cb8?format=webp&amp;width=2000 2000w"></picture><div style="width:100%;padding-top:40.8%;pointer-events:none;font-size:0" class="builder-image-sizer"></div></div></div></div></div></div></div><!--/qv--></div><script type="qwik/json">{"refs":{},"ctx":{},"objs":[],"subs":[]}</script></div><!--/cq--></div><!--/qv--></footer><!--/qv--></div><!--/qv--><!--/qv--><!--/qv--><!--/qv--><script>(function(){
+  const l=location,c=l.pathname+l.search,t="_qCityPopstateFallback",o="_qCityHistory";window[t]||(window[t]=()=>{window[o]||c===(l.pathname+l.search)||l.reload()},setTimeout(()=>{addEventListener("popstate",window[t])},0))
+})();
+</script><!--/qv--><!--/qv--><!--qv q:key=eW_2--><script q:key="1Z_0">((s,a,i,r)=>{i=(e,t)=>{t=document.querySelector("[q\\:base]"),t&&a.active&&a.active.postMessage({type:"qprefetch",base:t.getAttribute("q:base"),...e})},document.addEventListener("qprefetch",e=>{const t=e.detail;a?i(t):t.bundles&&s.push(...t.bundles)}),navigator.serviceWorker.register("/service-worker.js").then(e=>{r=()=>{a=e,i({bundles:s})},e.installing?e.installing.addEventListener("statechange",t=>{t.target.state=="activated"&&r()}):e.active&&r()}).catch(e=>console.error(e))})([])</script><!--/qv--><!--qv q:key=eW_3--><script q:key="xh_0">
+  ((d, sentStats) => {
+    const id = () => Math.round(Math.random() * Number.MAX_SAFE_INTEGER).toString(36);
+    const pageId = id();
+    const sessionId = (sessionStorage["q:sId"] = sessionStorage["q:sId"] || id());
+    const now = Date.now();
+    const sessionStart = parseInt((sessionStorage["q:sTs"] = sessionStorage["q:sTs"] || now), 10);
+    const sessionOffset = now - sessionStart;
+    const visitorId = (localStorage["q:vId"] = localStorage["q:vId"] || id());
+    const qEvents = [];
+    const loggedQrls = new Set();
+
+    const send = () => {
+      if (qEvents.length > 0) {
+        fetch("https://cdn.builder.io/api/v1/track", {
+          method: "POST",
+          body: JSON.stringify({ events: qEvents }),
+          keepalive: true,
+        });
+        qEvents.length = 0;
+      }
+
+    };
+
+    const queue = (type, metadata) => {
+      qEvents.push({
+        type: type,
+        data: {
+          metadata: {
+            url: location.href,
+            pageId: pageId,
+            sessionOffset: sessionOffset,
+            ...metadata
+          },
+          ownerId: "YJIGb4i01jvw0SRdL5Bt",
+          sessionId: sessionId,
+          visitorId: visitorId
+        },
+      });
+    };
+
+    d.addEventListener("qsymbol", (ev) => {
+      try {
+        const detail = ev.detail;
+        const qsymbol = detail?.symbol;
+        console.debug('Symbol', qsymbol);
+        if (qsymbol && !loggedQrls.has(qsymbol)) {
+          loggedQrls.add(qsymbol);
+
+          queue("qrl", {
+            reqTime: Math.round(detail?.reqTime ?? -1),
+            execTime: Math.round(performance.now()),
+            qsymbol: qsymbol,
+          });
+
+          if (qEvents.length > 9) {
+            send();
+          }
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    });
+
+    d.addEventListener("visibilitychange", () => {
+      if (d.visibilityState === "hidden") {
+        try {
+          if (!sentStats) {
+            sentStats = true;
+
+            const metadata = {
+              perf: [],
+              ua: navigator.userAgent,
+            };
+            const entryTypes = ["navigation", "paint", "longtask"];
+
+            if (performance.getEntriesByType) {
+              for (const entryTypeName of entryTypes) {
+                for (const entry of performance.getEntriesByType(entryTypeName)) {
+                  metadata.perf.push(entry.toJSON());
+                }
+              }
+            }
+
+            if (navigator.connection) {
+              metadata.conn = {};
+              for (const n in navigator.connection) {
+                if (navigator.connection[n] && typeof navigator.connection[n] !== "function") {
+                  metadata.conn[n] = navigator.connection[n];
+                }
+              }
+            }
+            queue('qstats', metadata);
+          }
+          send();
+        } catch (e) {
+          console.error(e);
+        }
+      }
+    });
+  })(document);
+</script><!--/qv--></body><!--/qv--><!--/qv--><!--/qv--><script type="qwik/json">{"refs":{"9":"n","b":"0!","d":"o f!","f":"f!","h":"0!","j":"0!"},"ctx":{"0":{"c":"site-store=0!"},"1":{"h":" 15!","w":"17","c":"qc-c=2! qc-ic=b qc-h=a! qc-l=5! qc-n=18 qc-s=12! qc-a=4"},"2":{"h":"y","s":"5! a!"},"3":{"h":" 1e"},"4":{"h":" 1e"},"5":{"h":"x","s":"b"},"8":{"h":"10","w":"n","s":"11 0! 5! n"},"13":{"h":" 1e"},"14":{"h":" 1e"},"15":{"h":" 1e"},"20":{"h":" 1e"},"21":{"h":" 1e"},"27":{"h":" 1e"},"28":{"h":" 1e"},"29":{"h":" 1e"},"33":{"h":" 1e"},"34":{"h":" 1e"},"35":{"h":" 1e"},"40":{"h":" 1e"},"41":{"h":" 1e"},"47":{"h":" 1e"},"48":{"h":" 1e"},"49":{"h":" 1e"},"53":{"h":" 1e"},"54":{"h":" 1e"},"55":{"h":" 1e"},"60":{"h":" 1e"},"61":{"h":" 1e"},"67":{"h":" 1e"},"68":{"h":" 1e"},"69":{"h":" 1e"},"73":{"h":" 1e"},"74":{"h":" 1e"},"75":{"h":" 1e"},"c":{"h":"t s!","s":"u 1 w f! o","c":"ai-result-open=1"},"n":{"h":" 1e"},"o":{"h":" 1e"},"p":{"h":" 1e"},"v":{"h":" 1e"},"w":{"h":" 1e"},"x":{"h":" 1e"},"1b":{"h":" 1e"},"1c":{"h":" 1e"},"1d":{"h":" 1e"},"1j":{"h":" 1e"},"1k":{"h":" 1e"},"1l":{"h":" 1e"},"1r":{"h":" 1e"},"1s":{"h":" 1e"},"1t":{"h":" 1e"},"1z":{"h":" 1e"},"2f":{"h":" 1e"},"2g":{"h":" 1e"},"2h":{"h":" 1e"},"2n":{"h":" 1e"},"2o":{"h":" 1e"},"2p":{"h":" 1e"},"2v":{"h":" 1e"},"2w":{"h":" 1e"},"2x":{"h":" 1e"},"3b":{"h":" 1e"},"3c":{"h":" 1e"},"3d":{"h":" 1e"},"3j":{"h":" 1e"},"3k":{"h":" 1e"},"3l":{"h":" 1e"},"3r":{"h":" 1e"},"3s":{"h":" 1e"},"3t":{"h":" 1e"},"3z":{"h":" 1e"},"4f":{"h":" 1e"},"4g":{"h":" 1e"},"4h":{"h":" 1e"},"4n":{"h":" 1e"},"4o":{"h":" 1e"},"4p":{"h":" 1e"},"4v":{"h":" 1e"},"4w":{"h":" 1e"},"4x":{"h":" 1e"},"5b":{"h":" 1e"},"5c":{"h":" 1e"},"5d":{"h":" 1e"},"5j":{"h":" 1e"},"5k":{"h":" 1e"},"5l":{"h":" 1e"},"5r":{"h":" 1e"},"5s":{"h":" 1e"},"5t":{"h":" 1e"},"5z":{"h":" 1e"},"6f":{"h":" 1e"},"6g":{"h":" 1e"},"6h":{"h":" 1e"},"6n":{"h":" 1e"},"6o":{"h":" 1e"},"6p":{"h":" 1e"},"6v":{"h":" 1e"},"6w":{"h":" 1e"},"6x":{"h":" 1e"},"7b":{"h":" 1e"},"7c":{"h":" 1e"},"7d":{"h":" 1e"},"7j":{"h":" 1e"},"7k":{"h":" 1e"},"7l":{"h":" 1e"},"7r":{"h":" 1e"},"7s":{"h":" 1e"},"7t":{"h":" 1e"}},"objs":[{"headerMenuOpen":"k","sideMenuOpen":"k","theme":"l"},"\u0012k",{"headings":"1h","menu":"1h"},"\u001213","\u00121h",{"url":"19","params":"1a","isNavigating":"k","prevUrl":"1b"},[],[],[],{},{"title":"1c","meta":"6","links":"7","styles":"8","frontmatter":"9"},"\u00121h",[],[],{"searchSuggestions":"d"},{"isOpen":"k","initialQuery":"1d","query":"1d","collections":"c","context":"e","activeItemId":"1e","status":"1f","snippetLength":"1g"},"\u00110! @0","\u00110! @1","#i","\u00110! @2",false,"auto","\u0002q-63d85f9e.js#s_9t1uPE4yoLA[0!]","\u00031 3 m #8","\u0012#f","X0ISHY6M1I","33e17ca2559e66c62577ab1d6c195a36","qwik",{"appId":"p","apiKey":"q","indexName":"r"},"\u0002q-63d85f9e.js#s_NsnidK2eXPg","gcz2wk-0","\u00111 @3",true,"\u0002q-e8ee71f8.js#s_e0ssiDXoeAM","\u0002q-a5c3c5d5.js#s_pTmg6TTZ2oo","\u00115! @4","\u0002q-ed6ee475.js#s_rQT2WX0s7cQ","m9eern-0",{},"/showcase/",{},{},"\u0002q-c5f39113.js#s_02wMImzEAbk[4 2! b a! 1h 12! 3 14 15! 5!]","\u00032 f 16 #1","\u0002q-c5f39113.js#s_fX0bDjeJa0E[4 3 14 5!]","\u0005https://qwik.builder.io/showcase/",{},"\u0005https://qwik.builder.io/showcase/","Qwik Sites Showcase","",null,"idle",10,"\u0001"],"subs":[["_1","1 #4 g #0 class headerMenuOpen","1 #4 g #0 class sideMenuOpen","3 #i h #i theme","1 #j j #g aria-label theme"],["1 #d v #c class"],["_1"],["0 17"],["0 17"],["1 #3 z #2 href url","0 #2 url","0 #8 url"],["_1","0 #2"],["_1","0 #2"],["_1","0 #2"],["_1"],["_1","0 #2 title","0 #2 meta","0 #2 links","0 #2 styles"],["0 #5"],["_1"],["_1"],["_1"],["_1","0 #c isOpen"]]}</script><script q:func="qwik/json">document.currentScript.qFuncs=[(p0,)=>({"header-open":p0.headerMenuOpen,"menu-open":p0.sideMenuOpen}),
+(p0,)=>(p0.theme==="light"?"Dark":"Light"),
+(p0,)=>(p0.theme),
+(p0,)=>({docsearch:true,"ai-result-open":p0.value}),
+(p0,)=>(p0.url.href)]</script><script type="module">document.dispatchEvent(new CustomEvent("qprefetch",{detail:{"bundles":["q-63d85f9e.js","q-25cb22da.js","q-71956c83.js","q-52bc70a7.js","q-564f5686.js","q-7ea826cb.js","q-8128c547.js","q-eef9fa7b.js","q-4d4bde90.js","q-725317a4.js","q-856b75da.js","q-86000b98.js","q-a1ad2395.js","q-e07bfb55.js","q-e31c5fa3.js","q-ed8a0226.js","q-b02a0988.js"]}}))</script><script id="qwikloader">((e,t)=>{const n="__q_context__",o=window,s=new Set,i=t=>e.querySelectorAll(t),a=(e,t,n=t.type)=>{i("[on"+e+"\\:"+n+"]").forEach((o=>f(o,e,t,n)))},r=(e,t)=>e.getAttribute(t),l=t=>{if(void 0===t._qwikjson_){let n=(t===e.documentElement?e.body:t).lastElementChild;for(;n;){if("SCRIPT"===n.tagName&&"qwik/json"===r(n,"type")){t._qwikjson_=JSON.parse(n.textContent.replace(/\\x3C(\/?script)/g,"<$1"));break}n=n.previousElementSibling}}},c=(e,t)=>new CustomEvent(e,{detail:t}),f=async(t,o,s,i=s.type)=>{const a="on"+o+":"+i;t.hasAttribute("preventdefault:"+i)&&s.preventDefault();const c=t._qc_,f=null==c?void 0:c.li.filter((e=>e[0]===a));if(f&&f.length>0){for(const e of f)await e[1].getFn([t,s],(()=>t.isConnected))(s,t);return}const b=r(t,a);if(b){const o=t.closest("[q\\:container]"),i=new URL(r(o,"q:base"),e.baseURI);for(const a of b.split("\n")){const r=new URL(a,i),c=r.hash.replace(/^#?([^?[|]*).*$/,"$1")||"default",f=performance.now(),b=import(r.href.split("#")[0]);l(o);const p=(await b)[c],u=e[n];if(t.isConnected)try{e[n]=[t,s,r],d("qsymbol",{symbol:c,element:t,reqTime:f}),await p(s,t)}finally{e[n]=u}}}},d=(t,n)=>{e.dispatchEvent(c(t,n))},b=e=>e.replace(/([A-Z])/g,(e=>"-"+e.toLowerCase())),p=async e=>{let t=b(e.type),n=e.target;for(a("-document",e,t);n&&n.getAttribute;)await f(n,"",e,t),n=e.bubbles&&!0!==e.cancelBubble?n.parentElement:null},u=e=>{a("-window",e,b(e.type))},w=()=>{var n;const a=e.readyState;if(!t&&("interactive"==a||"complete"==a)&&(t=1,d("qinit"),(null!=(n=o.requestIdleCallback)?n:o.setTimeout).bind(o)((()=>d("qidle"))),s.has("qvisible"))){const e=i("[on\\:qvisible]"),t=new IntersectionObserver((e=>{for(const n of e)n.isIntersecting&&(t.unobserve(n.target),f(n.target,"",c("qvisible",n)))}));e.forEach((e=>t.observe(e)))}},q=(e,t,n,o=!1)=>e.addEventListener(t,n,{capture:o,passive:!1}),v=t=>{for(const n of t)s.has(n)||(q(e,n,p,!0),q(o,n,u),s.add(n))};if(!e.qR){const t=o.qwikevents;Array.isArray(t)&&v(t),o.qwikevents={push:(...e)=>v(e)},q(e,"readystatechange",w),w()}})(document);</script><script>window.qwikevents.push("qvisible", "click", "keydown")</script></html>

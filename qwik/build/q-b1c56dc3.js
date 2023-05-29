@@ -1,0 +1,1 @@
+import{b as e,s as t,_ as o}from"./q-71956c83.js";const s=e(t(()=>o(()=>import("./q-b85a00fe.js"),["build/q-b85a00fe.js","build/q-c3ec3d1c.js","build/q-71956c83.js","build/q-681e2099.js","build/q-a276ee39.js","build/q-4bc7de01.js","build/q-d84644e3.js"]),"s_k5gVS1D1DFk")),a={title:"Framework reimagined for the edge!"};export{s as default,a as head};
