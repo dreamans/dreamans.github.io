@@ -1,1 +1,0 @@
-import{c as l,w as t}from"./q-71956c83.js";const a=e=>l("li",null,null,l("a",null,{href:t(r=>r.entry.href,[e]),target:"_blank",rel:"noreferrer"},t(r=>r.entry.title,[e]),3,null),3,"6E_1");export{a as s_kHf4Q0AkdIc};

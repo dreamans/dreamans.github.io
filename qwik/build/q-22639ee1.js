@@ -1,1 +1,0 @@
-import{$ as i}from"./q-71956c83.js";const c=(s,r)=>{var o;const t=(o=r.getAttribute("href"))==null?void 0:o.replace("#",""),e=document.getElementById(t);e&&(e.scrollIntoView({behavior:"smooth"}),history.pushState(null,"",`#${t}`))};export{i as _hW,c as s_m0MT2JXVZbc};

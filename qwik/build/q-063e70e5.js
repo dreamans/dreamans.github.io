@@ -1,1 +1,0 @@
-import{a as i,d as e,S as r}from"./q-71956c83.js";const l=t=>i("section",{...t.attributes,style:{width:"100%",alignSelf:"stretch",flexGrow:1,boxSizing:"border-box",maxWidth:t.maxWidth||1200,display:"flex",flexDirection:"column",alignItems:"stretch",marginLeft:"auto",marginRight:"auto"},children:e(r,null,3,"2Y_0")},null,0,"2Y_1");export{l as s_ZWF9iD5WeLg};

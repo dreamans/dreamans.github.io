@@ -1,1 +1,0 @@
-import{b as r,h as s,s as o,_ as a}from"./q-71956c83.js";import{s as e,r as t}from"./q-d84644e3.js";const p=e(s("s_sxmb3YL00PI")),d=t(s("s_85ZpGYZy0bU")),m=r(o(()=>a(()=>import("./q-35e121ad.js"),["build/q-35e121ad.js","build/q-71956c83.js","build/q-d84644e3.js"]),"s_TvXZX47I8c8"));export{p as approveId,m as default,d as useQueryData};

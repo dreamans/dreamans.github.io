@@ -1,1 +1,0 @@
-import{c as l}from"./q-71956c83.js";const o=()=>l("svg",null,{width:"20",height:"20",viewBox:"0 0 20 20"},l("path",null,{d:"M10 14.2L5 17l1-5.6-4-4 5.5-.7 2.5-5 2.5 5 5.6.8-4 4 .9 5.5z",stroke:"currentColor",fill:"none","fill-rule":"evenodd","stroke-linejoin":"round"},null,3,null),3,"lT_0");export{o as s_iKllj0hQcOw};

@@ -1,1 +1,0 @@
-import{b as s,c as o,k as _,s as a,_ as n}from"./q-71956c83.js";const e=t=>o("button",null,null,_(t,"text"),1,"99_0"),u=s(a(()=>n(()=>import("./q-d4a8a75f.js"),["build/q-d4a8a75f.js","build/q-71956c83.js"]),"s_2y2nxB87G0c"));export{e as MyButton,u as default};

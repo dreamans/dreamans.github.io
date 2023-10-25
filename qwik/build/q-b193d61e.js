@@ -1,1 +1,0 @@
-import{Child as a}from"./q-5ad123fe.js";import{e as s,d as o,v as r}from"./q-71956c83.js";const i=()=>{const t=s({count:0});return o(a,{userData:t,[r]:{userData:r}},3,"Y3_0")};export{i as s_6IG88b1XU6k};

@@ -1,1 +1,0 @@
-import{c as e,s as t,_ as o}from"./q-71956c83.js";const _=()=>e("a",null,{href:"/about","preventdefault:click":!0,onClick$:t(()=>o(()=>import("./q-073a3cfa.js"),[]),"s_TcxKlHwBeJ8")},"Go to about page",3,"EY_0");export{_ as s_ezshUvQhu44};

@@ -1,1 +1,0 @@
-import{c as i,w as t}from"./q-71956c83.js";import{_auto_useMousePosition as u}from"./q-c4a275f4.js";const e=()=>{const s=u();return i("div",null,null,["MousePosition: (",t(o=>o.x,[s]),", ",t(o=>o.y,[s]),")"],3,"KI_0")};export{e as s_NM1gh33X628};

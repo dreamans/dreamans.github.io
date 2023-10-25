@@ -1,8 +1,0 @@
-import{d as n,F as o,H as t,g as i}from"./q-71956c83.js";const d={title:"Serialization Graph",meta:[],styles:[],links:[],frontmatter:{contributors:["adamdbradley","the-r3aper7","mhevery"]}},l={title:"Serialization Graph",contributors:["adamdbradley","the-r3aper7","mhevery"]};function a(r){const e=Object.assign({p:"p",a:"a",blockquote:"blockquote",strong:"strong",code:"code"},r.components);return t(i,{children:[t(e.p,{children:"Stores are serializable as the application is paused on the server and resumed on the client."}),`
-`,t(e.p,{children:["Data in a store isn't required to be free of nested references. Qwik is perfectly happy serializing stores that feature data ",t(e.a,{href:"https://wikipedia.org/wiki/Directed_acyclic_graph",children:"cycles"}),"."]}),`
-`,t(e.p,{children:["Stores can also include ",t(e.a,{href:"/docs/advanced/qrl/",children:"Qwik URLs (QRLs)"}),"."]}),`
-`,t(e.p,{children:"There is no limit to how many stores can be created per component, nor to where they are passed. While the best practice is to implement top-down data flows, Qwik doesn't require this design philosophy."}),`
-`,t(e.blockquote,{children:[`
-`,t(e.p,{children:[t(e.strong,{children:"Your task"}),": Insert a few items into ",t(e.code,{children:"parent.children"})," to create a circular reference between the parent and child stores."]}),`
-`]}),`
-`,t(e.p,{children:["This example also shows how to attach and invoke closures to a store using ",t(e.code,{children:"$"})," and ",t(e.code,{children:"QRL"}),"."]})]})}function s(r={}){const{wrapper:e}=r.components||{};return e?t(e,Object.assign({},r,{children:t(a,r)})):a(r)}const h=()=>n(o,{children:n(s,{},3,null)},3,"6TWtBLL-");export{h as default,l as frontmatter,d as head};

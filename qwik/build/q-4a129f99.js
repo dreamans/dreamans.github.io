@@ -1,1 +1,0 @@
-import{b as t,s as e,_ as n}from"./q-71956c83.js";const _=t(e(()=>n(()=>import("./q-4d9e75c0.js"),["build/q-4d9e75c0.js","build/q-71956c83.js"]),"s_mKS4fGBkqag"));function i(o){const s=new Date;o.second=s.getSeconds()*6,o.minute=s.getMinutes()*6,o.hour=s.getHours()*30}export{_ as C,i as u};

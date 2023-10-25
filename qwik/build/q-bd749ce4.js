@@ -1,1 +1,0 @@
-import{i}from"./q-71956c83.js";import{$ as e}from"./q-71956c83.js";const m=s=>{const[o]=i(),{x:t,y:n}=s;o.x=t,o.y=n},r=s=>{const[o]=i();o.x=s.clientX,o.y=s.clientY};export{e as _hW,r as s_JgXkF0FnRTk,m as s_nm6i0jbViww};
